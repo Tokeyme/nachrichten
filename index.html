@@ -7,12 +7,14 @@
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         max-width: 680px; margin: 0 auto; padding: 24px 18px; line-height: 1.5;
+         max-width: 680px; margin: 0 auto; padding: 24px 18px; line-height: 1.5; font-size: 16px;
          color: #1a1a1a; background: #ffffff; }
   a { color: #0b66d0; }
   h1 { font-size: 1.4rem; margin: 0 0 4px; }
   .sub { color: #888; font-size: 0.9rem; margin: 0 0 28px; }
-  .empty { color: #888; }
+  .topic { font-weight: bold; margin-bottom: 2px; }
+  section { margin-bottom: 22px; }
+  .quiet { color: #888; font-size: 0.9rem; margin-top: 32px; }
   @media (prefers-color-scheme: dark) {
     body { color: #e6e6e6; background: #121212; }
     a { color: #6aa9ff; }
@@ -21,7 +23,68 @@
 </head>
 <body>
   <h1>Nachrichten</h1>
-  <p class="sub">Privater News-Digest · 2× täglich</p>
-  <p class="empty">Noch kein Digest erstellt. Beim nächsten automatischen Lauf (10 bzw. 20 Uhr) erscheint hier die aktuelle Übersicht.</p>
+  <p class="sub">aktualisiert: 24.07.2026, 04:04 Uhr</p>
+
+  <section>
+    <div class="topic">Ukraine/Russland</div>
+    <p>Nach russischen Angriffen auf Energieinfrastruktur bei Enerhodar kam es laut IAEA zu Wasserausfällen in der Stadt und am besetzten Atomkraftwerk Saporischschja; Außenminister Lawrow bekräftigte zugleich die grundsätzliche Bereitschaft Russlands zu einer politisch-diplomatischen Lösung. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Iran/USA</div>
+    <p>Der Konflikt zwischen den USA und Iran hat sich weiter zugespitzt: Die USA meldeten Angriffe auf über 80 Ziele im Iran und führten Ölsanktionen wieder ein, Iran meldete im Gegenzug weitere Raketenstarts und Angriffe auf Schiffe in der Straße von Hormus. <a href="https://www.cnn.com/2026/07/20/world/live-news/iran-war-trump" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">AfD</div>
+    <p>Die AfD hielt in Erfurt ihren Bundesparteitag ab; parallel legte die Gesellschaft für Freiheitsrechte ein Gutachten vor, das die Partei als verfassungswidrig einstuft und einem möglichen Verbotsantrag vor dem Bundesverfassungsgericht realistische Erfolgschancen einräumt. <a href="https://www.theeuropean.de/wissenschaft/afd-bundesparteitag-in-erfurt-und-verbotsdebatte" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">VfB Stuttgart</div>
+    <p>Der VfB gewann sein erstes Testspiel der Saisonvorbereitung deutlich mit 7:0 gegen Oberligist TSG Balingen, muss aber vorerst auf die verletzten Dennis Seimen und Justin Diehl verzichten. <a href="https://www.kicker.de/vfb-stuttgart/team-news" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Guild Wars 2</div>
+    <p>Mit dem Update vom 20./21. Juli wurden mehrere Balance-Änderungen und Bugfixes ausgerollt, unter anderem eine kürzere Abklingzeit für Lesser Chaos Storm sowie Korrekturen bei Mesmer, Thief und Necromancer. <a href="https://wiki.guildwars2.com/wiki/Game_updates/2026-07-21" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Weltraum</div>
+    <p>Mithilfe von Archivdaten des Hubble- und des James-Webb-Weltraumteleskops haben Astronomen erstmals ein stellares Schwarzes Loch im Kugelsternhaufen Omega Centauri nachgewiesen. <a href="https://esahubble.org/news/archive/year/2026/" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Wissenschaft/Forschung</div>
+    <p>Neue Analysen deuten darauf hin, dass die Sonne rund 55 Prozent mehr Silber enthält als bisher angenommen – ein Fund, der offene Fragen zur Elemententstehung im Sonnensystem berührt. <a href="https://www.scinexx.de/" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">KI</div>
+    <p>Im Rahmen des Digital Markets Act verpflichtet die EU Google, zentrale Teile seines Android-Ökosystems und seiner Suchinfrastruktur stärker für Wettbewerber zu öffnen; zugleich rechnet Gartner damit, dass bis Jahresende 40 Prozent der Unternehmensanwendungen KI-Agenten integriert haben werden. <a href="https://www.hectorpincheira.com/en/news/technological-radar-july-2026-ai-agents-go-into-production-and-governance-doesnt-keep-up/" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Bitcoin</div>
+    <p>Bitcoin hat sich vom Jahrestief bei rund 58.000 US-Dollar erholt und notiert aktuell bei etwa 66.300 US-Dollar (ca. 58.100 Euro); Spot-Bitcoin-ETFs verzeichnen bereits die zweite Woche in Folge Nettozuflüsse. <a href="https://www.wallstreet-online.de/nachricht/21142814-bitcoin-prognose-juli-2026-etf-wende-kampf-66-000-dollar" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Computer/Hardware</div>
+    <p>AMD hat auf seinem Advancing-AI-Event die neuen EPYC-„Venice"-Serverprozessoren vorgestellt – das erste HPC-Produkt auf TSMCs 2-nm-Fertigung mit bis zu 256 Kernen. <a href="https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-july-2026" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Apps</div>
+    <p>Seit dem 22. Juli können in den USA erstmals konkurrierende App-Stores direkt im Google Play Store installiert werden – eine gerichtlich angeordnete Öffnung des Android-Ökosystems, wobei Downloads weiterhin über Googles eigene Infrastruktur laufen. <a href="https://9to5google.com/2026/07/15/google-play-store-third-party-android-app-store-changes-july/" target="_blank">Quelle</a></p>
+  </section>
+
+  <section>
+    <div class="topic">Apple</div>
+    <p>Apple hat die zweiten öffentlichen Betas von iOS 27, iPadOS 27, macOS und watchOS 27 veröffentlicht; zudem muss der Konzern nach einer verlorenen Patentklage rund um Apple-Watch-Sensoren 634 Millionen Dollar an Masimo/Danaher zahlen. <a href="https://www.apfeltalk.de/magazin/news/apfeltalk-der-tag-vom-donnerstag-23-juli-2026/" target="_blank">Quelle</a></p>
+  </section>
+
+  <p class="quiet">Ruhig, nichts Grosses: Lorch (Württemberg)</p>
 </body>
 </html>
