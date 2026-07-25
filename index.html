@@ -5,81 +5,128 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         max-width: 680px; margin: 0 auto; padding: 24px 18px; line-height: 1.5; font-size: 16px;
-         color: #1a1a1a; background: #ffffff; }
-  a { color: #0b66d0; }
-  h1 { font-size: 1.4rem; margin: 0 0 4px; }
-  .sub { color: #888; font-size: 0.9rem; margin: 0 0 28px; }
-  .topic { font-weight: bold; margin-bottom: 2px; }
-  section { margin-bottom: 22px; }
-  .quiet { color: #888; font-size: 0.9rem; margin-top: 32px; }
+  body {
+    max-width: 680px;
+    margin: 0 auto;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 24px 18px;
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+  h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
+  }
+  .updated {
+    color: #777777;
+    font-size: 0.9em;
+    margin-bottom: 28px;
+  }
+  .topic {
+    margin: 0 0 18px 0;
+  }
+  .topic h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .topic p {
+    margin: 0;
+  }
+  a {
+    color: #0056b3;
+  }
+  .quiet {
+    color: #777777;
+    font-size: 0.9em;
+    margin-top: 28px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 14px;
+  }
   @media (prefers-color-scheme: dark) {
-    body { color: #e6e6e6; background: #121212; }
-    a { color: #6aa9ff; }
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .updated, .quiet {
+      color: #999999;
+    }
+    .quiet {
+      border-top: 1px solid #333333;
+    }
   }
 </style>
 </head>
 <body>
-  <h1>Nachrichten</h1>
-  <p class="sub">aktualisiert: 24.07.2026, 20:06 Uhr</p>
+<h1>Nachrichten</h1>
+<div class="updated">aktualisiert: 25.07.2026, 10:05 Uhr</div>
 
-  <section>
-    <div class="topic">Ukraine/Russland</div>
-    <p>Die IAEA meldet, dass Kampfhandlungen bei Enerhodar die Wasserversorgung des AKW Saporischschja beeinträchtigt haben; die Reaktorkühlung sei laut IAEA-Chef Grossi über Grundwasserbrunnen weiterhin gesichert. US-Präsident Trump will den ukrainischen Präsidenten Selenskyj kommenden Dienstag im Weißen Haus empfangen. <a href="https://www.iaea.org/newscenter/pressreleases/update-359-iaea-director-general-statement-on-situation-in-ukraine" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Ukraine / Russland</h2>
+  <p>Bei einem russischen Raketenangriff auf die Region Kiew wurden nach ukrainischen Angaben zehn Menschen getötet; beide Seiten setzten ihre Luftangriffe fort, unter anderem auf die Krim und im Donbass. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle: ZDFheute</a></p>
+</div>
 
-  <section>
-    <div class="topic">Iran/USA</div>
-    <p>Die USA griffen laut iranischen Angaben zum 13. Mal Ziele im Iran an, erstmals auch eine Marinebasis am Kaspischen Meer im Norden des Landes. Nach Huthi-Angriffen auf zwei saudische Öltanker kündigte Iran eine vorläufige Sperrung der Straße von Hormus an; der Ölpreis stieg erstmals seit Mai über 100 US-Dollar je Barrel. <a href="https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Iran / USA</h2>
+  <p>US-Präsident Trump erklärte, die USA blieben trotz fortgesetzter Gespräche mit Teheran einsatzbereit ("locked and loaded"); der Iran meldete eigene Angriffe auf US-Stützpunkte in Kuwait, Bahrain und Jordanien. <a href="https://www.aljazeera.com/news/liveblog/2026/7/25/iran-war-live-trump-says-us-locked-and-loaded-as-it-seeks-iran-talks" target="_blank">Quelle: Al Jazeera</a></p>
+</div>
 
-  <section>
-    <div class="topic">AfD</div>
-    <p>Der Kreiswahlausschuss Friesland ließ den AfD-Bundestagsabgeordneten Martin Sichert wegen Zweifeln an dessen Verfassungstreue nicht zur Landratswahl zu; einen Tag später wurde in Nörten-Hardenberg auch die AfD-Kandidatin Reinhild Goes von der Bürgermeisterwahl ausgeschlossen. Die AfD wertet die Entscheidungen als politische Einflussnahme und kündigte rechtliche Schritte an. <a href="https://taz.de/Ausschluss-eines-AfD-Kandidaten/!6198097/" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>AfD</h2>
+  <p>Bundesverteidigungsminister Boris Pistorius (SPD) hat sich laut Medienberichten intern für die Einleitung eines AfD-Verbotsverfahrens ausgesprochen; die Union lehnt dies bislang ab. <a href="https://www.finanznachrichten.de/nachrichten-2026-07/69122578-bericht-pistorius-spricht-sich-fuer-afd-verbotsverfahren-aus-003.htm" target="_blank">Quelle: finanznachrichten.de</a></p>
+</div>
 
-  <section>
-    <div class="topic">VfB Stuttgart</div>
-    <p>Der VfB muss länger auf die verletzten Dennis Seimen und Justin Diehl (beide Muskelverletzungen) verzichten. Im Transfersommer erhöhte der Klub sein Angebot für Wolfsburgs Stürmer Dzenan Pejcinovic, während Mirza Catovic den Verein wohl verlässt; die Bundesliga-Saison startet am 28. August gegen den FC Bayern. <a href="https://www.echo24.de/sport/vfb-stuttgart-transfergeruechte-2026-spieler-vereine-leo-sauer-bilal-nadir-ladislav-krejci-pejcinovic-catovic-promise-david-demirovic-94386485.html" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>VfB Stuttgart</h2>
+  <p>Der VfB hat sein Angebot für Wolfsburg-Stürmer Dzenan Pejcinovic erhöht, eine Einigung steht aber noch aus; zudem fallen Torhüter Dennis Seimen und Offensivspieler Justin Diehl wegen Muskelverletzungen länger aus. <a href="https://www.kicker.de/vfb-stuttgart/team-news" target="_blank">Quelle: kicker.de</a></p>
+</div>
 
-  <section>
-    <div class="topic">Weltraum</div>
-    <p>Ein internationales Forschungsteam hat mit dem Molekül Erythrulose erstmals einen komplexen Zucker im interstellaren Raum nachgewiesen, rund 26.700 Lichtjahre entfernt nahe dem galaktischen Zentrum. Der in Nature Astronomy veröffentlichte Fund gilt als weiteres Indiz dafür, dass lebensrelevante Bausteine schon vor der Erdentstehung im All vorhanden waren. <a href="https://t3n.de/news/zucker-weltall-entdeckt-forscher-1752663/" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Guild Wars 2</h2>
+  <p>Der grosse Balance-Patch vom 14. Juli hat das Meta spürbar verändert, seither folgten mehrere Nachbesserungen an Dieb, Krieger, Nekromant und weiteren Klassen. <a href="https://snowcrows.com/news/game/july-balance-patch-preview-2026" target="_blank">Quelle: Snow Crows</a></p>
+</div>
 
-  <section>
-    <div class="topic">Wissenschaft/Forschung</div>
-    <p>Eine neue Studie zeigt, dass CO2-Inhalation die Aktivität des glymphatischen Systems anregen kann, das normalerweise vor allem im Tiefschlaf Stoffwechselabfälle wie Alzheimer-Proteine aus dem Gehirn abtransportiert – ein möglicher Ansatzpunkt für neue Präventionsstrategien. <a href="https://www.scinexx.de/news/medizin/co%E2%82%82-inhalation-foerdert-die-entfernung-von-alzheimerproteinen-aus-dem-gehirn/" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Weltraum</h2>
+  <p>Die ESA-Sonde Hera soll im vierten Quartal beim Asteroiden Dimorphos eintreffen, um die Folgen von NASAs DART-Einschlag zu untersuchen; zur Artemis-III-Crew gehört mit Luca Parmitano erstmals ein ESA-Astronaut. <a href="https://www.esa.int/Space_in_Member_States/Germany/Die_Hoehepunkte_der_ESA_fuer_das_Jahr_2026" target="_blank">Quelle: ESA</a></p>
+</div>
 
-  <section>
-    <div class="topic">KI</div>
-    <p>Anthropic hat den Sprachmodus von Claude erweitert: Nutzer können nun zwischen Haiku, Sonnet und Opus wählen statt nur das kleine Haiku-Modell zu nutzen, was auch komplexere Aufgaben per Sprache ermöglicht. Gleichzeitig beobachten US-Politiker die jüngsten leistungsstarken chinesischen KI-Modelle (u.a. Kimi K3, Qwen 3.8, GLM 5.2) mit wachsender Sorge. <a href="https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Wissenschaft / Forschung</h2>
+  <p>Forschende fanden heraus, dass eine einzelne Gruppe von Hautnervenzellen sowohl Kälte als auch Wärme wahrnimmt - ein Befund, der bisherige Annahmen zum Temperaturempfinden infrage stellt. <a href="https://www.scinexx.de/" target="_blank">Quelle: scinexx.de</a></p>
+</div>
 
-  <section>
-    <div class="topic">Bitcoin</div>
-    <p>Bitcoin notiert am 24. Juli bei rund 65.000 US-Dollar (knapp 57.000 Euro), nach einem leichten Rückgang von etwa 1 Prozent binnen 24 Stunden – belastet von geopolitischen Spannungen und steigenden Ölpreisen. <a href="https://fortune.com/article/current-price-of-bitcoin-for-july-24-2026/" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>KI</h2>
+  <p>Mit Kimi K3 hat ein chinesisches Unternehmen ein Modell mit 2,8 Billionen Parametern vorgestellt, das größte frei verfügbare (Open-Weight) KI-Modell - es soll bei Programmieraufgaben führende Konkurrenzmodelle übertreffen. <a href="https://frankfurt-ai.de/blog/ki-aktuelle-entwicklungen/" target="_blank">Quelle: frankfurt-ai.de</a></p>
+</div>
 
-  <section>
-    <div class="topic">Computer/Hardware</div>
-    <p>Intel verlagert laut Berichten wegen deutlich verbesserter Fertigungsausbeute rund 80-90% der Nova-Lake-CPU-Produktion von TSMC zurück in die eigene 18A-Fertigung. Parallel zeigen erste Benchmarks, dass Nvidias neue 88-Kern-CPU „Vera" aktuelle AMD-Epyc- und Intel-Xeon-Chips in Server-Workloads schlägt. <a href="https://www.techpowerup.com/350751/intel-shifts-majority-of-nova-lake-production-in-house-amid-yield-improvements" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Bitcoin</h2>
+  <p>Nach acht Wochen mit Abflüssen verzeichnen Spot-Bitcoin-ETFs wieder Nettozuflüsse; zugleich akzeptierte das Weiße Haus die Ethikklausel des CLARITY Act und räumte damit eine zentrale Hürde für die US-Kryptoregulierung aus. <a href="https://www.coindesk.com/markets/2026/07/04/bitcoin-jumps-above-usd63-000-reversing-end-june-losses" target="_blank">Quelle: CoinDesk</a></p>
+</div>
 
-  <section>
-    <div class="topic">Apps</div>
-    <p>Nach einer US-Kartellgerichts-Anordnung sind seit dem 22. Juli erstmals konkurrierende App-Stores direkt im Google Play Store in den USA sichtbar; Google senkte zugleich seine Provision auf 20% (10% bei Abos). Downloads laufen aber weiterhin über Googles eigene Infrastruktur – von echtem Sideloading ist das noch entfernt. <a href="https://9to5google.com/2026/07/15/google-play-store-third-party-android-app-store-changes-july/" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Computer</h2>
+  <p>Erstmals führt eine Laptop-Grafikkarte (Nvidia RTX 4060 Laptop) die Steam-Hardware-Umfrage an; im CPU-Markt hat AMD laut den Daten den Rückstand auf Intel auf unter neun Prozentpunkte verringert. <a href="https://www.thefpsreview.com/2026/07/06/steam-hardware-survey-june-2026-a-laptop-gpu-just-topped-the-chart-for-the-first-time/" target="_blank">Quelle: The FPS Review</a></p>
+</div>
 
-  <section>
-    <div class="topic">Apple</div>
-    <p>Apple kündigte eine sechsjährige Partnerschaft mit Broadcom für kundenspezifische Chips und neue Funktechnik an und bereitet mit „Apple Upgrade" (Start 28. Juli, Finanzierung über Klarna) ein Leasing-Modell für iPhone, Mac, iPad und Apple Watch vor. Die Quartalszahlen für Q3 2026 werden am 30. Juli veröffentlicht – vermutlich Tim Cooks letzter Auftritt als CEO. <a href="https://www.bloomberg.com/news/articles/2026-07-21/apple-to-launch-upgrade-device-leasing-program-with-klarna-to-spur-sales" target="_blank">Quelle</a></p>
-  </section>
+<div class="topic">
+  <h2>Apps</h2>
+  <p>Seit dem 22. Juli muss Google im Play Store alternative App-Marktplätze wie den Epic Games Store zulassen - eine direkte Folge des Digital Markets Act der EU. <a href="https://9to5google.com/2026/07/15/google-play-store-third-party-android-app-store-changes-july/" target="_blank">Quelle: 9to5Google</a></p>
+</div>
 
-  <p class="quiet">Ruhig, nichts Großes: Guild Wars 2, Lorch (Württemberg)</p>
+<div class="topic">
+  <h2>Apple</h2>
+  <p>Apple legt am 30. Juli seine Zahlen für das dritte Geschäftsquartal 2026 vor; im Fokus steht unter anderem, wie sich das iPhone 17 mit stärkerer Speicherausstattung im Business-Segment schlägt. <a href="https://appleinsider.com/articles/26/07/02/what-to-expect-from-apples-q3-2026-results-on-july-30" target="_blank">Quelle: AppleInsider</a></p>
+</div>
+
+<div class="quiet">Ruhig, nichts Großes: Lorch (Württemberg)</div>
+
 </body>
 </html>
