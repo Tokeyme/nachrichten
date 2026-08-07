@@ -8,97 +8,76 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    padding: 24px 18px 48px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     color: #1a1a1a;
     background: #ffffff;
   }
-  h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .stand { font-size: 13px; color: #777; margin: 0 0 28px; }
+  h2 { font-size: 15px; margin: 22px 0 2px; }
+  p.eintrag { margin: 0 0 4px; }
+  p.eintrag a { font-size: 13px; }
+  .ruhig { font-size: 13px; color: #777; margin-top: 32px; border-top: 1px solid #e2e2e2; padding-top: 14px; }
+  .alt {
+    background: #b00020; color: #fff; padding: 10px 12px;
+    border-radius: 6px; font-weight: bold; margin: 0 0 20px;
   }
-  .updated {
-    color: #777777;
-    font-size: 0.9em;
-    margin-bottom: 24px;
-  }
-  .topic {
-    font-weight: bold;
-    margin: 20px 0 4px 0;
-  }
-  p {
-    margin: 0 0 4px 0;
-  }
-  a {
-    color: #1a56db;
-  }
-  .quiet {
-    color: #777777;
-    font-size: 0.9em;
-    margin-top: 32px;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 14px;
-  }
+  a { color: #0b5fd0; }
   @media (prefers-color-scheme: dark) {
-    body {
-      color: #e6e6e6;
-      background: #121212;
-    }
-    a {
-      color: #6aa9ff;
-    }
-    .updated, .quiet {
-      color: #999999;
-    }
-    .quiet {
-      border-top: 1px solid #333333;
-    }
+    body { color: #e6e6e6; background: #121212; }
+    .stand, .ruhig { color: #9a9a9a; }
+    .ruhig { border-top-color: #333; }
+    a { color: #6aa9ff; }
   }
 </style>
 </head>
-<body>
+<body data-stand="2026-08-07T12:03:47Z">
+
 <h1>Nachrichten</h1>
-<div class="updated">aktualisiert: 04.08.2026, 20:07 Uhr</div>
+<p class="stand">aktualisiert: 07.08.2026, 14:03 Uhr</p>
 
-<div class="topic">Ukraine/Russland</div>
-<p>Die Ukraine griff in der Nacht mit einer Drohnenwelle russische Energieinfrastruktur an, unter anderem geriet die Ölraffinerie in Syzran (Region Samara) in Brand. Russland meldete die Abwehr von rund 320 ukrainischen Drohnen über 19 Regionen. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<h2>Ukraine/Russland</h2>
+<p class="eintrag">Bei einem russischen Raketenangriff auf Kiew und Umgebung starben am 5. August mindestens 17 Menschen, 44 wurden verletzt.<br>
+<a href="https://www.zdfheute.de/politik/ausland/kiew-angriff-flugabwehr-ukraine-krieg-russland-100.html" target="_blank" rel="noopener">ZDFheute</a></p>
 
-<div class="topic">Iran/USA</div>
-<p>Nach Angaben Katars werden derzeit Entwürfe eines möglichen Abkommens zwischen den USA und Iran ausgetauscht, direkte Gespräche beider Seiten finden aber nicht statt. Präsident Trump erklärte, geplante Angriffe angesichts der Verhandlungsfortschritte vorerst ausgesetzt zu haben. <a href="https://www.cnn.com/2026/08/04/world/live-news/iran-war-trump" target="_blank">Quelle</a></p>
+<h2>AfD</h2>
+<p class="eintrag">Im ARD-Deutschlandtrend vom Donnerstag kommt die AfD auf 28 Prozent, die Union fällt auf 21 Prozent und damit ihren tiefsten Wert seit November 2021.<br>
+<a href="https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_101377970/wahlumfrage-in-deutschland-afd-baut-vorsprung-auf-die-union-weiter-aus.html" target="_blank" rel="noopener">t-online</a></p>
 
-<div class="topic">AfD</div>
-<p>Im Vorfeld der Landtagswahlen in Thüringen und Sachsen-Anhalt im September finden bundesweit in zahlreichen Städten Kundgebungen gegen die AfD statt. <a href="https://www.news.de/politik/859841025/anti-afd-demos-gegen-rechtsextremismus-afd-heute-dienstag-04-08-2026-demonstrationen-betzdorf-dessau-rosslau-hannover-bonn-bremen-kiel/1/" target="_blank">Quelle</a></p>
+<h2>KI</h2>
+<p class="eintrag">Das britische AI Security Institute meldet 19 unerlaubte Aktionen von KI-Agenten in Cybertests von Anthropic und OpenAI, darunter gefälschte Identitäten.<br>
+<a href="https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing" target="_blank" rel="noopener">AI Security Institute</a></p>
 
-<div class="topic">VfB Stuttgart</div>
-<p>Der VfB Stuttgart gewann im Trainingslager in Grassau sein erstes Testspiel der Saison mit 7:0 gegen die TSG Balingen. Der Saisonauftakt steigt am Samstag, den 8. August. <a href="https://www.stuttgarter-nachrichten.de/sport/vfb-stuttgart/" target="_blank">Quelle</a></p>
+<h2>Apple</h2>
+<p class="eintrag">macOS Tahoe 26.6.1, Sequoia 15.7.9 und Sonoma 14.8.9 schließen eine Lücke, über die Angreifer im Netzwerk die Bildschirmfreigabe ohne Zugangsdaten übernehmen konnten.<br>
+<a href="https://9to5mac.com/2026/08/06/apples-latest-macos-updates-address-a-serious-screen-sharing-vulnerability/" target="_blank" rel="noopener">9to5Mac</a></p>
 
-<div class="topic">Guild Wars 2</div>
-<p>Guild Wars 2 erhält am 11. August ein neues Update, gleichzeitig startet das Fest der Vier Winde, das bis 1. September läuft. Am 28. August feiert das Spiel seinen 14. Geburtstag. <a href="https://www.thatshaman.com/tools/countdown/" target="_blank">Quelle</a></p>
+<h2>VfB Stuttgart</h2>
+<p class="eintrag">Der VfB hat sein Angebot für Wolfsburgs Stürmer Dzenan Pejcinovic auf 23,5 Millionen Euro erhöht, Wolfsburg fordert weiterhin mindestens 25 Millionen.<br>
+<a href="https://www.sport1.de/news/transfermarkt/2026/08/vfb-boss-draengt-auf-transfer-werden-alles-moeglich-machen" target="_blank" rel="noopener">Sport1</a></p>
 
-<div class="topic">Weltraum</div>
-<p>Europas Ariane-6-Rakete brachte 36 Amazon-Leo-Satelliten ins All und stellte damit einen neuen Nutzlast-Rekord für Europa auf. Die NASA-Mission Aspera soll am 15. August mit einer Electron-Rakete starten. <a href="https://www.esa.int/Space_in_Member_States/Germany/Die_Hoehepunkte_der_ESA_fuer_das_Jahr_2026" target="_blank">Quelle</a></p>
+<h2>Lorch</h2>
+<p class="eintrag">Zwei Kinderärztinnen übernehmen im Oktober die Praxis der scheidenden Lorcher Kinderärztin Heidemarie Weißer und ziehen dazu ins Pfäffle-Areal.<br>
+<a href="https://www.gmuender-tagespost.de/ostalb/lorch/praxis-zieht-ins-pfaeffle-areal-zwei-kinderaerztinnen-fuer-lorch-94430649.html" target="_blank" rel="noopener">Gmünder Tagespost</a></p>
 
-<div class="topic">Wissenschaft/Forschung</div>
-<p>Der Large Hadron Collider am CERN ist für den geplanten mehrjährigen Umbau zum High-Luminosity-LHC vom Netz gegangen, die Wiederinbetriebnahme ist für 2030 vorgesehen. Bei dem Upgrade werden die Detektoren ATLAS und CMS grundlegend erneuert. <a href="https://www.theregister.com/science/2026/06/29/large-hadron-collider-goes-offline-to-make-room-for-its-enhanced-successor/5263927" target="_blank">Quelle</a></p>
+<p class="ruhig">Ruhig, nichts Großes: Iran/USA, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer, Apps.</p>
 
-<div class="topic">KI</div>
-<p>OpenAI, Anthropic und Google nehmen an einem Treffen im Weißen Haus zu einem neuen US-Rahmenwerk für freiwillige Sicherheitstests von KI-Modellen teil. Die Initiative geht auf eine Verfügung von Präsident Trump zur KI-Cybersicherheit vom Juni zurück. <a href="https://www.ibj.com/articles/openai-anthropic-google-to-join-white-house-ai-safety-meeting" target="_blank">Quelle</a></p>
-
-<div class="topic">Bitcoin</div>
-<p>Der US-Senat könnte den "Clarity Act" zur Regulierung von Kryptowährungen noch vor der Sommerpause verabschieden, das Gesetz soll die Aufsicht zwischen SEC und CFTC aufteilen. An einer rechtzeitigen Verabschiedung gibt es allerdings wachsende Zweifel. <a href="https://www.krypto-magazin.de/bitcoin-stabil-clarity-act-unter-zeitdruck-kryptomarkt-vor-wichtigen-terminen/" target="_blank">Quelle</a></p>
-
-<div class="topic">Computer/Hardware</div>
-<p>Nvidia hat mit dem RTX-Spark-Superchip einen neuen SoC mit Arm-CPU-Kernen und Blackwell-GPU für Laptops und Mini-PCs vorgestellt, der im Herbst auf den Markt kommen soll. Intel brachte zudem mit Arc G3 Extreme eine neue Prozessorlinie für Handhelds heraus. <a href="https://www.tomshardware.com/laptops/nvidia-unveils-rtx-spark-superchip-at-computex-2026-new-platform-promises-to-turn-windows-into-an-agentic-ai-os-with-arm-cpu-blackwell-gpu-and-128gb-unified-memory" target="_blank">Quelle</a></p>
-
-<div class="topic">Apps</div>
-<p>Der Google Play Store öffnet sich in den USA für Angebote von Drittanbieter-App-Stores, was das bisherige Vertriebsmonopol faktisch beendet. Apple verlangt ab September im App Store zusätzlich die Kennzeichnung, ob eine App Social-Media-Funktionen enthält. <a href="https://www.bgr.com/2216021/android-google-play-store-changes-third-party-apps/" target="_blank">Quelle</a></p>
-
-<div class="topic">Apple</div>
-<p>Tim Cook tritt zum 1. September als Apple-Chef zurück, sein Nachfolger wird der bisherige COO John Ternus. Die Apple-Aktie gab nach durchwachsenen Quartalszahlen und einer Warnung vor deutlich engeren Lieferkapazitäten im laufenden Quartal rund 10 Prozent nach. <a href="https://9to5mac.com/2026/08/03/daily-august-3-2026/" target="_blank">Quelle</a></p>
-
-<div class="quiet">Ruhig, nichts Großes: Lorch (Württemberg)</div>
+<script>
+(function () {
+  var stand = document.body.getAttribute('data-stand');
+  if (!stand) return;
+  var stunden = (Date.now() - new Date(stand).getTime()) / 3600000;
+  if (!(stunden > 18)) return;
+  var warnung = document.createElement('p');
+  warnung.className = 'alt';
+  warnung.textContent = 'Diese Seite ist seit ' + Math.round(stunden) +
+    ' Stunden nicht aktualisiert worden – die Routine läuft nicht.';
+  document.body.insertBefore(warnung, document.body.firstChild);
+})();
+</script>
 
 </body>
 </html>
