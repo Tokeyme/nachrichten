@@ -15,47 +15,82 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 { margin-bottom: 4px; }
-  .stand { color: #666; font-size: 14px; margin-bottom: 24px; }
-  h2 { font-size: 16px; margin: 22px 0 4px; }
-  p { margin: 0 0 4px; }
-  a { color: #0b57d0; }
-  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
-  .warnung { background: #cc0000; color: #fff; padding: 10px 14px; border-radius: 4px; margin-bottom: 18px; font-size: 14px; }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 22px 0 4px;
+  }
+  p {
+    margin: 0 0 4px;
+  }
+  a {
+    color: #0060df;
+  }
+  .ruhig {
+    color: #666;
+    font-size: 14px;
+    margin-top: 28px;
+  }
+  .warnung {
+    background: #c00;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
   @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e6e6e6; }
-    .stand, .ruhig { color: #aaaaaa; }
-    a { color: #6aa9ff; }
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .stand, .ruhig {
+      color: #999;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-08-20T08:06:26Z">
+<body data-stand="2026-08-20T18:07:28Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 20.08.2026, 10:06 Uhr</p>
+<p class="stand">aktualisiert: 20.08.2026, 20:07 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Russische Raketen- und Drohnenangriffe auf Kiew töteten in der Nacht mindestens zwölf Menschen und beschädigten ein Krankenhaus sowie eine Schule. <a href="https://www.t-online.de/nachrichten/ukraine/id_101391962/ukraine-krieg-aktuell-russische-raketen-treffen-krankenhaus-in-kiew.html" target="_blank">Quelle</a></p>
+<h2>Ukraine / Russland</h2>
+<p>Bei russischen Drohnenangriffen auf Kiew wurden nach Angaben von Bürgermeister Klitschko mehrere Menschen getötet, während die Ukraine weiter russische Ölanlagen in Tatarstan und Krasnodar angreift. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<h2>Iran/USA</h2>
-<p>Die Vereinigten Arabischen Emirate haben laut einem CNN-Livebericht sämtlichen Handel und Finanzverkehr mit Iran ausgesetzt, während Verhandlungen zwischen Washington und Teheran weiter stocken. <a href="https://www.cnn.com/2026/08/19/world/live-news/iran-war-trump" target="_blank">Quelle</a></p>
+<h2>Iran / USA</h2>
+<p>Nach Ablauf einer Frist für eine Einigung mit Iran droht Trump nun auch Oman, während die Blockade der Straße von Hormus laut USA anhält. <a href="https://www.cnn.com/2026/08/17/world/live-news/iran-war-trump" target="_blank">Quelle</a></p>
 
-<h2>Weltraum</h2>
-<p>Das chinesische Raumfahrtunternehmen LandSpace hat als erstes privates Unternehmen Chinas mit seiner Rakete ZhuQue-3 eine Boosterstufe mit ausfahrbaren Landebeinen erfolgreich gelandet. <a href="https://spaceflightnow.com/2026/08/" target="_blank">Quelle</a></p>
+<h2>Apple / Apps</h2>
+<p>Apple hat die App-Store-Gebühren in der EU überarbeitet, um den Streit um Zahlungsmethoden beizulegen, und plant außerdem 15 Prozent Provision auf Käufe außerhalb des App Store. <a href="https://www.cnbc.com/2026/08/18/apple-eu-app-store-fees-iphone.html" target="_blank">Quelle</a></p>
 
 <h2>VfB Stuttgart</h2>
-<p>Der VfB Stuttgart verpflichtet laut Medienberichten Wolfsburgs Stürmertalent Dzenan Pejcinovic für rund 25 Millionen Euro, Bundestrainer Jürgen Klopp soll den Wechsel beeinflusst haben. <a href="https://www.vfb.de/en/1893/latest/news/" target="_blank">Quelle</a></p>
+<p>Der VfB Stuttgart eröffnet die Bundesliga-Saison am 28. August auswärts bei Bayern München, Stürmer Jovan Milosevic steht offenbar vor einem Wechsel zu Sporting Braga. <a href="https://www.sport.de/fussball/te2076/vfb-stuttgart/" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: AfD, Guild Wars 2, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</p>
+<h2>Guild Wars 2</h2>
+<p>Das Update Code of Creation beendet ab dem 15. September die Handlung von Visions of Eternity, das Fest der Vier Winde läuft noch bis 1. September. <a href="https://massivelyop.com/2026/08/11/guild-wars-2s-code-of-creation-update-brings-visions-of-eternity-to-an-end-on-september-15/" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Großes: AfD, Weltraum, Wissenschaft, KI, Bitcoin, Computer, Lorch.</p>
 
 <script>
 (function () {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var hours = (Date.now() - standDate.getTime()) / 36e5;
-  if (hours > 18) {
+  var diffHours = (Date.now() - standDate.getTime()) / 3600000;
+  if (diffHours > 18) {
     var warn = document.createElement('div');
     warn.className = 'warnung';
-    warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+    warn.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
     document.body.insertBefore(warn, document.body.firstChild);
   }
 })();
