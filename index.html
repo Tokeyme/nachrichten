@@ -21,19 +21,14 @@
   .stand {
     color: #666;
     font-size: 14px;
-    margin-top: 0;
     margin-bottom: 28px;
   }
-  .thema {
-    margin-bottom: 22px;
-  }
-  .thema h2 {
+  h2 {
     font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 4px 0;
+    margin: 22px 0 4px;
   }
-  .thema p {
-    margin: 0;
+  p {
+    margin: 0 0 4px;
   }
   a {
     color: #0060df;
@@ -48,7 +43,7 @@
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
@@ -60,65 +55,44 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #aaa;
     }
   }
 </style>
 </head>
-<body data-stand="2026-08-21T18:06:57Z">
-
+<body data-stand="2026-08-22T08:06:09Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 21.08.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 22.08.2026, 10:06 Uhr</p>
 
-<div class="thema">
-<h2>Ukraine/Russland</h2>
-<p>Bei einem russischen Drohnenangriff auf ein Einkaufszentrum in Krywyj Rih wurden nach ukrainischen Angaben mindestens 14 Menschen getötet und über 100 verletzt. <a href="https://www.t-online.de/nachrichten/ukraine/id_101391962/ukraine-krieg-aktuell-klitschko-ordnet-flaggen-auf-halbmast-in-kiew-an.html" target="_blank">Quelle</a></p>
-</div>
+<h2>Iran / USA</h2>
+<p>Die USA verhängten am 21. August schärfere Sanktionen gegen Iran und drängen China zur Unterstützung, während Iran und Oman über die Straße von Hormus verhandeln. <a href="https://www.aljazeera.com/news/liveblog/2026/8/21/iran-war-live-us-vows-toughest-iran-sanctions-urges-china-support" target="_blank">Quelle</a></p>
 
-<div class="thema">
-<h2>Iran/USA</h2>
-<p>US-Präsident Trump drohte dem Iran mit einem "Wirtschaftskrieg" und neuen Sanktionen, Teheran wies die Drohung als reine "Ablenkung" zurück. <a href="https://edition.cnn.com/2026/08/20/world/live-news/iran-war-trump" target="_blank">Quelle</a></p>
-</div>
-
-<div class="thema">
 <h2>Apps</h2>
-<p>Apple will laut einem Vorschlag künftig bis zu 15 Prozent Provision auf App-Käufe verlangen, die über externe Links außerhalb des App Store abgewickelt werden. <a href="https://techcrunch.com/2026/08/14/apple-proposes-to-take-a-15-cut-of-purchases-made-outside-the-app-store/" target="_blank">Quelle</a></p>
-</div>
+<p>Apple senkt ab August 2026 in der EU die App-Store-Gebühr von 30 auf 26 Prozent, für kleine Entwickler bis auf 15 Prozent. <a href="https://appleinsider.com/articles/26/08/18/apples-eu-app-store-changes-are-big-and-a-preview-of-whats-coming-in-the-us" target="_blank">Quelle</a></p>
 
-<div class="thema">
-<h2>Bitcoin</h2>
-<p>Ein US-Gesetz zur Krypto-Marktregulierung (Clarity Act) verfehlte vor der Sommerpause die nötige Mehrheit im Senat und wurde auf September vertagt. <a href="https://www.ig.com/uk/trading-strategies/us-crypto-bill-delay-bitcoin-etf-inflows-260810" target="_blank">Quelle</a></p>
-</div>
-
-<div class="thema">
 <h2>Weltraum</h2>
-<p>SpaceX startete am 15. August zwei Falcon-9-Missionen für Globalstar und die US Space Force im Rekordabstand von nur 38,5 Minuten. <a href="https://spaceflightnow.com/2026/08/15/live-coverage-spacex-to-launch-satellite-replenishment-mission-for-globalstar-from-cape-canaveral/" target="_blank">Quelle</a></p>
-</div>
+<p>Das chinesische Unternehmen LandSpace landete am 19. August als erste private chinesische Firma erfolgreich eine orbitale Raketenstufe. <a href="https://spaceflightnow.com/2026/08/" target="_blank">Quelle</a></p>
 
-<div class="thema">
-<h2>Computer</h2>
-<p>Branchenberichte für August 2026 sehen KI-Rechenzentren, Speicherengpässe und TSMCs Kapazitätsausbau in Arizona als aktuell prägende Themen bei Computer-Hardware. <a href="https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-august-2026" target="_blank">Quelle</a></p>
-</div>
+<h2>Wissenschaft</h2>
+<p>Forscher fanden einen Zusammenhang zwischen dem Darmbakterium Roseburia inulinivorans und stärkerer Muskelkraft, ältere Träger zeigten 29 Prozent mehr Griffkraft. <a href="https://www.sciencedaily.com/breaking/" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: AfD, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, KI, Lorch (Württemberg)</p>
+<h2>VfB Stuttgart</h2>
+<p>Der VfB Stuttgart startet die Bundesliga-Saison 2026/27 am 28. August auswärts beim FC Bayern München. <a href="https://www.vfb.de/en/1893/latest/news/" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, AfD, Guild Wars 2, KI, Bitcoin, Computer/Hardware, Apple, Lorch.</p>
 
 <script>
-(function () {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var jetzt = new Date();
-    var stundenAlt = (jetzt - standDate) / 1000 / 60 / 60;
-    if (stundenAlt > 18) {
-      var n = Math.floor(stundenAlt);
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + n + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
-    }
-  } catch (e) {}
+(function() {
+  var stand = document.body.getAttribute('data-stand');
+  var standDate = new Date(stand);
+  var ageHours = (Date.now() - standDate.getTime()) / 3600000;
+  if (ageHours > 18) {
+    var warn = document.createElement('div');
+    warn.className = 'warnung';
+    warn.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    document.body.insertBefore(warn, document.body.firstChild);
+  }
 })();
 </script>
-
 </body>
 </html>
