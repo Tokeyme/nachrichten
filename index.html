@@ -13,40 +13,43 @@
     line-height: 1.5;
     padding: 24px 18px;
     background: #ffffff;
-    color: #1a1a1a;
+    color: #111111;
   }
   h1 {
     margin-bottom: 4px;
   }
   .stand {
-    color: #666;
+    color: #666666;
     font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
-  h2 {
-    font-size: 16px;
-    margin-bottom: 4px;
-  }
-  p {
-    margin-top: 0;
+  .thema {
     margin-bottom: 20px;
   }
+  .thema h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
+  }
   a {
-    color: #0060df;
+    color: #0b57d0;
   }
   .ruhig {
-    color: #666;
+    color: #666666;
     font-size: 14px;
-    margin-top: 32px;
+    margin-top: 28px;
   }
-  .warnung {
+  #warnung {
+    display: none;
     background: #c0392b;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -57,46 +60,61 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #aaaaaa;
     }
   }
 </style>
 </head>
-<body data-stand="2026-08-23T18:06:31Z">
-
+<body data-stand="2026-08-24T08:07:55Z">
+<div id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 23.08.2026, 20:06 Uhr</p>
+<div class="stand">aktualisiert: 24.08.2026, 10:07 Uhr</div>
 
-<h2>Ukraine / Russland</h2>
-<p>Die Ukraine zerstörte auf der besetzten Krim ein russisches Radarsystem, während ein russischer Drohnenangriff in der Region Odessa einen Personenzug traf. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Ukraine/Russland</h2>
+<p>Russland erklärte sich offen für "neue Ideen" zur Kriegsbeendigung, sofern sie mit Putins Zielen übereinstimmen, während neue russische Angriffe weitere Zivilisten in der Ukraine töteten. <a href="https://www.aljazeera.com/news/2026/8/21/russia-ready-for-new-ideas-on-ukraine-war-that-match-putins-goals" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Iran / USA</h2>
-<p>Die USA verhängten am 20. August neue, nach eigenen Angaben besonders harte Sanktionen gegen Iran, während die Spannungen um die Straße von Hormus anhalten. <a href="https://www.aljazeera.com/news/liveblog/2026/8/20/iran-war-live-trump-announces-most-crushing-iran-sanctions" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Iran/USA</h2>
+<p>Die USA kündigten für den 24. August weitere, bislang beispiellose Wirtschaftssanktionen gegen Iran an, nachdem eine Frist für ein Abkommen ohne Einigung verstrichen war. <a href="https://www.aljazeera.com/news/liveblog/2026/8/21/iran-war-live-us-vows-toughest-iran-sanctions-urges-china-support" target="_blank">Quelle</a></p>
+</div>
 
-<h2>VfB Stuttgart</h2>
-<p>Neuzugang Dzenan Pejcinovic erzielte beim 4:0-Pokalsieg des VfB Stuttgart bei Hansa Rostock einen Hattrick und führte das Team in die zweite Pokalrunde. <a href="https://www.echo24.de/sport/vfb-stuttgart-transfergeruechte-2026-spieler-news-vereine-rb-leipzig-wolfsburg-culbreath-pejcinovic-el-khannouss-promise-david-sidiki-cherif-94386485.html" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>KI</h2>
+<p>Anthropic bereitet laut Medienberichten einen der größten Börsengänge der Geschichte vor, nachdem der annualisierte Umsatz Ende Juli rund 65 Milliarden Dollar erreichte. <a href="https://techstartups.com/2026/08/21/top-tech-news-today-august-21-2026-anthropic-apple-broadcom-google-nvidia-openai-tesla-more/" target="_blank">Quelle</a></p>
+</div>
 
+<div class="thema">
 <h2>Bitcoin</h2>
-<p>Der Bitcoin-Kurs legte binnen einer Woche um mehr als 22 Prozent zu und liegt aktuell bei rund 70.000 Dollar, umgerechnet knapp 60.000 Euro. <a href="https://www.vietnam.vn/de/gia-bitcoin-hom-nay-23-8-2026-bitcoin-tang-hon-22-trong-mot-tuan" target="_blank">Quelle</a></p>
+<p>Bitcoin sprang am 20. August durch eine Rekord-Short-Eindeckung von 2,7 Milliarden Dollar um mehr als 10 Prozent auf 71.750 Dollar, umgerechnet etwa 66.000 Euro. <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-august-20-2026-crypto-prices-surge-after-president-trump-pushes-for-clarity-act-154014757.html" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Apple</h2>
-<p>Apple überarbeitete seine App-Store-Gebühren in der EU und einigte sich damit vorläufig mit Brüssel im Streit um das Digital Markets Act. <a href="https://www.cnbc.com/2026/08/18/apple-eu-app-store-fees-iphone.html" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>VfB Stuttgart</h2>
+<p>Der VfB Stuttgart startet am 28. August auswärts bei Bayern München in die Bundesliga-Saison, während Manchester United Interesse an Mittelfeldspieler Angelo Stiller zeigt. <a href="https://www.goal.com/en-us/team/vfb-stuttgart/news/3dwlvz6cl4lcavvrg0y2dycrt" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: AfD, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Lorch.</p>
+<div class="thema">
+<h2>Guild Wars 2</h2>
+<p>Guild Wars 2 kündigte für den 15. September mit "Code of Creation" das finale Update der Reihe "Visions of Eternity" samt neuem Raid und Fraktal an. <a href="https://massivelyop.com/2026/08/11/guild-wars-2s-code-of-creation-update-brings-visions-of-eternity-to-an-end-on-september-15/" target="_blank">Quelle</a></p>
+</div>
+
+<div class="ruhig">Ruhig, nichts Grosses: AfD, Weltraum, Wissenschaft/Forschung, Apple, Computer/Hardware, Apps, Lorch.</div>
 
 <script>
-(function() {
-  var stand = document.body.getAttribute('data-stand');
-  var standDate = new Date(stand);
-  var ageHours = (Date.now() - standDate.getTime()) / 3600000;
-  if (ageHours > 18) {
-    var warnung = document.createElement('div');
-    warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(warnung, document.body.firstChild);
-  }
+(function () {
+  try {
+    var stand = document.body.getAttribute('data-stand');
+    var standDate = new Date(stand);
+    var stunden = (Date.now() - standDate.getTime()) / 3600000;
+    if (stunden > 18) {
+      var warnung = document.getElementById('warnung');
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.style.display = 'block';
+    }
+  } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
