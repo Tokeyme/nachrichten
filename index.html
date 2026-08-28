@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -19,34 +22,39 @@
     margin-bottom: 4px;
   }
   .stand {
-    color: #666666;
-    font-size: 14px;
+    color: #777777;
+    font-size: 0.9em;
     margin-top: 0;
     margin-bottom: 28px;
   }
-  h2 {
-    font-size: 17px;
-    margin-bottom: 4px;
+  .thema {
+    margin-bottom: 20px;
   }
-  p {
-    margin-top: 0;
-    margin-bottom: 22px;
+  .thema h2 {
+    font-size: 1.05em;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
   }
   a {
-    color: #0b5fff;
+    color: #0060df;
   }
   .ruhig {
-    color: #666666;
-    font-size: 14px;
+    color: #777777;
+    font-size: 0.9em;
     margin-top: 32px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
   }
   .warnung {
-    background: #b00020;
+    background: #cc0000;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -57,50 +65,67 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #a0a0a0;
+      color: #999999;
+    }
+    .ruhig {
+      border-top: 1px solid #333333;
     }
   }
 </style>
 </head>
-<body data-stand="2026-08-28T08:08:20Z">
+<body data-stand="2026-08-28T18:06:36Z">
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 28.08.2026, 10:08 Uhr</p>
+<p class="stand">aktualisiert: 28.08.2026, 20:06 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Nach neuen russischen Angriffen nahe Kiew besuchten Estlands Präsident und Luxemburgs Premier die Ukraine; vier EU-Staaten wollen eingefrorene russische Vermögen für die Verteidigung nutzen. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Russland griff Kiew laut Berichten am 27. August erstmals mit einer aufgerüsteten Iskander-1000-Rakete an, während Angriffe auf Energieanlagen anhielten. <a href="https://www.globalsecurity.org/military/world/war/russo-ukraine-2026-08-27.htm" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Iran/USA</h2>
-<p>Iran hält die Straße von Hormuz trotz eines möglichen Vermittlungsabkommens mit Oman weiter für gesperrt, während die USA neue Sanktionen gegen Teheran ankündigen. <a href="https://www.aljazeera.com/news/liveblog/2026/8/26/iran-war-live-iran-says-hormuz-remains-closed-despite-oman-rout-deal" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Iran/USA</h2>
+  <p>Die USA verhängten neue Sanktionen gegen Iran, während Teheran laut eigenen Angaben die Straße von Hormus trotz eines Abkommens mit Oman weiter gesperrt hält. <a href="https://www.aljazeera.com/news/liveblog/2026/8/26/iran-war-live-iran-says-hormuz-remains-closed-despite-oman-rout-deal" target="_blank">Quelle</a></p>
+</div>
 
-<h2>AfD</h2>
-<p>Beobachter sehen die politische Brandmauer gegen die AfD zunehmend bröckeln, kurz vor der Landtagswahl in Sachsen-Anhalt am 6. September mit möglicher absoluter Mehrheit der Partei. <a href="https://foreignpolicy.com/2026/08/24/germany-afd-far-right-elections-saxony-anhalt-firewall/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>AfD</h2>
+  <p>Die AfD erreicht in Umfragen im Osten Deutschlands Rekordwerte, während vor den Landtagswahlen im September bundesweit Demonstrationen gegen die Partei stattfinden. <a href="https://www.handelsblatt.com/themen/afd" target="_blank">Quelle</a></p>
+</div>
 
-<h2>VfB Stuttgart</h2>
-<p>Der VfB Stuttgart startet die Bundesliga-Saison 2026/27 heute auswärts beim FC Bayern München, während Neuzugang Pejcinovic und die Verletzung von Kapitän Jaquez für Gesprächsstoff sorgen. <a href="https://bleacherreport.com/game/fc-bayern-munich-vs-vfb-stuttgart-2026-8-28-19-30" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>VfB Stuttgart</h2>
+  <p>Der VfB Stuttgart eröffnet die Bundesliga-Saison am Freitag, den 28. August, um 20:30 Uhr zu Hause gegen den FC Bayern München. <a href="https://www.vfb.de/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Apple</h2>
-<p>Apple hat für den 9. September ein Event unter dem Motto "Surprise and Shine" angekündigt, bei dem iPhone 18 Pro, ein faltbares iPhone und weitere Produkte erwartet werden. <a href="https://www.macrumors.com/2026/08/26/apple-iphone-event-2026/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Bitcoin</h2>
+  <p>Bitcoin stieg auf ein Dreimonatshoch von rund 80.000 Dollar (etwa 73.000 Euro), getrieben von Short-Eindeckungen und positiven regulatorischen Erwartungen in den USA. <a href="https://www.bloomberg.com/news/articles/2026-08-25/bitcoin-reaches-three-month-high-of-80-000-as-momentum-returns" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Bitcoin</h2>
-<p>Bitcoin stieg erstmals seit Mai über 80.000 US-Dollar (umgerechnet rund 69.000 Euro), begünstigt durch ETF-Zuflüsse und Eindeckungen nach wochenlanger Schwäche. <a href="https://www.bloomberg.com/news/articles/2026-08-25/bitcoin-reaches-three-month-high-of-80-000-as-momentum-returns" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Wissenschaft/Forschung</h2>
+  <p>Von der Petermann-Gletscherfront brach der größte arktische Tafeleisberg seit 2020 ab, während Forscher zugleich einen neuen Wärmerekord in den Weltmeeren meldeten. <a href="https://scinexx.de/" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: Guild Wars 2, Weltraum, Wissenschaft/Forschung, Kuenstliche Intelligenz, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
+<p class="ruhig">Ruhig, nichts Großes: Guild Wars 2, Weltraum, Künstliche Intelligenz, Computer/Hardware, Apple/Apps, Lorch.</p>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var jetzt = new Date();
-    var stundenAlt = (jetzt - standDate) / 1000 / 60 / 60;
-    if (stundenAlt > 18) {
+    var now = new Date();
+    var diffHours = (now - standDate) / (1000 * 60 * 60);
+    if (diffHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
