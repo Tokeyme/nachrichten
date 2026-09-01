@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
   body {
@@ -16,87 +16,87 @@
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: #777;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
+    color: #767676;
+    font-size: 0.85em;
+    margin: 0 0 24px 0;
   }
-  h2 {
-    font-size: 17px;
-    margin-bottom: 4px;
+  .thema {
+    margin: 0 0 4px 0;
+    font-weight: bold;
+    font-size: 1.02em;
   }
-  p {
-    margin-top: 0;
-    margin-bottom: 20px;
+  .thema + p {
+    margin: 0 0 20px 0;
   }
   a {
-    color: #0060df;
+    color: #1a56db;
   }
   .ruhig {
-    color: #777;
-    font-size: 14px;
-    margin-top: 32px;
+    color: #767676;
+    font-size: 0.9em;
+    margin-top: 28px;
   }
-  .warnung {
-    background: #d32f2f;
-    color: #fff;
+  #warnung {
+    display: none;
+    background: #c0392b;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 4px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
       color: #e6e6e6;
     }
+    .stand, .ruhig {
+      color: #a0a0a0;
+    }
     a {
       color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-08-31T18:06:09Z">
+<body data-stand="2026-09-01T08:08:16Z">
+<div id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 31.08.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 01.09.2026, 10:08 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Russland griff am 31. August erneut Kiew und Sumy mit Drohnen an, dabei starb laut Bürgermeister Klitschko ein zweijähriges Kind, mehrere Menschen wurden verletzt. <a href="https://www.ukrinform.de/rubric-ato" target="_blank">Quelle</a></p>
+<p class="thema">Ukraine/Russland</p>
+<p>Russland griff die Region Kiew erneut mit Raketen und Drohnen an, mehrere Menschen wurden verletzt, darunter Kinder. <a href="https://www.t-online.de/nachrichten/ukraine/id_101413502/ukraine-krieg-aktuell-putin-laesst-massive-angriffe-auf-kiew-fliegen.html" target="_blank">Quelle</a></p>
 
-<h2>Iran/USA</h2>
-<p>Der Konflikt zwischen den USA und Iran hält an, die Straße von Hormus bleibt gesperrt, die USA verhängten weitere Sanktionen gegen Teheran. <a href="https://www.aljazeera.com/news/liveblog/2026/8/26/iran-war-live-iran-says-hormuz-remains-closed-despite-oman-rout-deal" target="_blank">Quelle</a></p>
+<p class="thema">Iran/USA</p>
+<p>Der seit Ende Februar laufende Krieg der USA und Israels gegen Iran hat die USA laut Verteidigungsminister Hegseth bereits gut 37,5 Milliarden Dollar gekostet. <a href="https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html" target="_blank">Quelle</a></p>
 
-<h2>AfD</h2>
-<p>Die AfD erreicht in aktuellen bundesweiten Umfragen 28 Prozent und liegt in Ostdeutschland vor der CDU, kurz vor den Landtagswahlen in Sachsen-Anhalt und Mecklenburg-Vorpommern. <a href="https://dawum.de/AfD/" target="_blank">Quelle</a></p>
+<p class="thema">Guild Wars 2</p>
+<p>Das grosse Raid- und Ausruestungs-Update "Visions of Eternity" ist live, das naechste Update folgt bereits am 15. September. <a href="https://gw2.news/official" target="_blank">Quelle</a></p>
 
-<h2>VfB Stuttgart</h2>
-<p>Der VfB Stuttgart verlor zum Bundesliga-Saisonauftakt am 28. August deutlich mit 1:5 gegen Bayern München und startet damit schwach in die neue Saison. <a href="https://www.kicker.de/vfb-stuttgart/team-news" target="_blank">Quelle</a></p>
+<p class="thema">Wissenschaft/Forschung</p>
+<p>In Kenia entdeckte Fussspuren von Paranthropus boisei liefern neue Erkenntnisse ueber die Fortbewegung dieses Vormenschen. <a href="https://wissenschaft.de/" target="_blank">Quelle</a></p>
 
-<h2>Weltraum</h2>
-<p>Die NASA startete am 30. August ihr neues Nancy-Grace-Roman-Weltraumteleskop vom Kennedy Space Center, das künftig Dunkle Energie und weitere kosmische Rätsel erforschen soll. <a href="https://www.nasa.gov/2026-news-releases/" target="_blank">Quelle</a></p>
+<p class="thema">Bitcoin</p>
+<p>Der Bitcoin-Kurs stieg erstmals seit Mai wieder ueber 81.000 Dollar (rund 75.000 Euro), ein Plus von etwa 20 Prozent binnen einer Woche. <a href="https://www.wiwo.de/themen/bitcoin" target="_blank">Quelle</a></p>
 
-<h2>Bitcoin</h2>
-<p>Bitcoin fiel nach Aussagen von Fed-Gouverneur Warsh zu möglichen Zinserhöhungen um 3,3 Prozent auf 77.678 Dollar (rund 71.500 Euro), nachdem zuvor ein Drei-Monats-Hoch erreicht wurde. <a href="https://www.bloomberg.com/news/articles/2026-08-25/bitcoin-reaches-three-month-high-of-80-000-as-momentum-returns" target="_blank">Quelle</a></p>
+<p class="thema">Apple</p>
+<p>Apple hat sein Septemberevent fuer den 9. September angekuendigt, erwartet werden die iPhone-18-Reihe und ein erstes faltbares iPhone. <a href="https://appleinsider.com/articles/26/08/30/iphone-home-ipad-mini-apples-launches-for-september-and-october" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: Guild Wars 2, Wissenschaft/Forschung, KI, Computer/Hardware, Apps/Apple, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Weltraum, KI, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
 
 <script>
-(function() {
+(function () {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var now = new Date();
-  var diffHours = (now - standDate) / (1000 * 60 * 60);
-  if (diffHours > 18) {
-    var warn = document.createElement('div');
-    warn.className = 'warnung';
-    warn.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-    document.body.insertBefore(warn, document.body.firstChild);
+  var stunden = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
+  if (stunden > 18) {
+    var warnung = document.getElementById('warnung');
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    warnung.style.display = 'block';
   }
 })();
 </script>
