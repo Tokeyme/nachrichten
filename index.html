@@ -25,14 +25,15 @@
     margin-bottom: 28px;
   }
   h2 {
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
-  section {
+  p {
+    margin-top: 0;
     margin-bottom: 20px;
   }
   a {
-    color: #1a5fb4;
+    color: #0060df;
   }
   .ruhig {
     color: #666;
@@ -56,57 +57,44 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #aaa;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-06T08:07:19Z">
+<body data-stand="2026-09-06T18:07:23Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 06.09.2026, 10:07 Uhr</p>
+<p class="stand">aktualisiert: 06.09.2026, 20:07 Uhr</p>
 
-<section>
 <h2>Ukraine/Russland</h2>
-<p>US-Sondergesandte Witkoff und Kushner reisen am Wochenende zu Verhandlungen nach Moskau und Kiew, zuvor stoppte Putin für drei Tage die Luftangriffe auf Kiew. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
-</section>
+<p>Bei einem russischen Luftangriff auf die Region Kiew wurden mindestens 37 Menschen getötet, Präsident Selenskyj sieht Friedensgespräche derzeit skeptisch. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<section>
 <h2>Iran/USA</h2>
-<p>Der Krieg zwischen den USA und Iran hält an, laut Berichten erwägt Trump einen baldigen US-Angriff auf die iranische Anlage Pickaxe Mountain. <a href="https://www.aljazeera.com/news/liveblog/2026/9/4/iran-war-live-us-rules-out-iran-talks-until-ship-attacks-stop" target="_blank">Quelle</a></p>
-</section>
+<p>Die USA schließen neue Gespräche mit dem Iran aus, bis dessen Angriffe auf Schiffe im Golf enden, Präsident Trump droht mit weiteren Schlägen. <a href="https://www.aljazeera.com/news/liveblog/2026/9/4/iran-war-live-us-rules-out-iran-talks-until-ship-attacks-stop" target="_blank">Quelle</a></p>
 
-<section>
-<h2>AfD</h2>
-<p>In Sachsen-Anhalt wird heute ein neuer Landtag gewählt, Umfragen zufolge könnte die AfD dort erstmals stärkste Kraft und regierungsbeteiligt werden. <a href="https://www.zdfheute.de/thema/afd-224.html" target="_blank">Quelle</a></p>
-</section>
+<h2>Apple</h2>
+<p>Apple kündigt sein "Surprise and Shine"-Event für den 9. September an, erwartet werden iPhone 18 Pro, ein faltbares iPhone und neue Watch-Modelle. <a href="https://www.macrumors.com/2026/08/26/apple-iphone-event-2026/" target="_blank">Quelle</a></p>
 
-<section>
-<h2>Apple/Apps</h2>
-<p>Apple ersetzt im App Store die bisherige Core Technology Fee durch eine neue Core Technology Commission von 5 Prozent auf digitale Verkäufe außerhalb des Stores. <a href="https://developer.apple.com/app-store/whats-new/" target="_blank">Quelle</a></p>
-</section>
+<h2>Weltraum</h2>
+<p>Isar Aerospace ist mit der Rakete Spectrum als erstes Unternehmen von europäischem Boden aus in den Orbit gestartet. <a href="https://spaceflightnow.com/2026/09/" target="_blank">Quelle</a></p>
 
-<section>
+<h2>KI</h2>
+<p>Anthropic hat sein Modell Fable 5.1 am 1. September regulär veröffentlicht, zum gleichen Preis wie Fable 5, mit günstigeren Cache-Kosten. <a href="https://www.anthropic.com/news" target="_blank">Quelle</a></p>
+
 <h2>Guild Wars 2</h2>
-<p>Guild Wars 2 bekommt am 15. September mit "Code of Creation" das finale Update des Addons Visions of Eternity samt neuem Raid und Convergence. <a href="https://www.thatshaman.com/tools/countdown/" target="_blank">Quelle</a></p>
-</section>
+<p>Guild Wars 2 erhält am 15. September das letzte große Update der Erweiterung Visions of Eternity mit neuem Raid und Convergence-Karte. <a href="https://www.thatshaman.com/tools/countdown/" target="_blank">Quelle</a></p>
 
-<section>
-<h2>Computer/Hardware</h2>
-<p>Nvidia bietet die RTX-50-Founders-Edition-Grafikkarten auf der Messe PAX West wieder zum offiziellen Listenpreis an, zudem ist DLSS 5 für die Serie gestartet. <a href="https://www.tomshardware.com/archive/2026/09" target="_blank">Quelle</a></p>
-</section>
-
-<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Lorch (Württemberg)</p>
+<p class="ruhig">Ruhig, nichts Großes: AfD, VfB Stuttgart, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
 
 <script>
 (function() {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var now = new Date();
-  var diffHours = (now - standDate) / (1000 * 60 * 60);
-  if (diffHours > 18) {
+  var ageHours = (Date.now() - standDate.getTime()) / 3600000;
+  if (ageHours > 18) {
     var warnung = document.createElement('div');
     warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
     document.body.insertBefore(warnung, document.body.firstChild);
   }
 })();
