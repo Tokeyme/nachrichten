@@ -21,17 +21,18 @@
   .stand {
     color: #666;
     font-size: 14px;
+    margin-top: 0;
     margin-bottom: 28px;
   }
   h2 {
-    font-size: 16px;
-    margin: 22px 0 4px;
+    font-size: 17px;
+    margin-bottom: 4px;
   }
-  p {
-    margin: 0 0 4px;
+  section {
+    margin-bottom: 20px;
   }
   a {
-    color: #0060df;
+    color: #1a5fb4;
   }
   .ruhig {
     color: #666;
@@ -55,41 +56,57 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #aaa;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-05T18:06:40Z">
+<body data-stand="2026-09-06T08:07:19Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 05.09.2026, 20:06 Uhr</div>
+<p class="stand">aktualisiert: 06.09.2026, 10:07 Uhr</p>
 
-<h2>Ukraine / Russland</h2>
-<p>US-Sondergesandte Witkoff und Kushner reisten mit einem Friedensplan nach Moskau, Putin ordnete für die Dauer des Besuchs eine dreitägige Angriffspause auf Kiew an. <a href="https://www.kyivpost.com/thread/83805" target="_blank">Kyiv Post</a></p>
+<section>
+<h2>Ukraine/Russland</h2>
+<p>US-Sondergesandte Witkoff und Kushner reisen am Wochenende zu Verhandlungen nach Moskau und Kiew, zuvor stoppte Putin für drei Tage die Luftangriffe auf Kiew. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+</section>
 
-<h2>Iran / USA</h2>
-<p>Nach einer einmonatigen Pause griffen die USA erneut Ziele im Iran an, ein Treffer auf eine Hochzeitsfeier in Sirik tötete mehrere Menschen. <a href="https://www.aljazeera.com/news/liveblog/2026/9/1/iran-war-live-trump-vows-to-hit-iran-following-first-clash-in-a-month" target="_blank">Al Jazeera</a></p>
+<section>
+<h2>Iran/USA</h2>
+<p>Der Krieg zwischen den USA und Iran hält an, laut Berichten erwägt Trump einen baldigen US-Angriff auf die iranische Anlage Pickaxe Mountain. <a href="https://www.aljazeera.com/news/liveblog/2026/9/4/iran-war-live-us-rules-out-iran-talks-until-ship-attacks-stop" target="_blank">Quelle</a></p>
+</section>
 
+<section>
 <h2>AfD</h2>
-<p>Vor der Landtagswahl in Sachsen-Anhalt am 6. September liegt die AfD laut Umfragen bei über 40 Prozent und könnte erstmals seit 1945 eine Landesregierung stellen. <a href="https://www.npr.org/2026/09/04/nx-s1-5946404/germany-far-right-election" target="_blank">NPR</a></p>
+<p>In Sachsen-Anhalt wird heute ein neuer Landtag gewählt, Umfragen zufolge könnte die AfD dort erstmals stärkste Kraft und regierungsbeteiligt werden. <a href="https://www.zdfheute.de/thema/afd-224.html" target="_blank">Quelle</a></p>
+</section>
 
-<h2>VfB Stuttgart</h2>
-<p>Der VfB Stuttgart feierte nach der 1:5-Auftaktniederlage gegen Bayern seinen ersten Saison-Bundesligasieg mit einem 4:1 gegen den 1. FC Köln. <a href="https://www.sportschau.de/fussball/bundesliga/nach-dem-lattenschiessen-laesst-es-der-vfb-krachen,spielbericht-vfb-stuttgart-koeln-102.html" target="_blank">Sportschau</a></p>
+<section>
+<h2>Apple/Apps</h2>
+<p>Apple ersetzt im App Store die bisherige Core Technology Fee durch eine neue Core Technology Commission von 5 Prozent auf digitale Verkäufe außerhalb des Stores. <a href="https://developer.apple.com/app-store/whats-new/" target="_blank">Quelle</a></p>
+</section>
 
-<h2>Apple</h2>
-<p>Apple stellt auf seinem Event am 9. September die neue iPhone-Reihe vor, im Zentrum steht Gerüchten zufolge erstmals ein faltbares iPhone Ultra. <a href="https://www.macrumors.com/guide/apple-september-2026-what-to-expect/" target="_blank">MacRumors</a></p>
+<section>
+<h2>Guild Wars 2</h2>
+<p>Guild Wars 2 bekommt am 15. September mit "Code of Creation" das finale Update des Addons Visions of Eternity samt neuem Raid und Convergence. <a href="https://www.thatshaman.com/tools/countdown/" target="_blank">Quelle</a></p>
+</section>
 
-<div class="ruhig">Ruhig, nichts Großes: Guild Wars 2, Weltraum, Wissenschaft/Forschung, Künstliche Intelligenz, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</div>
+<section>
+<h2>Computer/Hardware</h2>
+<p>Nvidia bietet die RTX-50-Founders-Edition-Grafikkarten auf der Messe PAX West wieder zum offiziellen Listenpreis an, zudem ist DLSS 5 für die Serie gestartet. <a href="https://www.tomshardware.com/archive/2026/09" target="_blank">Quelle</a></p>
+</section>
+
+<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Lorch (Württemberg)</p>
 
 <script>
-(function () {
+(function() {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var stunden = (Date.now() - standDate.getTime()) / 1000 / 3600;
-  if (stunden > 18) {
+  var now = new Date();
+  var diffHours = (now - standDate) / (1000 * 60 * 60);
+  if (diffHours > 18) {
     var warnung = document.createElement('div');
     warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
     document.body.insertBefore(warnung, document.body.firstChild);
   }
 })();
