@@ -5,66 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666666;
+    --link: #0056b3;
+    --warn-bg: #b00020;
+    --warn-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #e6e6e6;
+      --muted: #999999;
+      --link: #6aa9ff;
+      --warn-bg: #7a0016;
+      --warn-fg: #ffffff;
+    }
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
-    background: #ffffff;
-    color: #111111;
+    background: var(--bg);
+    color: var(--fg);
   }
-  h1 { margin-bottom: 4px; }
-  .stand { color: #666666; font-size: 14px; margin-bottom: 24px; }
-  h2 { font-size: 16px; margin: 20px 0 4px; }
-  p { margin: 0 0 4px; }
-  a { color: #0b57d0; }
-  .ruhig { color: #666666; font-size: 14px; margin-top: 28px; }
-  .warnung { background: #c62828; color: #ffffff; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-weight: bold; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e6e6e6; }
-    .stand, .ruhig { color: #999999; }
-    a { color: #6aa9ff; }
+  h1 {
+    margin: 0 0 4px 0;
+  }
+  .stand {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 22px 0 4px 0;
+  }
+  p {
+    margin: 0 0 4px 0;
+  }
+  a {
+    color: var(--link);
+  }
+  .ruhig {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .warnung {
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
   }
 </style>
 </head>
-<body data-stand="2026-09-09T08:07:56Z">
+<body data-stand="2026-09-09T18:06:14Z">
+
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 09.09.2026, 10:07 Uhr</div>
+<div class="stand">aktualisiert: 09.09.2026, 20:06 Uhr</div>
 
 <h2>Ukraine/Russland</h2>
-<p>An der ukrainischen Front kam es am 9. September zu ueber 260 Gefechten mit Schwerpunkt Pokrowsk, waehrend Russland weiter Staedte und Infrastruktur beschiesst. <a href="https://ua.news/en/war-vs-rf/karta-boiovikh-dii-v-ukrayini-na-9-veresnia-2026-roku" target="_blank">Quelle</a></p>
+<p>Bei einem russischen Luftangriff auf die Region Kiew wurden nach ukrainischen Angaben mindestens 37 Menschen getötet und 42 verletzt. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
 <h2>Iran/USA</h2>
-<p>Die USA zerstoerten nach Angaben des Zentralkommandos fuenf Oeltanker der iranischen Revolutionsgarden im Golf von Oman, nachdem ein US-Kriegsschiff mit Raketen angegriffen worden war. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
+<p>Die USA griffen nach eigenen Angaben fünf iranische Öltanker an und versenkten einen, Aussenminister Rubio warnte Teheran vor weiterer Eskalation. <a href="https://www.t-online.de/nachrichten/ausland/usa/id_101426686/nahost-usa-zerstoeren-fuenf-iranische-oeltanker-rubio-warnt-teheran.html" target="_blank">Quelle</a></p>
 
 <h2>AfD</h2>
-<p>Nach dem AfD-Wahlsieg in Sachsen-Anhalt trafen sich Partei- und CDU-Spitzen im Bundestag, waehrend NRW-Ministerpraesident Wuest eine Bund-Laender-Arbeitsgruppe zur AfD fordert. <a href="https://www.epochtimes.de/kurznachrichten/08-09-2026-afd-in-sachsen-anhalt-will-zu-gespraechen-einladen-wuest-fordert-bund-laender-arbeitsgruppe-zur-pruefung-der-afd-a5603404.html" target="_blank">Quelle</a></p>
+<p>Die AfD kam laut einem CNN-Bericht bei einer Regionalwahl in Sachsen erstmals auf Platz eins, mit einem Programm, das unter anderem Massenabschiebungen vorsieht. <a href="https://www.cnn.com/2026/09/07/europe/afd-first-place-saxony-germany-election-intl" target="_blank">Quelle</a></p>
 
 <h2>VfB Stuttgart</h2>
-<p>VfB Stuttgart bestritt sein Champions-League-Auftaktspiel gegen den norwegischen Club Viking FK, es folgt am 12. September die Bundesliga-Partie gegen Hoffenheim. <a href="https://www.fubo.tv/news/soccer/vfb-stuttgart-vs-viking-fk-where-to-watch-stream-info-tv-channel-and-live-updates-september-09-2026/" target="_blank">Quelle</a></p>
+<p>Der VfB Stuttgart startet heute mit einem Heimspiel gegen den norwegischen Meister Viking Stavanger in die neue Champions-League-Saison. <a href="https://www.vfb.de/en/1893/latest/news/" target="_blank">Quelle</a></p>
 
 <h2>Guild Wars 2</h2>
-<p>Guild Wars 2 bekommt am 15. September mit "Code of Creation" das finale grosse Update von Visions of Eternity samt neuer Zone, Raid und Fraktal. <a href="https://massivelyop.com/2026/09/08/guild-wars-2s-code-of-creation-adds-new-zone-new-fractal-and-new-raid-on-september-15/" target="_blank">Quelle</a></p>
+<p>Guild Wars 2 bringt am 15. September mit dem Update Code of Creation eine neue Zone, einen Raid und ein Fraktal zum Abschluss der laufenden Story. <a href="https://massivelyop.com/2026/09/08/guild-wars-2s-code-of-creation-adds-new-zone-new-fractal-and-new-raid-on-september-15/" target="_blank">Quelle</a></p>
 
-<h2>Apple</h2>
-<p>Apple praesentierte auf seinem Event iPhone 18 Pro, iPhone 18 Pro Max und ein faltbares iPhone mit neuem A20-Pro-Chip sowie neue Watches und AirPods. <a href="https://9to5mac.com/2026/09/03/apple-will-launch-six-major-new-products-next-week-heres-whats-coming/" target="_blank">Quelle</a></p>
+<h2>Weltraum</h2>
+<p>Die NASA startet im September das Nancy-Grace-Roman-Weltraumteleskop per Falcon-Heavy-Rakete zum Lagrange-Punkt L2, um Dunkle Energie und Exoplaneten zu erforschen. <a href="https://www.dlr.de/de/forschung-und-transfer/raumfahrt/nachrichten" target="_blank">Quelle</a></p>
 
-<div class="ruhig">Ruhig, nichts Grosses: Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</div>
+<div class="ruhig">Ruhig, nichts Grosses: Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg)</div>
 
 <script>
 (function () {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var stundenAlt = (Date.now() - standDate.getTime()) / 3600000;
-  if (stundenAlt > 18) {
-    var warnung = document.createElement('div');
-    warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-    document.body.insertBefore(warnung, document.body.firstChild);
+  var stunden = (Date.now() - standDate.getTime()) / 3600000;
+  if (stunden > 18) {
+    var zeile = document.createElement('div');
+    zeile.className = 'warnung';
+    zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    document.body.insertBefore(zeile, document.body.firstChild);
   }
 })();
 </script>
+
 </body>
 </html>
