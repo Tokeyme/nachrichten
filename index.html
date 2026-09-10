@@ -5,102 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #666666;
-    --link: #0056b3;
-    --warn-bg: #b00020;
-    --warn-fg: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --fg: #e6e6e6;
-      --muted: #999999;
-      --link: #6aa9ff;
-      --warn-bg: #7a0016;
-      --warn-fg: #ffffff;
-    }
-  }
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: var(--bg);
-    color: var(--fg);
+    padding: 24px 18px;
+    background: #ffffff;
+    color: #111111;
   }
   h1 {
     margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 28px;
+    color: #666666;
+    font-size: 0.85em;
+    margin-bottom: 24px;
   }
-  h2 {
-    font-size: 16px;
-    margin: 22px 0 4px 0;
-  }
-  p {
+  .thema {
     margin: 0 0 4px 0;
+    font-weight: bold;
+    font-size: 1.05em;
+  }
+  p.meldung {
+    margin: 0 0 20px 0;
   }
   a {
-    color: var(--link);
+    color: #0056b3;
   }
   .ruhig {
-    margin-top: 28px;
-    color: var(--muted);
-    font-size: 14px;
+    color: #777777;
+    font-size: 0.9em;
+    margin-top: 24px;
   }
   .warnung {
-    background: var(--warn-bg);
-    color: var(--warn-fg);
+    background: #c0392b;
+    color: #ffffff;
     padding: 10px 14px;
-    border-radius: 6px;
+    border-radius: 4px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 0.95em;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .stand {
+      color: #a0a0a0;
+    }
+    .ruhig {
+      color: #a0a0a0;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-09-10T08:06:18Z">
-
+<body data-stand="2026-09-10T18:06:30Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 10.09.2026, 10:06 Uhr</div>
+<div class="stand">aktualisiert: 10.09.2026, 20:06 Uhr</div>
 
-<h2>Iran/USA</h2>
-<p>Die USA griffen mehrere iranische Öltanker im Golf an, Teheran feuerte im Gegenzug eine Rakete auf US-Kriegsschiffe, der Ölpreis stieg auf ein Siebenwochenhoch. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
+<div class="thema">Ukraine/Russland</div>
+<p class="meldung">Russland und die Ukraine drohten einander eskalierend, während Drohnenangriffe auf Kyjiw, Odessa und Dnipro mehrere Tote und Verletzte forderten. <a href="https://www.aljazeera.com/news/2026/9/2/putin-and-zelenskyy-issue-threats-as-strikes-rock-ukraine-russia" target="_blank">Quelle</a></p>
 
-<h2>AfD</h2>
-<p>Die AfD gewann die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent, verfehlte die absolute Mehrheit knapp und muss nun einen Koalitionspartner suchen. <a href="https://www.lto.de/recht/presseschau/p/2026-09-07-landtagswahl-sachsen-anhalt-afd-videoverhandlung-bgh-igh-anhoerung" target="_blank">Quelle</a></p>
+<div class="thema">Iran/USA</div>
+<p class="meldung">Die USA schalteten nach IRGC-Raketenangriffen auf einen Flugzeugträger zwei iranische Öltanker dauerhaft aus, der Tankerkrieg in der Straße von Hormus eskaliert weiter. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
 
-<h2>Apple</h2>
-<p>Apple stellte beim September-Event das iPhone 18 Pro, das faltbare iPhone Duo für rund 2000 Dollar sowie neue Apple Watch und AirPods 5 vor. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="thema">AfD</div>
+<p class="meldung">Die AfD hat die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent gewonnen, verfehlt knapp die absolute Mehrheit; ein neues Verbotsverfahren wird diskutiert. <a href="https://www.lto.de/recht/presseschau/p/2026-09-07-landtagswahl-sachsen-anhalt-afd-videoverhandlung-bgh-igh-anhoerung" target="_blank">Quelle</a></p>
 
-<h2>Ukraine/Russland</h2>
-<p>US-Vermittler Witkoff und Kushner pendelten ergebnislos zwischen Moskau und Kiew, während Großbritannien ein zusätzliches Luftabwehrpaket über 100 Millionen Pfund für die Ukraine ankündigte. <a href="https://www.forbes.com/sites/katyasoldak/2026/09/09/wednesday-september-9-russias-war-on-ukraine-news-and-information-from-ukraine/" target="_blank">Quelle</a></p>
+<div class="thema">Apple</div>
+<p class="meldung">Apple stellte beim September-Event das faltbare iPhone Duo, das iPhone 18 Pro, AirPods 5 und die Watch Ultra 4 vor, das Duo startet ab rund 2000 Dollar. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
 
-<h2>VfB Stuttgart</h2>
-<p>VfB Stuttgart startete mit einem 3:1-Sieg gegen Viking Stavanger erfolgreich in die Champions-League-Saison, nächste Bundesliga-Gegner sind Hoffenheim und Dortmund. <a href="https://bleacherreport.com/game/vfb-stuttgart-vs--2026-9-9-17-45" target="_blank">Quelle</a></p>
+<div class="thema">KI</div>
+<p class="meldung">OpenAI stellte mit GPT-6 Astra ein neues Spitzenmodell vor und erklärte, das Zeitalter der allgemeinen künstlichen Intelligenz (AGI) habe begonnen. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
 
-<div class="ruhig">Ruhig, nichts Großes: Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg)</div>
+<div class="thema">VfB Stuttgart</div>
+<p class="meldung">VfB Stuttgart ist mit einem 3:1-Sieg gegen Viking FK und einem Dreierpack von Ermedin Demirovic erfolgreich in die Champions-League-Saison gestartet. <a href="https://bleacherreport.com/game/vfb-stuttgart-vs--2026-9-9-17-45" target="_blank">Quelle</a></p>
+
+<div class="ruhig">Ruhig, nichts Grosses: Guild Wars 2 (Erweiterungsfinale ab 15.9.), Weltraum (Raumfahrtgipfel in Paris), Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</div>
 
 <script>
 (function () {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var stunden = (Date.now() - standDate.getTime()) / 3600000;
-  if (stunden > 18) {
-    var zeile = document.createElement('div');
-    zeile.className = 'warnung';
-    zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(zeile, document.body.firstChild);
+  var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+  if (ageHours > 18) {
+    var warnung = document.createElement('div');
+    warnung.className = 'warnung';
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    document.body.insertBefore(warnung, document.body.firstChild);
   }
 })();
 </script>
-
 </body>
 </html>
