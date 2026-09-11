@@ -16,37 +16,40 @@
     color: #111111;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
     color: #666666;
-    font-size: 0.85em;
-    margin-bottom: 24px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
   .thema {
-    margin: 0 0 4px 0;
-    font-weight: bold;
-    font-size: 1.05em;
+    margin-bottom: 22px;
   }
-  p.meldung {
-    margin: 0 0 20px 0;
+  .thema h2 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
   }
   a {
-    color: #0056b3;
+    color: #0055aa;
   }
   .ruhig {
-    color: #777777;
-    font-size: 0.9em;
-    margin-top: 24px;
+    color: #666666;
+    font-size: 14px;
+    margin-top: 32px;
   }
-  .warnung {
-    background: #c0392b;
+  #warnung {
+    display: none;
+    background: #cc0000;
     color: #ffffff;
     padding: 10px 14px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 0.95em;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -56,49 +59,58 @@
     a {
       color: #6aa9ff;
     }
-    .stand {
-      color: #a0a0a0;
-    }
-    .ruhig {
+    .stand, .ruhig {
       color: #a0a0a0;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-10T18:06:30Z">
+<body data-stand="2026-09-11T08:07:21Z">
+<div id="warnung"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 10.09.2026, 20:06 Uhr</div>
+<p class="stand">aktualisiert: 11.09.2026, 10:07 Uhr</p>
 
-<div class="thema">Ukraine/Russland</div>
-<p class="meldung">Russland und die Ukraine drohten einander eskalierend, während Drohnenangriffe auf Kyjiw, Odessa und Dnipro mehrere Tote und Verletzte forderten. <a href="https://www.aljazeera.com/news/2026/9/2/putin-and-zelenskyy-issue-threats-as-strikes-rock-ukraine-russia" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Ukraine/Russland</h2>
+<p>Kremlchef Putin kündigte eine dreitägige Waffenruhe für Kiew an, während die US-Unterhändler Kushner und Witkoff zu Gesprächen nach Moskau reisten. <a href="https://www.nzz.ch/international/krieg-in-der-ukraine-putin-kuendigt-dreitaegige-waffenruhe-fuer-kiew-an-us-unterhaendler-kushner-und-witkoff-zu-besuch-in-moskau-ld.10021245" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">Iran/USA</div>
-<p class="meldung">Die USA schalteten nach IRGC-Raketenangriffen auf einen Flugzeugträger zwei iranische Öltanker dauerhaft aus, der Tankerkrieg in der Straße von Hormus eskaliert weiter. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Iran/USA</h2>
+<p>Im eskalierenden Tankerkrieg legte das US-Militär mehrere iranische Öltanker lahm, nachdem die iranischen Revolutionsgarden Raketen auf einen US-Flugzeugträger abgefeuert hatten. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">AfD</div>
-<p class="meldung">Die AfD hat die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent gewonnen, verfehlt knapp die absolute Mehrheit; ein neues Verbotsverfahren wird diskutiert. <a href="https://www.lto.de/recht/presseschau/p/2026-09-07-landtagswahl-sachsen-anhalt-afd-videoverhandlung-bgh-igh-anhoerung" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>AfD</h2>
+<p>Die AfD gewann die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent klar, verfehlte aber die absolute Mehrheit zur Regierungsbildung. <a href="https://www.aljazeera.com/news/2026/9/6/far-right-afd-wins-vote-in-germanys-saxony-anhalt-state-exit-polls" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">Apple</div>
-<p class="meldung">Apple stellte beim September-Event das faltbare iPhone Duo, das iPhone 18 Pro, AirPods 5 und die Watch Ultra 4 vor, das Duo startet ab rund 2000 Dollar. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Apple</h2>
+<p>Apple stellte bei seinem Herbst-Event das faltbare iPhone Duo für rund 2000 Dollar sowie das neue iPhone 18 Pro und Pro Max vor. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">KI</div>
-<p class="meldung">OpenAI stellte mit GPT-6 Astra ein neues Spitzenmodell vor und erklärte, das Zeitalter der allgemeinen künstlichen Intelligenz (AGI) habe begonnen. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>KI</h2>
+<p>OpenAI stellte das neue Modell GPT-6 Astra vor und erklärte damit nach eigener Darstellung den Beginn der allgemeinen künstlichen Intelligenz. <a href="https://digitaleprofis.de/die-ki-news-der-woche-vom-10-09-2026/" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">VfB Stuttgart</div>
-<p class="meldung">VfB Stuttgart ist mit einem 3:1-Sieg gegen Viking FK und einem Dreierpack von Ermedin Demirovic erfolgreich in die Champions-League-Saison gestartet. <a href="https://bleacherreport.com/game/vfb-stuttgart-vs--2026-9-9-17-45" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>VfB Stuttgart</h2>
+<p>Der VfB Stuttgart startete dank eines Hattricks von Ermedin Demirovic mit einem 3:1-Sieg gegen Viking FK in die Champions-League-Saison. <a href="https://bleacherreport.com/game/vfb-stuttgart-vs--2026-9-9-17-45" target="_blank">Quelle</a></p>
+</div>
 
-<div class="ruhig">Ruhig, nichts Grosses: Guild Wars 2 (Erweiterungsfinale ab 15.9.), Weltraum (Raumfahrtgipfel in Paris), Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</div>
+<p class="ruhig">Ruhig, nichts Grosses: Weltraum, Wissenschaft/Forschung, Guild Wars 2, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
 
 <script>
 (function () {
   var stand = document.body.getAttribute('data-stand');
   var standDate = new Date(stand);
-  var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-  if (ageHours > 18) {
-    var warnung = document.createElement('div');
-    warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(warnung, document.body.firstChild);
+  var stundenAlt = (Date.now() - standDate.getTime()) / 1000 / 3600;
+  if (stundenAlt > 18) {
+    var warnung = document.getElementById('warnung');
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    warnung.style.display = 'block';
   }
 })();
 </script>
