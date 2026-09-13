@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
   body {
@@ -16,37 +16,39 @@
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
+    color: #777;
+    font-size: 0.85em;
+    margin: 0 0 28px 0;
   }
   .thema {
-    font-weight: bold;
-    margin-bottom: 4px;
+    margin: 0 0 20px 0;
   }
-  p {
-    margin-top: 0;
-    margin-bottom: 24px;
+  .thema h2 {
+    font-size: 1em;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
   }
   a {
-    color: #0060df;
+    color: #1a56db;
   }
   .ruhig {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 8px;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 32px;
   }
   .warnung {
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -57,34 +59,47 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-12T18:06:30Z">
+<body data-stand="2026-09-13T08:07:02Z">
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 12.09.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 13.09.2026, 10:07 Uhr</p>
 
-<div class="thema">Ukraine/Russland</div>
-<p>Ein russischer Luftangriff auf die Region Kiew tötete in der Nacht zum 12. September mindestens 37 Menschen, während ukrainische Drohnen russische Kriegsschiffe im Hafen Noworossijsk beschädigten. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Putin warnte bei einem Indienbesuch die Europäer vor der Entsendung von Soldaten in die Ukraine und sprach von einem Krieg gegen Russland. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">Iran/USA</div>
-<p>Das US-Kommando CENTCOM griff am 5. September iranische Öltanker im Golf von Oman an, während die Kämpfe zwischen den USA und Iran trotz laufender Verhandlungen andauern. <a href="https://abcnews.com/International/live-updates/iran-live-updates-centcom-targeted-iranian-forces-posed/?id=136080582" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Iran/USA</h2>
+  <p>Der seit Ende Februar andauernde Krieg der USA und Israels gegen den Iran fordert laut iranischen Angaben inzwischen über 3500 Tote und mehr als 27000 Verletzte. <a href="https://www.aljazeera.com/news/liveblog/2026/9/4/iran-war-live-us-rules-out-iran-talks-until-ship-attacks-stop" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">AfD</div>
-<p>Die AfD gewann die Landtagswahl in Sachsen-Anhalt deutlich, lud alle Parteien zu Sondierungsgesprächen ein und löste damit erneut eine Debatte über ein Parteiverbotsverfahren aus. <a href="https://www.news.de/thema/afd/1/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>AfD</h2>
+  <p>Die AfD gewann die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent deutlich, verfehlte damit aber knapp die absolute Mehrheit im Landtag. <a href="https://www.lto.de/recht/presseschau/p/2026-09-07-landtagswahl-sachsen-anhalt-afd-videoverhandlung-bgh-igh-anhoerung" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">Apple</div>
-<p>Apple startete am 12. September die Vorbestellungen für iPhone 18 Pro und Pro Max, die am 18. September in den Handel kommen. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Apple</h2>
+  <p>Apple hat die Vorbestellungen für iPhone 18 Pro und Pro Max gestartet, das neue Betriebssystem iOS 27 erscheint am 14. September. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">KI</div>
-<p>OpenAI stellte das neue Modell GPT-6 Astra vor und erklärte, die Ära der allgemeinen künstlichen Intelligenz sei nun offiziell angebrochen. <a href="https://aitoolly.com/de/ai-news/2026-09-05" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>KI</h2>
+  <p>OpenAI stellte sein neues Modell GPT-6 Astra vor und erklärte den Beginn der Ära der allgemeinen künstlichen Intelligenz, während Mistral drei Milliarden Euro einwarb. <a href="https://digitaleprofis.de/die-ki-news-der-woche-vom-10-09-2026/" target="_blank">Quelle</a></p>
+</div>
 
-<div class="thema">Weltraum</div>
-<p>Die ESA bereitet den Start ihres Klimasatelliten FLEX für den 15. September vor, der weltweit die Photosynthese von Pflanzen aus dem All vermessen soll. <a href="https://starlust.org/space-weekly-recap-september-511-2026-key-stories-you-may-have-missed/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Guild Wars 2</h2>
+  <p>Guild Wars 2 veröffentlicht am 15. September das große Update Code of Creation mit neuer Karte, Raid und dem Abschluss der Visions-of-Eternity-Story. <a href="https://www.mmorpg.com/news/guild-wars-2-details-next-weeks-code-of-creation-update-and-shares-new-fall-roadmap-2000138880" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg)</p>
 
 <script>
 (function() {
@@ -100,5 +115,6 @@
   }
 })();
 </script>
+
 </body>
 </html>
