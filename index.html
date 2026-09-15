@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -19,34 +22,32 @@
     margin-bottom: 4px;
   }
   .stand {
-    color: #767676;
-    font-size: 0.9em;
-    margin-top: 0;
+    color: #666666;
+    font-size: 14px;
     margin-bottom: 28px;
   }
-  h2 {
-    font-size: 1em;
-    margin-bottom: 4px;
+  .thema {
+    margin: 0 0 4px 0;
+    font-weight: bold;
   }
-  p {
-    margin-top: 0;
-    margin-bottom: 24px;
+  .eintrag {
+    margin: 0 0 22px 0;
   }
   a {
     color: #0060df;
   }
   .ruhig {
-    color: #767676;
-    font-size: 0.9em;
+    color: #666666;
+    font-size: 14px;
     margin-top: 32px;
   }
   .warnung {
-    background: #c0392b;
+    background: #b00020;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -62,42 +63,55 @@
   }
 </style>
 </head>
-<body data-stand="2026-09-15T08:06:47Z">
+<body data-stand="2026-09-15T18:05:36Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 15.09.2026, 10:06 Uhr</p>
+<div class="stand">aktualisiert: 15.09.2026, 20:05 Uhr</div>
 
-<h2>Ukraine/Russland</h2>
-<p>Nach Trumps überraschendem Vorschlag einer Feuerpause bei Angriffen auf Energieanlagen zeigt sich die Ukraine offen, sofern Russland seine Angriffe auf zivile Infrastruktur einstellt. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <p class="thema">Ukraine/Russland</p>
+  <p>Russland griff die Stadt Pryluky mit Drohnen an, dabei starben nach ukrainischen Angaben mehrere Menschen, waehrend Kiew zwei russische Oelraffinerien traf. <a href="https://www.forbes.com/sites/katyasoldak/2026/09/14/monday-september-14-russias-war-on-ukraine-news-and-information-from-ukraine/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Iran/USA</h2>
-<p>Der seit Ende Februar andauernde US-israelische Krieg gegen Iran hält an, zuletzt griffen US-Kräfte Anfang September einen Telekommunikationsmast im iranischen Minab an. <a href="https://www.aljazeera.com/news/liveblog/2026/9/4/iran-war-live-us-rules-out-iran-talks-until-ship-attacks-stop" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <p class="thema">Iran/USA</p>
+  <p>Die USA und Iran liefern sich weiter einen Tankerkrieg am Golf, Washington traf mehrere iranische Tanker, Teheran griff Schiffe und US-Stuetzpunkte an. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Apple</h2>
-<p>Apple hat beim Event am 9. September das faltbare iPhone Duo sowie das iPhone 18 Pro vorgestellt, Marktstart ist am 18. September. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <p class="thema">AfD</p>
+  <p>Die AfD hat die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent klar gewonnen, verfehlte aber die absolute Mehrheit im Landtag. <a href="https://www.cbsnews.com/news/afd-german-election-saxony-anhalt/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Guild Wars 2</h2>
-<p>ArenaNet veröffentlicht heute das große Finale von Visions of Eternity mit neuer Karte, Raid und Fraktal, das den bisherigen Story-Bogen von Guild Wars 2 abschließt. <a href="https://mmos.com/news/mmorpg-news/guild-wars-2-update" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <p class="thema">Kuenstliche Intelligenz</p>
+  <p>OpenAI hat mit GPT-6 Astra ein neues KI-Modell gestartet, waehrend der KI-Boom die Chippreise und damit Smartphones, Notebooks und Konsolen verteuert. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>KI</h2>
-<p>Das französische KI-Unternehmen Mistral hat eine Finanzierungsrunde über drei Milliarden Euro abgeschlossen und wird damit mit mehr als 21 Milliarden Euro bewertet. <a href="https://digitaleprofis.de/die-ki-news-der-woche-vom-10-09-2026/" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <p class="thema">Apple/Apps</p>
+  <p>Apple ersetzt die Core Technology Fee durch eine Core Technology Commission und verlangt kuenftig 5 Prozent Provision auf digitale Verkaeufe ausserhalb des App Store. <a href="https://www.apple.com/newsroom/2026/08/apple-announces-changes-for-apps-in-the-european-union/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Bitcoin</h2>
-<p>Bitcoin ist im September auf rund 79.000 US-Dollar (etwa 73.000 Euro) gestiegen, getrieben von starken Zuflüssen in Spot-Bitcoin-ETFs vor der Fed-Sitzung am 16. September. <a href="https://coinstats.app/ai/a/latest-news-for-bitcoin" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <p class="thema">Guild Wars 2</p>
+  <p>Guild Wars 2 veroeffentlicht heute mit "Code of Creation" den Abschluss von Visions of Eternity samt neuer Karte, Raid und Fraktal. <a href="https://massivelyop.com/2026/08/11/guild-wars-2s-code-of-creation-update-brings-visions-of-eternity-to-an-end-on-september-15/" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Lorch.</p>
 
 <script>
-(function() {
-  var stand = document.body.getAttribute('data-stand');
-  var standDate = new Date(stand);
-  var now = new Date();
-  var diffHours = (now - standDate) / (1000 * 60 * 60);
-  if (diffHours > 18) {
-    var warnung = document.createElement('div');
-    warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(warnung, document.body.firstChild);
-  }
+(function () {
+  try {
+    var stand = document.body.getAttribute('data-stand');
+    var standDate = new Date(stand);
+    var stunden = (Date.now() - standDate.getTime()) / 1000 / 3600;
+    if (stunden > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
+    }
+  } catch (e) {}
 })();
 </script>
 </body>
