@@ -26,12 +26,13 @@
     font-size: 14px;
     margin-bottom: 28px;
   }
-  .thema {
-    margin: 0 0 4px 0;
+  h2 {
+    font-size: 17px;
     font-weight: bold;
+    margin: 22px 0 4px;
   }
-  .eintrag {
-    margin: 0 0 22px 0;
+  p {
+    margin: 0 0 4px;
   }
   a {
     color: #0060df;
@@ -42,12 +43,13 @@
     margin-top: 32px;
   }
   .warnung {
-    background: #b00020;
+    background: #c62828;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
     font-size: 14px;
+    display: none;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -58,58 +60,46 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #a0a0a0;
+      color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-16T08:06:38Z">
+<body data-stand="2026-09-16T18:06:16Z">
+<div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 16.09.2026, 10:06 Uhr</div>
+<div class="stand">aktualisiert: 16.09.2026, 20:06 Uhr</div>
 
-<div class="eintrag">
-  <p class="thema">Ukraine/Russland</p>
-  <p>Nordkoreas Machthaber Kim Jong Un sicherte Russland weitere Unterstützung im Krieg gegen die Ukraine zu, während ukrainische Drohnen ein russisches Radarsystem hinter der Front trafen. <a href="https://www.kyivpost.com/thread/84517" target="_blank">Quelle</a></p>
-</div>
+<h2>Iran / USA</h2>
+<p>Nach monatelangem Tanker-Krieg im Golf sagte US-Präsident Trump, Verhandlungen mit dem Iran seien möglich, ein Kriegsende komme aber wohl erst nach der US-Wahl. <a href="https://www.aljazeera.com/news/liveblog/2026/9/9/iran-war-live-us-hits-iranian-tankers-irgc-attacks-us-base-in-jordan" target="_blank">Quelle</a></p>
 
-<div class="eintrag">
-  <p class="thema">Iran/USA</p>
-  <p>Im andauernden Tankerkrieg griffen US-Streitkräfte mehrere iranische Öltanker in der Straße von Hormus an, während Teheran wiederum auf US-nahe Schiffe schoss. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
-</div>
+<h2>Ukraine / Russland</h2>
+<p>Russland setzt seine Drohnenangriffe auf ukrainische Städte fort, während Deutschland zusätzliche Mittel für die Sicherheit ukrainischer Atomkraftwerke zugesagt hat. <a href="https://www.kyivindependent.com/" target="_blank">Quelle</a></p>
 
-<div class="eintrag">
-  <p class="thema">AfD</p>
-  <p>Die AfD hat die Landtagswahl in Sachsen-Anhalt klar gewonnen, woraufhin Bundeskanzler Merz öffentlich einen Bundeszwang gegen das Land ins Gespräch brachte. <a href="https://en.wikipedia.org/wiki/Ulrich_Siegmund" target="_blank">Quelle</a></p>
-</div>
+<h2>Bitcoin</h2>
+<p>Der US-Senat hat den CLARITY Act zur Kryptoregulierung nicht verabschiedet, was laut Berichten zu deutlichen Kursverlusten am Bitcoin-Markt geführt habe. <a href="https://news.bitcoin.com/" target="_blank">Quelle</a></p>
 
-<div class="eintrag">
-  <p class="thema">VfB Stuttgart</p>
-  <p>Der VfB Stuttgart startete mit einem 3:1-Erfolg gegen Viking Stavanger erfolgreich in die neue Champions-League-Saison. <a href="https://www.vfb.de/en/1893/latest/news/" target="_blank">Quelle</a></p>
-</div>
+<h2>Künstliche Intelligenz</h2>
+<p>OpenAI, Anthropic und Google DeepMind haben bestätigt, seit Wochen über eine gemeinsame Selbstregulierung zur KI-Sicherheit zu verhandeln, auch um staatlichen Vorgaben zuvorzukommen. <a href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" target="_blank">Quelle</a></p>
 
-<div class="eintrag">
-  <p class="thema">Guild Wars 2</p>
-  <p>Guild Wars 2 veröffentlichte am 15. September das große Update, das mit dem Showdown gegen Vloxx die Erweiterung Visions of Eternity abschließt. <a href="https://wiki.guildwars2.com/wiki/Game_updates/2026-09-15" target="_blank">Quelle</a></p>
-</div>
+<h2>Apple</h2>
+<p>Apple hat auf seinem September-Event das faltbare iPhone Duo sowie das iPhone 18 Pro vorgestellt, die Vorbestellungen für das iPhone Duo starten am 16. Oktober. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
 
-<div class="eintrag">
-  <p class="thema">Apple/Apps</p>
-  <p>Apple präsentierte auf seinem September-Event das iPhone 18 Pro und ersetzt im App Store künftig alte Gebühren durch eine 5-Prozent-Provision für Entwickler. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
-</div>
+<h2>Weltraum</h2>
+<p>Die ESA hat mit einer Vega-C-Rakete die Satelliten FLEX und Sentinel-3C erfolgreich ins All gebracht, um Vegetation und Ozeane besser zu beobachten. <a href="https://www.esa.int/Newsroom" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: Weltraum, Wissenschaft/Forschung, Künstliche Intelligenz, Bitcoin, Computer/Hardware, Lorch.</p>
+<div class="ruhig">Ruhig, nichts Großes: AfD, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch (Württemberg).</div>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var stunden = (Date.now() - standDate.getTime()) / 1000 / 3600;
+    var stunden = (Date.now() - standDate.getTime()) / 3600000;
     if (stunden > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
+      var warnung = document.getElementById('warnung');
       warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+      warnung.style.display = 'block';
     }
   } catch (e) {}
 })();
