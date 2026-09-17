@@ -6,100 +6,120 @@
 <title>Nachrichten</title>
 <style>
   :root {
-    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --link: #0060df;
+    --warn-bg: #b00020;
+    --warn-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #e6e6e6;
+      --muted: #9a9a9a;
+      --link: #6aa9ff;
+      --warn-bg: #7a0016;
+      --warn-fg: #ffffff;
+    }
   }
   body {
     max-width: 680px;
     margin: 0 auto;
     padding: 24px 18px;
+    background: var(--bg);
+    color: var(--fg);
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #ffffff;
-    color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 0.85em;
+    margin: 0 0 28px 0;
   }
-  h2 {
-    font-size: 17px;
-    font-weight: bold;
-    margin: 22px 0 4px;
+  .thema {
+    margin: 0 0 4px 0;
+    font-size: 1em;
+    font-weight: 700;
   }
-  p {
-    margin: 0 0 4px;
+  .thema-block {
+    margin-bottom: 22px;
+  }
+  .thema-block p {
+    margin: 0;
   }
   a {
-    color: #0060df;
+    color: var(--link);
   }
   .ruhig {
-    color: #666666;
-    font-size: 14px;
+    color: var(--muted);
+    font-size: 0.9em;
     margin-top: 32px;
   }
-  .warnung {
-    background: #c62828;
-    color: #ffffff;
+  #warnung {
+    display: none;
+    background: var(--warn-bg);
+    color: var(--warn-fg);
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 14px;
-    display: none;
-  }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e6e6e6;
-    }
-    a {
-      color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #999999;
-    }
+    font-size: 0.9em;
+    font-weight: 600;
   }
 </style>
 </head>
-<body data-stand="2026-09-17T08:05:55Z">
-<div class="warnung" id="warnung"></div>
+<body data-stand="2026-09-17T18:07:00Z">
+<div id="warnung"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 17.09.2026, 10:05 Uhr</div>
+<p class="stand">aktualisiert: 17.09.2026, 20:07 Uhr</p>
 
-<h2>Ukraine / Russland</h2>
-<p>Russland griff die Ukraine im September mit über 3500 Drohnen und fast 190 Raketen an, zuletzt starb ein Mann bei einem Angriff auf Saporischschja. <a href="https://www.aljazeera.com/news/2025/9/17/russia-ukraine-war-list-of-key-events-day-1301" target="_blank">Quelle</a></p>
+<div class="thema-block">
+  <p class="thema">Ukraine/Russland</p>
+  <p>Eine russische Gerbera-Drohne drang in litauischen Nato-Luftraum ein und wurde von italienischen Eurofightern abgefangen, während Russland die Ukraine mit rund 80 Drohnen angriff. <a href="https://www.newsy-today.com/russia-ukraine-war-live-updates-and-latest-news-for-september-16/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>AfD</h2>
-<p>Die AfD gewann die Landtagswahl in Sachsen-Anhalt mit fast 44 Prozent, was Forderungen nach einem Verbotsverfahren verstärkt hat. <a href="https://www.zdfheute.de/thema/afd-224.html" target="_blank">Quelle</a></p>
+<div class="thema-block">
+  <p class="thema">Iran/USA</p>
+  <p>Die USA griffen im eskalierenden Tankerkrieg mit dem Iran mehrere iranische Öltanker an, nachdem die Revolutionsgarden Raketen auf einen US-Flugzeugträger abgefeuert hatten. <a href="https://www.aljazeera.com/news/liveblog/2026/9/9/iran-war-live-us-hits-iranian-tankers-irgc-attacks-us-base-in-jordan" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Apple</h2>
-<p>Apple bringt das neue iPhone 18 Pro und Pro Max am 18. September in den Handel, nachdem die Vorbestellungen am 12. September starteten. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="thema-block">
+  <p class="thema">Guild Wars 2</p>
+  <p>Guild Wars 2 hat am 15. September das Update Code of Creation veröffentlicht, mit neuer Zone Leyspring Hollows und dem Meta-Event Depths of Cruelty. <a href="https://wiki.guildwars2.com/wiki/Game_updates/2026-09-15" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Weltraum</h2>
-<p>Dschibuti unterzeichnete als 72. Staat die Artemis Accords, während Crew-12-Astronauten am 16. September von der ISS aus berichteten. <a href="https://www.nasa.gov/2026-news-releases/" target="_blank">Quelle</a></p>
+<div class="thema-block">
+  <p class="thema">Apple</p>
+  <p>Apple stellte beim September-Event iPhone 18 Pro, das faltbare iPhone Duo, Apple Watch Series 12 und AirPods 5 vor, das iPhone 18 Pro startet am 18. September. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Guild Wars 2</h2>
-<p>Guild Wars 2 veröffentlichte am 15. September das Update Code of Creation mit neuer Zone, Meta-Event und legendärer Waffe. <a href="https://wiki.guildwars2.com/wiki/Game_updates/2026-09-15" target="_blank">Quelle</a></p>
+<div class="thema-block">
+  <p class="thema">KI</p>
+  <p>Die Hersteller Ugreen und Anker bringen lokale KI-Assistenten fürs Smart Home ohne Cloud-Zwang auf den Markt, die Geräte sind bislang aber vergleichsweise teuer. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>VfB Stuttgart</h2>
-<p>Der VfB Stuttgart gewann sein Champions-League-Auftaktspiel gegen Viking FK mit 3:1 und trifft am 19. September auf Borussia Dortmund. <a href="https://www.espn.com/soccer/match/_/gameId/401915448/viking-fk-vfb-stuttgart" target="_blank">Quelle</a></p>
+<div class="thema-block">
+  <p class="thema">Bitcoin</p>
+  <p>Spot-Bitcoin-ETFs verzeichneten Anfang September Nettozuflüsse von rund 1,03 Milliarden Dollar binnen einer Woche, das stärkste Ergebnis seit Mitte Januar. <a href="https://coinstats.app/ai/a/latest-news-for-bitcoin" target="_blank">Quelle</a></p>
+</div>
 
-<div class="ruhig">Ruhig, nichts Großes: Iran/USA, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</div>
+<p class="ruhig">Ruhig, nichts Großes: AfD, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch (Württemberg).</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var stunden = (Date.now() - standDate.getTime()) / 3600000;
-    if (stunden > 18) {
-      var warnung = document.getElementById('warnung');
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      warnung.style.display = 'block';
+    var ageHours = (Date.now() - standDate.getTime()) / 3600000;
+    if (ageHours > 18) {
+      var el = document.getElementById('warnung');
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      el.style.display = 'block';
     }
   } catch (e) {}
 })();
