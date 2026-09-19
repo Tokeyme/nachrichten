@@ -6,123 +6,101 @@
 <title>Nachrichten</title>
 <style>
   :root {
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #6b6b6b;
-    --link: #0060df;
-    --warn-bg: #b00020;
-    --warn-fg: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --fg: #e6e6e6;
-      --muted: #9a9a9a;
-      --link: #6aa9ff;
-      --warn-bg: #7a0016;
-      --warn-fg: #ffffff;
-    }
+    color-scheme: light dark;
   }
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
-    background: var(--bg);
-    color: var(--fg);
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
+    background: #ffffff;
+    color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
-    color: var(--muted);
-    font-size: 0.85em;
-    margin: 0 0 28px 0;
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
-  .thema {
-    margin: 0 0 4px 0;
-    font-size: 1em;
-    font-weight: 700;
+  h2 {
+    font-size: 16px;
+    margin: 22px 0 4px;
   }
-  .thema-block {
-    margin-bottom: 22px;
-  }
-  .thema-block p {
-    margin: 0;
+  p {
+    margin: 0 0 4px;
   }
   a {
-    color: var(--link);
+    color: #1a5fb4;
   }
   .ruhig {
-    color: var(--muted);
-    font-size: 0.9em;
+    color: #666;
+    font-size: 14px;
     margin-top: 32px;
   }
-  #warnung {
-    display: none;
-    background: var(--warn-bg);
-    color: var(--warn-fg);
+  .warnung {
+    background: #c62828;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 14px;
+    display: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .stand, .ruhig {
+      color: #9a9a9a;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-09-18T18:07:06Z">
-<div id="warnung"></div>
+<body data-stand="2026-09-19T08:06:34Z">
+
+<div id="warnung" class="warnung"></div>
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 18.09.2026, 20:07 Uhr</p>
+<p class="stand">aktualisiert: 19.09.2026, 10:06 Uhr</p>
 
-<div class="thema-block">
-  <p class="thema">Ukraine/Russland</p>
-  <p>Russland griff nach ukrainischen Angaben weiter Ziele im Raum Kiew an, während ukrainische Kräfte mehrere russische Militäranlagen und Raketenstellungen im Donbass attackierten. <a href="https://www.lpb-bw.de/ukrainekonflikt" target="_blank">Quelle</a></p>
-</div>
+<h2>Ukraine/Russland</h2>
+<p>Bei einem russischen Angriff auf ein Wohnhaus in der ukrainischen Stadt Sumy wurden laut Präsident Selenskyj mindestens zwei Menschen getötet, Rettungskräfte suchten weiter nach Verschütteten. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<div class="thema-block">
-  <p class="thema">Iran/USA</p>
-  <p>Im eskalierenden Tankerkrieg im Golf legten US-Streitkräfte mehrere iranische Öltanker lahm, nachdem iranische Einheiten zuvor Raketen auf einen US-Flugzeugträger abgefeuert hatten. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
-</div>
+<h2>Apple</h2>
+<p>Apples neue iPhone-18-Pro-Modelle sind seit dem 18. September offiziell erhältlich, zudem übernahm John Ternus als neuer CEO die Nachfolge von Tim Cook. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
 
-<div class="thema-block">
-  <p class="thema">AfD</p>
-  <p>Die AfD gewann die Landtagswahl in Sachsen-Anhalt mit 43,8 Prozent, verfehlte mit 39 von nötigen 42 Sitzen knapp die absolute Mehrheit, Kanzler Merz erwägt nun einen Bundeszwang. <a href="https://www.lto.de/recht/presseschau/p/2026-09-07-landtagswahl-sachsen-anhalt-afd-videoverhandlung-bgh-igh-anhoerung" target="_blank">Quelle</a></p>
-</div>
+<h2>Künstliche Intelligenz</h2>
+<p>Die USA kippten mehrere CO2-Regeln der Vorgängerregierung, was laut Beobachtern den Bau zusätzlicher Gaskraftwerke für den Betrieb von KI-Rechenzentren beschleunigt. <a href="https://wissenschaftaktuell.de/2026/09/19/usa-trump-kippt-co%E2%82%82-regeln-und-befeuert-boom-schmutziger-ki-gaskraftwerke/" target="_blank">Quelle</a></p>
 
-<div class="thema-block">
-  <p class="thema">Apple</p>
-  <p>Apple hat die neuen iPhone-, Apple-Watch- und AirPods-Modelle diese Woche offiziell in die Geschäfte weltweit gebracht, wie das Unternehmen mitteilte. <a href="https://www.apple.com/newsroom/2026/09/the-latest-iphone-apple-watch-and-airpods-lineups-arrive-in-stores-worldwide/" target="_blank">Quelle</a></p>
-</div>
+<h2>Guild Wars 2</h2>
+<p>Das grosse Guild-Wars-2-Update vom 15. September brachte den Abschluss der aktuellen Erweiterungsstory mit neuer Karte, Raid-Encounter und einem neuen Legendär-Schwert. <a href="https://wiki.guildwars2.com/wiki/Game_updates/September_2026" target="_blank">Quelle</a></p>
 
-<div class="thema-block">
-  <p class="thema">Guild Wars 2</p>
-  <p>Guild Wars 2 veröffentlichte am 15. September das Update Code of Creation mit dem Finale der Story Visions of Eternity und der neuen Zone Leyspring Hollows. <a href="https://en-forum.guildwars2.com/topic/176681-game-update-notes-september-15-2026/" target="_blank">Quelle</a></p>
-</div>
-
-<div class="thema-block">
-  <p class="thema">VfB Stuttgart</p>
-  <p>Der VfB Stuttgart gewann sein Champions-League-Auswärtsspiel bei Viking FK mit 3:1, Ermedin Demirovic erzielte dabei einen Hattrick. <a href="https://www.espn.com/soccer/match/_/gameId/401915448/viking-fk-vfb-stuttgart" target="_blank">Quelle</a></p>
-</div>
-
-<p class="ruhig">Ruhig, nichts Großes: Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Iran/USA, AfD, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</p>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 3600000;
-    if (ageHours > 18) {
+    var now = new Date();
+    var hours = (now - standDate) / 1000 / 3600;
+    if (hours > 18) {
       var el = document.getElementById('warnung');
-      el.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
       el.style.display = 'block';
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
