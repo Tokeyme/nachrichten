@@ -11,45 +11,12 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
-  }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #666;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  h2 {
-    font-size: 16px;
-    margin: 22px 0 4px;
-  }
-  p {
-    margin: 0 0 4px;
-  }
-  a {
-    color: #1a5fb4;
-  }
-  .ruhig {
-    color: #666;
-    font-size: 14px;
-    margin-top: 32px;
-  }
-  .warnung {
-    background: #c62828;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    display: none;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -59,54 +26,95 @@
     a {
       color: #6aa9ff;
     }
-    .stand, .ruhig {
-      color: #9a9a9a;
-    }
+  }
+  a {
+    color: #1a5fb4;
+  }
+  h1 {
+    margin-bottom: 2px;
+  }
+  .stand {
+    color: #777;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  .thema {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  .eintrag {
+    margin-bottom: 20px;
+  }
+  .eintrag p {
+    margin: 0;
+  }
+  .ruhig {
+    color: #777;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .warnung {
+    background: #c0392b;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
   }
 </style>
 </head>
-<body data-stand="2026-09-20T08:07:15Z">
-
-<div id="warnung" class="warnung"></div>
-
+<body data-stand="2026-09-20T18:06:27Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 20.09.2026, 10:07 Uhr</p>
+<p class="stand">aktualisiert: 20.09.2026, 20:06 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Russland und die Ukraine setzten ihre gegenseitigen Drohnenangriffe fort, dabei wurde laut Moskaus Bürgermeister eine Ölraffinerie in der russischen Hauptstadt beschädigt. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <div class="thema">Ukraine/Russland</div>
+  <p>Bei einem russischen Luftangriff auf die Region Kiew wurden nach ukrainischen Angaben mindestens 37 Menschen getötet und 42 verletzt, Ziel war offenbar ein Munitionslager. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Iran/USA</h2>
-<p>Die USA griffen mehrere iranische Öltanker an, woraufhin die iranischen Revolutionsgarden mit Raketen- und Drohnenangriffen auf US-Stützpunkte in Jordanien, Bahrain und dem Irak reagierten. <a href="https://www.aljazeera.com/news/liveblog/2026/9/9/iran-war-live-us-hits-iranian-tankers-irgc-attacks-us-base-in-jordan" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <div class="thema">AfD / Berlin-Wahl</div>
+  <p>In Berlin findet heute, am 20. September 2026, die Wahl zum Abgeordnetenhaus statt, bundesweit auch mit Blick auf das AfD-Ergebnis beachtet. <a href="https://en.wikipedia.org/wiki/2026_Berlin_state_election" target="_blank">Quelle</a></p>
+</div>
 
-<h2>AfD</h2>
-<p>In Mecklenburg-Vorpommern und Berlin finden heute Landtagswahlen statt, nachdem die AfD bei vorherigen Landtagswahlen in diesem Jahr deutlich zugelegt hatte. <a href="https://en.wikipedia.org/wiki/2026_Mecklenburg-Vorpommern_state_election" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <div class="thema">VfB Stuttgart</div>
+  <p>Der VfB Stuttgart verlor das Bundesliga-Heimspiel gegen Borussia Dortmund am Samstag trotz mehr Torchancen knapp mit 0:1, Dortmund führt nun die Tabelle an. <a href="https://www.sportschau.de/fussball/vereine/vfb-stuttgart,vfb-stuttgart-klub-index-sp-100.html" target="_blank">Quelle</a></p>
+</div>
 
-<h2>VfB Stuttgart</h2>
-<p>Der VfB Stuttgart verlor am 19. September trotz guter Chancen mit 0:1 gegen Borussia Dortmund in der Bundesliga. <a href="https://www.stuttgarter-zeitung.de/sport/vfb-stuttgart/" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <div class="thema">Apple</div>
+  <p>Apple hat am 18. September die neuen iPhone 18 Pro und Pro Max ausgeliefert und zugleich das faltbare iPhone Duo für Vorbestellungen ab 16. Oktober angekündigt. <a href="https://www.macrumors.com/2026/09/09/apple-event-live-blog-september-2026/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Künstliche Intelligenz</h2>
-<p>OpenAI stellte mit GPT-6 Astra ein neues KI-Spitzenmodell mit deutlich grösserem Kontextfenster vor, kurz nachdem auch Google und Anthropic neue Modelle veröffentlicht hatten. <a href="https://llm-stats.com/ai-news" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <div class="thema">KI</div>
+  <p>OpenAI hat sein neues Modell GPT-6 Astra vorgestellt und erklärt, damit habe die Ära der allgemeinen künstlichen Intelligenz begonnen, während Google zeitgleich Gemini 3.8 Live veröffentlichte. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
+</div>
 
-<h2>Apple</h2>
-<p>Apple öffnete die Vorbestellung für sein erstes faltbares iPhone, das iPhone Duo, ab dem 16. Oktober mit Marktstart am 23. Oktober. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="eintrag">
+  <div class="thema">Bitcoin</div>
+  <p>Bitcoin-ETFs verzeichneten am Freitag mit 433 Millionen Dollar den stärksten Tageszufluss seit Anfang September, das verwaltete Vermögen liegt wieder bei rund 102,5 Milliarden Dollar. <a href="https://bitcoinnewsdigest.substack.com/p/bitcoin-news-digest-september-20-e41" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Iran/USA, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch (Württemberg).</p>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var hours = (now - standDate) / 1000 / 3600;
-    if (hours > 18) {
-      var el = document.getElementById('warnung');
-      el.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      el.style.display = 'block';
+    var jetzt = new Date();
+    var stundenAlt = (jetzt - standDate) / (1000 * 60 * 60);
+    if (stundenAlt > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
