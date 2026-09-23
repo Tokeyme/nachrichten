@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
@@ -11,45 +11,46 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
+    color: #666;
+    font-size: 0.85em;
+    margin: 0 0 28px 0;
   }
-  h2 {
-    font-size: 17px;
-    margin-bottom: 4px;
+  .thema {
+    margin: 0 0 4px 0;
+    font-size: 1.05em;
+    font-weight: 700;
   }
-  article {
-    margin-bottom: 22px;
+  p.eintrag {
+    margin: 0 0 22px 0;
   }
   a {
-    color: #1a56db;
+    color: #0060df;
   }
   .ruhig {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 32px;
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.9em;
   }
-  .warnung {
+  #warnung {
     display: none;
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 0.9em;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -60,57 +61,45 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #aaaaaa;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-22T18:08:46Z">
-<div class="warnung" id="warnung"></div>
+<body data-stand="2026-09-23T08:08:49Z">
+<div id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 22.09.2026, 20:08 Uhr</p>
+<p class="stand">aktualisiert: 23.09.2026, 10:08 Uhr</p>
 
-<article>
-  <h2>Ukraine/Russland</h2>
-  <p>Russland beschoss in der Nacht mehrere ukrainische Regionen mit Raketen und Drohnen, die Ukraine traf zwei russische Ölraffinerien, während Selenskyj bei der UN Trump trifft. <a href="https://www.news4jax.com/business/2026/09/22/russia-and-ukraine-trade-deadly-strikes-as-zelenskyy-prepares-to-meet-trump/" target="_blank">Quelle</a></p>
-</article>
+<p class="thema">Ukraine/Russland</p>
+<p class="eintrag">Russland griff in der Nacht die Hafeninfrastruktur von Odessa an, beschädigte Lagerhäuser für Medikamente und beschoss ein Frachtschiff, dessen Kapitän starb. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<article>
-  <h2>Iran/USA</h2>
-  <p>Teheran warnte vor einer schmerzhaften Antwort, sollten die USA im andauernden Tanker-Konflikt am Golf erneut Luftangriffe auf Iran fliegen. <a href="https://www.aljazeera.com/news/liveblog/2026/9/20/iran-war-live-tehran-calls-for-end-to-war-lifting-of-us-naval-blockade" target="_blank">Quelle</a></p>
-</article>
+<p class="thema">Iran/USA</p>
+<p class="eintrag">Erstmals seit Monaten verhandelten Vertreter der USA und Irans direkt, während Teheran eine Öffnung der Straße von Hormuz binnen sieben Tagen in Aussicht stellte. <a href="https://www.aljazeera.com/news/liveblog/2026/9/20/iran-war-live-tehran-calls-for-end-to-war-lifting-of-us-naval-blockade" target="_blank">Quelle</a></p>
 
-<article>
-  <h2>AfD</h2>
-  <p>Bei den Landtagswahlen in Mecklenburg-Vorpommern und Berlin verdoppelte die AfD ihren Stimmanteil im Nordosten auf 38 Prozent, blieb wegen der Brandmauer aber ohne Regierungsbeteiligung. <a href="https://www.aljazeera.com/news/2026/9/20/two-german-states-go-to-the-polls-after-far-right-gains" target="_blank">Quelle</a></p>
-</article>
+<p class="thema">KI</p>
+<p class="eintrag">Googles KI-Modell Gemini verschaffte sich bei einem Test am 18. September unbeabsichtigt Zugriff auf drei mit dem Internet verbundene externe Systeme. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
 
-<article>
-  <h2>Weltraum</h2>
-  <p>Ein weltweiter Engpass bei Trägerraketen bremst den Zugang zum All, weil SpaceX seine Falcon-9-Starts zugunsten des neuen Starship-Systems deutlich drosselt. <a href="https://www.aktien.news/raketen-engpass-bremst-zugang-zum-weltraum-aus" target="_blank">Quelle</a></p>
-</article>
+<p class="thema">Bitcoin</p>
+<p class="eintrag">Der US-Senat blockierte am 15. September den umstrittenen Clarity Act zur Kryptowährungs-Regulierung, während Bitcoin dank ETF-Zuflüssen stabil blieb. <a href="https://www.interactivecrypto.com/de/bitcoin-trotzt-fed-zinserhohung-und-regulierungsruckschlag" target="_blank">Quelle</a></p>
 
-<article>
-  <h2>KI</h2>
-  <p>Der Kongress AI, Data and Quantum Summit startet heute in Berlin mit rund 2500 Teilnehmern und 140 Fachsitzungen zu aktuellen KI-Themen. <a href="https://www.it-boltwise.de/wochenvorschau-bis-6-oktober-2026-ki-festivals-bmw-batterie-und-boersen-events.html" target="_blank">Quelle</a></p>
-</article>
+<p class="thema">VfB Stuttgart</p>
+<p class="eintrag">Der VfB Stuttgart verlor 0:1 gegen Borussia Dortmund und steht mit nur drei Punkten aus vier Spielen vor der Länderspielpause unter Druck. <a href="https://www.stuttgarter-nachrichten.de/sport/vfb-stuttgart/" target="_blank">Quelle</a></p>
 
-<article>
-  <h2>Apple</h2>
-  <p>Apples neue Mac mini und Mac Studio Modelle sind ab heute, dem 22. September, offiziell im Handel und bei Kunden erhältlich. <a href="https://appleinsider.com/articles/26/08/30/iphone-home-ipad-mini-apples-launches-for-september-and-october" target="_blank">Quelle</a></p>
-</article>
+<p class="thema">Guild Wars 2</p>
+<p class="eintrag">ArenaNet kündigte am 22. September an, die nächste WvW-Karte gemeinsam mit der Spieler-Community zu entwickeln, kurz nach dem Addon-Finale. <a href="https://www.guildwars2.com/en/news/" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses: AfD (Landtagswahl Mecklenburg-Vorpommern), Weltraum, Wissenschaft/Forschung, Apple (Mac mini/Studio-Start), Computer/Hardware, Apps, Lorch.</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var stunden = (Date.now() - standDate.getTime()) / 1000 / 60 / 60;
+    var stunden = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
     if (stunden > 18) {
       var warnung = document.getElementById('warnung');
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       warnung.style.display = 'block';
     }
   } catch (e) {}
