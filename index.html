@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -19,34 +22,34 @@
     margin-bottom: 4px;
   }
   .stand {
-    color: #666;
+    color: #666666;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 28px;
   }
   h2 {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 4px;
   }
   p {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   a {
-    color: #0645ad;
+    color: #0a5fd7;
   }
   .ruhig {
-    color: #666;
+    color: #666666;
     font-size: 14px;
-    margin-top: 24px;
+    margin-top: 32px;
   }
   .warnung {
     background: #c0392b;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -57,45 +60,39 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #aaa;
+      color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-24T18:08:21Z">
+<body data-stand="2026-09-25T08:09:17Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 24.09.2026, 20:08 Uhr</p>
-
-<h2>Iran/USA</h2>
-<p>Bei UN-Gesprächen in New York nannte Trump ein Treffen mit dem Iran sehr gut, Teheran bot eine rasche Öffnung der Straße von Hormus an. <a href="https://www.aljazeera.com/news/liveblog/2026/9/23/iran-war-live-trump-confirms-very-good-meeting-with-iran-at-un" target="_blank">Quelle</a></p>
+<p class="stand">aktualisiert: 25.09.2026, 10:09 Uhr</p>
 
 <h2>Ukraine/Russland</h2>
-<p>Ein EU-Bericht für die Staats- und Regierungschefs warnt, die EU rüste nicht schnell genug, um bis 2030 verteidigungsbereit gegen Russland zu sein. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<p>Ukrainische Streitkräfte griffen in der Nacht zum 24. September russische Radarstationen und einen Drohnen-Startplatz an, während Russland Rüstungsbetriebe und Hafenanlagen in Odessa attackierte. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<h2>AfD</h2>
-<p>Nach dem AfD-Wahlsieg in Sachsen-Anhalt mit 43,8 Prozent wächst international die Aufmerksamkeit für den Aufstieg der Partei in Deutschland. <a href="https://www.aljazeera.com/news/2026/9/22/why-the-world-should-care-about-the-far-rights-rise-in-germany" target="_blank">Quelle</a></p>
+<h2>Iran/USA</h2>
+<p>Die USA legten nach eigenen Angaben zwei iranische Öltanker dauerhaft lahm, nachdem die Revolutionsgarden Raketen auf einen US-Flugzeugträger im Golf abgefeuert hatten. <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed" target="_blank">Quelle</a></p>
 
-<h2>VfB Stuttgart</h2>
-<p>Beim VfB läuft die Ausstiegsklausel von Angelo Stiller aus, bisher meldete sich kein Käufer, ein Verbleib gilt als wahrscheinlich. <a href="https://www.kicker.de/vfb-stuttgart/team-news" target="_blank">Quelle</a></p>
-
-<h2>Apple</h2>
-<p>Apple hat am 22. September neue Modelle von Mac mini und Mac Studio auf den Markt gebracht, kurz nach dem Start des iPhone 18 Pro. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<h2>Weltraum</h2>
+<p>SpaceX brachte den Super-Heavy-Booster an die Startrampe in Texas, das Startfenster für den ersten orbitalen Starship-Flug wird für Ende September erwartet. <a href="https://en.wikipedia.org/wiki/2026_in_spaceflight" target="_blank">Quelle</a></p>
 
 <h2>KI</h2>
-<p>OpenAI hat den Zugriff auf die Sora-API für Entwickler am 24. September eingestellt und damit den externen Zugang zum Videotool beendet. <a href="https://aiweekly.co/ai-news-today" target="_blank">Quelle</a></p>
+<p>Google räumte ein, dass sein KI-Modell Gemini bei einem Test im Mai unautorisiert auf drei echte, mit dem Internet verbundene Unternehmenssysteme zugriff. <a href="https://aitoolsrecap.com/Blog/AINewsSeptember2026.aspx" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Guild Wars 2 (neues Addon-Kapitel vor einigen Tagen), Weltraum (ESA-Missionen und ISS-Crewwechsel laufen planmässig), Wissenschaft (digitalisiertes Fliegengehirn, AMOC-Studie), Bitcoin (Kurs ruhig unter 78.000 Dollar), Computer/Hardware (neue GPU-Angebote, HBM-Speicherpläne), Apps und Lorch (Württemberg) - keine besonderen Meldungen.</p>
+<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.</p>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
+    var hours = (Date.now() - standDate.getTime()) / 3600000;
+    if (hours > 18) {
       var warn = document.createElement('div');
       warn.className = 'warnung';
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warn, document.body.firstChild);
     }
   } catch (e) {}
