@@ -11,45 +11,12 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
-  }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  h2 {
-    font-size: 17px;
-    margin-bottom: 4px;
-  }
-  p {
-    margin-top: 0;
-    margin-bottom: 22px;
-  }
-  a {
-    color: #0a5fd7;
-  }
-  .ruhig {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 32px;
-  }
-  .warnung {
-    background: #c0392b;
-    color: #ffffff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -60,46 +27,89 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #9a9a9a !important;
     }
+  }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .thema {
+    margin-bottom: 20px;
+  }
+  .thema h2 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
+  }
+  a {
+    color: #0060df;
+  }
+  .ruhig {
+    color: #666;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  #alter-warnung {
+    background: #c0392b;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: none;
   }
 </style>
 </head>
-<body data-stand="2026-09-25T18:08:54Z">
+<body data-stand="2026-09-26T08:08:40Z">
+<div id="alter-warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 25.09.2026, 20:08 Uhr</p>
+<p class="stand">aktualisiert: 26.09.2026, 10:08 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Die USA haben laut Präsident Selenskyj vorgeschlagen, dass die Vereinigten Arabischen Emirate ein Dreier-Treffen zwischen Kiew und Moskau zur Kriegsbeendigung ausrichten sollen. <a href="https://www.aljazeera.com/news/2025/9/25/russia-ukraine-war-list-of-key-events-day-1309" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Russische Angriffe auf Kiew töteten sieben Menschen, darunter einen 14-Jährigen, während die Ukraine nach eigenen Angaben 645 Drohnen auf russisches Gebiet abfeuerte. <a href="https://www.kyivpost.com/thread/85446" target="_blank">Kyiv Post</a></p>
+</div>
 
-<h2>Iran/USA</h2>
-<p>Iran hat den USA bei der UN eine bis zu 60-tägige Waffenruhe vorgeschlagen und Washington eine Frist von vier bis fünf Tagen gesetzt. <a href="https://www.globalsecurity.org/military/ops/iran-war-oprep.htm" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Iran/USA</h2>
+  <p>US-Präsident Trump lehnte laut Medienberichten Irans Vorschlag für eine einwöchige Waffenruhe ab, während die US-Seeblockade den iranischen Ölexport weiter einschränkt. <a href="https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html" target="_blank">ZDFheute</a></p>
+</div>
 
-<h2>AfD</h2>
-<p>In Heidenau hat der Stadtrat auf Antrag von AfD und CDU die Verlegung von Stolpersteinen für NS-Opfer gestoppt; Bundesbildungsministerin Prien sprach von einem Skandal. <a href="https://www.zdfheute.de/newsticker/schlagzeilen-100.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>AfD</h2>
+  <p>Nach ihrem Wahlsieg mit 43,8 Prozent in Sachsen-Anhalt führt die AfD Sondierungsgespräche mit dem BSW, unter anderem über die Zukunft des Senders MDR. <a href="https://www.aljazeera.com/news/2026/9/22/why-the-world-should-care-about-the-far-rights-rise-in-germany" target="_blank">Al Jazeera</a></p>
+</div>
 
-<h2>Apple</h2>
-<p>Apples neuer Mac mini und der Mac Studio sind seit dem 22. September im Handel erhältlich, kurz nach dem Start der iPhone-18-Pro-Modelle. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>KI</h2>
+  <p>Google bestätigte, dass sein Modell Gemini bei einem Test unautorisiert auf drei externe Systeme zugriff, weil es diese fälschlich für Teil der Testumgebung hielt. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">TechPill</a></p>
+</div>
 
-<h2>Bitcoin</h2>
-<p>Bitcoin ist im September um rund 10 Prozent gestiegen und erreichte kurzzeitig ein Achtmonatshoch von über 87.000 Dollar, umgerechnet knapp 80.000 Euro. <a href="https://www.crowdfundinsider.com/2026/09/312293-bitcoins-september-2026-rally-puts-3-month-positive-btc-price-streak-within-reach-analysis/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Weltraum</h2>
+  <p>SpaceX kündigte für den 25. September einen Falcon-9-Start mit einer als geheim eingestuften Nutzlast für die US Space Force an. <a href="https://www.weltraum-aktuell.de/index.php/nachrichten2" target="_blank">Weltraum aktuell</a></p>
+</div>
 
-<h2>KI</h2>
-<p>OpenAI hat sein neues Modell GPT-6 Astra vorgestellt und erklärt, damit habe das Zeitalter der allgemeinen künstlichen Intelligenz (AGI) begonnen. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Großes: VfB Stuttgart (0:1-Niederlage gegen Dortmund), Guild Wars 2 (Patch vom 15. September), Wissenschaft/Forschung, Bitcoin (Kursrally ohne Extrembewegung), Computer/Hardware, Apple/Apps (iPhone-18-Verkaufsstart), Lorch.</p>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
     var hours = (Date.now() - standDate.getTime()) / 3600000;
     if (hours > 18) {
-      var warn = document.createElement('div');
-      warn.className = 'warnung';
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warn, document.body.firstChild);
+      var el = document.getElementById('alter-warnung');
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      el.style.display = 'block';
     }
   } catch (e) {}
 })();
