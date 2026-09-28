@@ -11,10 +11,10 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -36,7 +36,7 @@
     margin-bottom: 20px;
   }
   a {
-    color: #0645ad;
+    color: #0060df;
   }
   .ruhig {
     color: #666666;
@@ -49,7 +49,7 @@
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -60,45 +60,42 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #a0a0a0;
+      color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-28T08:09:50Z">
+<body data-stand="2026-09-28T18:09:35Z">
 
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 28.09.2026, 10:09 Uhr</p>
+<p class="stand">aktualisiert: 28.09.2026, 20:09 Uhr</p>
 
-<h2>Iran / USA</h2>
-<p>Die USA haben Behauptungen zurückgewiesen, im Golf von Hormuz eine "hochentwickelte" iranische Drohne abgefangen zu haben, während Teheran auf eine offizielle Reaktion wartet. <a href="https://www.aljazeera.com/news/liveblog/2026/9/27/iran-war-live-tehran-awaits-official-response-as-trump-rejects-hormuz-plan" target="_blank">Quelle</a></p>
+<h2>Ukraine/Russland</h2>
+<p>Nach ukrainischen Angaben liegen die russischen Kriegsverluste seit Februar 2022 inzwischen bei rund 1,53 Millionen Gefallenen und Verwundeten, mit 1690 weiteren Opfern binnen eines Tages. <a href="https://www.t-online.de/nachrichten/ukraine/id_101455600/ukraine-krieg-neue-zahlen-zu-russischen-kriegstoten-veroeffentlicht.html" target="_blank">Quelle</a></p>
 
-<h2>AfD</h2>
-<p>Nach Wahlerfolgen in mehreren Bundesländern wächst laut Beobachtern die internationale Sorge über die AfD, während selbst europäische Rechtsparteien auf Distanz gehen. <a href="https://www.cnn.com/2026/09/27/europe/germany-afd-rattles-europe-and-not-just-the-mainstream" target="_blank">Quelle</a></p>
-
-<h2>Apple</h2>
-<p>Apple hat mit iPhone 18 Pro, Pro Max, dem faltbaren iPhone Duo, neuen Apple-Watch-Modellen und iOS 27 seine wichtigsten Neuheiten des Jahres vorgestellt. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
-
-<h2>KI</h2>
-<p>Während OpenAI weiter auf starkes Wachstum bei KI-Bildgeneratoren setzt, verzeichnete das KI-freie LibreOffice einen Download-Rekord als Gegenbewegung zum aktuellen KI-Boom. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
+<h2>Iran/USA</h2>
+<p>US-Präsident Trump hat einen von Iran vorgeschlagenen Siebentage-Plan zur Beendigung des Kriegs und Öffnung der Straße von Hormuz abgelehnt, die Lage bleibt angespannt. <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-september-28-2026-bitcoin-loses-ground-after-trump-rejects-irans-7-day-plan-113444329.html" target="_blank">Quelle</a></p>
 
 <h2>Weltraum</h2>
-<p>Dschibuti ist am 14. September als 72. Staat den Artemis-Accords beigetreten und stärkt damit die internationale Zusammenarbeit im Weltraum. <a href="https://www.nasa.gov/2026-news-releases/" target="_blank">Quelle</a></p>
+<p>SpaceX hat am 28. September einen weiteren Starship-Testflug gestartet, der die Erde mehrfach umkreisen und nach rund zehn Stunden vor der Küste Chiles wassern soll. <a href="https://en.wikipedia.org/wiki/2026_in_spaceflight" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: Ukraine/Russland, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</p>
+<h2>Wissenschaft/Forschung</h2>
+<p>Der neu entdeckte Naturstoff Corramycin tötet im Labor auch gegen Fluorchinolon-Antibiotika resistente Tuberkulose-Bakterien und gilt als vielversprechender Ansatz gegen resistente Erreger. <a href="https://www.scinexx.de/" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg)</p>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var jetzt = new Date();
-    var stundenAlt = (jetzt - standDate) / (1000 * 60 * 60);
-    if (stundenAlt > 18) {
-      var zeile = document.createElement('div');
-      zeile.className = 'warnung';
-      zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      document.body.insertBefore(zeile, document.body.firstChild);
+    var now = new Date();
+    var diffHours = (now - standDate) / (1000 * 60 * 60);
+    if (diffHours > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
