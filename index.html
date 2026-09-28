@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -15,43 +18,86 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 { margin-bottom: 4px; }
-  .stand { color: #666; font-size: 14px; margin-bottom: 28px; }
-  h2 { font-size: 17px; margin: 22px 0 4px; }
-  p { margin: 0 0 4px; }
-  a { color: #1a56db; }
-  .ruhig { color: #666; font-size: 14px; margin-top: 32px; }
-  .warnung { background: #c00; color: #fff; padding: 10px 14px; border-radius: 6px; margin-bottom: 20px; font-weight: bold; }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #0645ad;
+  }
+  .ruhig {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .warnung {
+    background: #c0392b;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
   @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e6e6e6; }
-    a { color: #6aa9ff; }
-    .stand, .ruhig { color: #999; }
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .stand, .ruhig {
+      color: #a0a0a0;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-09-27T18:08:35Z">
+<body data-stand="2026-09-28T08:09:50Z">
 
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 27.09.2026, 20:08 Uhr</p>
+<p class="stand">aktualisiert: 28.09.2026, 10:09 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Russland und die Ukraine griffen sich gegenseitig mit Drohnen und Raketen an, dabei kamen laut Berichten mindestens zehn Menschen ums Leben. <a href="https://www.aljazeera.com/news/2026/9/26/at-least-10-people-killed-in-russian-and-ukrainian-attacks" target="_blank">Quelle</a></p>
+<h2>Iran / USA</h2>
+<p>Die USA haben Behauptungen zurückgewiesen, im Golf von Hormuz eine "hochentwickelte" iranische Drohne abgefangen zu haben, während Teheran auf eine offizielle Reaktion wartet. <a href="https://www.aljazeera.com/news/liveblog/2026/9/27/iran-war-live-tehran-awaits-official-response-as-trump-rejects-hormuz-plan" target="_blank">Quelle</a></p>
 
-<h2>Iran/USA</h2>
-<p>Iran bot den USA an, die Straße von Hormus binnen sieben Tagen wieder zu öffnen, doch Präsident Trump lehnte den Vorschlag ab. <a href="https://www.aljazeera.com/news/liveblog/2026/9/26/iran-war-live-tehran-offers-us-plan-to-reopen-hormuz-within-seven-days" target="_blank">Quelle</a></p>
+<h2>AfD</h2>
+<p>Nach Wahlerfolgen in mehreren Bundesländern wächst laut Beobachtern die internationale Sorge über die AfD, während selbst europäische Rechtsparteien auf Distanz gehen. <a href="https://www.cnn.com/2026/09/27/europe/germany-afd-rattles-europe-and-not-just-the-mainstream" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch</p>
+<h2>Apple</h2>
+<p>Apple hat mit iPhone 18 Pro, Pro Max, dem faltbaren iPhone Duo, neuen Apple-Watch-Modellen und iOS 27 seine wichtigsten Neuheiten des Jahres vorgestellt. <a href="https://www.macrumors.com/2026/09/09/apple-september-2026-event-recap/" target="_blank">Quelle</a></p>
+
+<h2>KI</h2>
+<p>Während OpenAI weiter auf starkes Wachstum bei KI-Bildgeneratoren setzt, verzeichnete das KI-freie LibreOffice einen Download-Rekord als Gegenbewegung zum aktuellen KI-Boom. <a href="https://techpill.de/ki-boom-gegenbewegung-september-2026/" target="_blank">Quelle</a></p>
+
+<h2>Weltraum</h2>
+<p>Dschibuti ist am 14. September als 72. Staat den Artemis-Accords beigetreten und stärkt damit die internationale Zusammenarbeit im Weltraum. <a href="https://www.nasa.gov/2026-news-releases/" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Großes: Ukraine/Russland, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
-    var alterMs = Date.now() - new Date(stand).getTime();
-    var stunden = alterMs / 1000 / 60 / 60;
-    if (stunden > 18) {
+    var standDate = new Date(stand);
+    var jetzt = new Date();
+    var stundenAlt = (jetzt - standDate) / (1000 * 60 * 60);
+    if (stundenAlt > 18) {
       var zeile = document.createElement('div');
       zeile.className = 'warnung';
-      zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
       document.body.insertBefore(zeile, document.body.firstChild);
     }
   } catch (e) {}
