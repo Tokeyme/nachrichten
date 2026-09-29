@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -22,13 +22,13 @@
     margin-bottom: 4px;
   }
   .stand {
-    color: #666666;
+    color: #666;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 28px;
   }
   h2 {
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
   p {
@@ -39,13 +39,13 @@
     color: #0060df;
   }
   .ruhig {
-    color: #666666;
+    color: #666;
     font-size: 14px;
     margin-top: 32px;
   }
   .warnung {
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -60,46 +60,49 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-09-28T18:09:35Z">
-
+<body data-stand="2026-09-29T08:08:54Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 28.09.2026, 20:09 Uhr</p>
+<p class="stand">aktualisiert: 29.09.2026, 10:08 Uhr</p>
 
 <h2>Ukraine/Russland</h2>
-<p>Nach ukrainischen Angaben liegen die russischen Kriegsverluste seit Februar 2022 inzwischen bei rund 1,53 Millionen Gefallenen und Verwundeten, mit 1690 weiteren Opfern binnen eines Tages. <a href="https://www.t-online.de/nachrichten/ukraine/id_101455600/ukraine-krieg-neue-zahlen-zu-russischen-kriegstoten-veroeffentlicht.html" target="_blank">Quelle</a></p>
+<p>Russland beschoss Kiew erneut mit ballistischen Raketen, nachdem ein Grossangriff zuvor zwei Menschen getoetet, 26 verletzt und die Wissenschaftsakademie getroffen hatte. <a href="https://www.kyivpost.com/thread/85608" target="_blank">Quelle</a></p>
 
 <h2>Iran/USA</h2>
-<p>US-Präsident Trump hat einen von Iran vorgeschlagenen Siebentage-Plan zur Beendigung des Kriegs und Öffnung der Straße von Hormuz abgelehnt, die Lage bleibt angespannt. <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-september-28-2026-bitcoin-loses-ground-after-trump-rejects-irans-7-day-plan-113444329.html" target="_blank">Quelle</a></p>
+<p>US-Praesident Trump wies einen iranischen Vorschlag zurueck, die Strasse von Hormus innerhalb von sieben Tagen wieder zu oeffnen, der Konflikt bleibt ungeloest. <a href="https://www.aljazeera.com/news/liveblog/2026/9/26/iran-war-live-tehran-offers-us-plan-to-reopen-hormuz-within-seven-days" target="_blank">Quelle</a></p>
+
+<h2>AfD</h2>
+<p>Nach den juengsten Wahlerfolgen der AfD zeigen sich auch andere europaeische Rechtsaussen-Parteien zunehmend besorgt ueber die Radikalitaet der Partei. <a href="https://www.cnn.com/2026/09/27/europe/germany-afd-rattles-europe-and-not-just-the-mainstream" target="_blank">Quelle</a></p>
+
+<h2>Guild Wars 2</h2>
+<p>Zur Erweiterung "Visions of Eternity" starten heute die Challenge-Modes fuer Fraktal, Schlachtzug und Convergence rund um den neuen Inhalt "Solitary Throne". <a href="https://wiki.guildwars2.com/wiki/Game_updates/September_2026" target="_blank">Quelle</a></p>
 
 <h2>Weltraum</h2>
-<p>SpaceX hat am 28. September einen weiteren Starship-Testflug gestartet, der die Erde mehrfach umkreisen und nach rund zehn Stunden vor der Küste Chiles wassern soll. <a href="https://en.wikipedia.org/wiki/2026_in_spaceflight" target="_blank">Quelle</a></p>
+<p>Die SpaceX-Crew-13 traf am Kennedy Space Center ein, Falcon 9 und Dragon stehen startbereit, der Flug zur ISS ist fruehestens fuer den 1. Oktober geplant. <a href="https://www.nasa.gov/2026-news-releases/" target="_blank">Quelle</a></p>
 
-<h2>Wissenschaft/Forschung</h2>
-<p>Der neu entdeckte Naturstoff Corramycin tötet im Labor auch gegen Fluorchinolon-Antibiotika resistente Tuberkulose-Bakterien und gilt als vielversprechender Ansatz gegen resistente Erreger. <a href="https://www.scinexx.de/" target="_blank">Quelle</a></p>
+<h2>Bitcoin</h2>
+<p>Bitcoin stieg erstmals seit Januar wieder ueber 87.000 US-Dollar (rund 79.000 Euro), begleitet von etwa zwei Milliarden Dollar ETF-Zufluessen binnen weniger Tage. <a href="https://www.cryptotimes.io/2026/09/24/inside-bitcoins-september-2026-rally-btc-reclaiming-87k-2b-in-etf-inflows-and-a-short-squeeze/" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg)</p>
+<p class="ruhig">Ruhig, nichts Grosses: Wissenschaft/Forschung (Stammzellen-, Entsalzungsforschung), KI (OpenAI stellt Sora-API ein), Computer/Hardware (neue Nvidia- und AMD-Chips), Apps (neue App-Store-Regeln), Apple (iPhone 18 Pro laeuft an), VfB Stuttgart, Lorch.</p>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var diffHours = (now - standDate) / (1000 * 60 * 60);
-    if (diffHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+    var hours = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
+    if (hours > 18) {
+      var warn = document.createElement('div');
+      warn.className = 'warnung';
+      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warn, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
