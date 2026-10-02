@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -11,45 +11,47 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
-    color: #111111;
+    color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 28px;
   }
   .stand {
-    color: #666666;
+    color: #777;
     font-size: 14px;
-    margin-top: 0;
     margin-bottom: 28px;
   }
-  h2 {
+  .thema {
+    margin: 0 0 4px 0;
     font-size: 17px;
-    margin-bottom: 4px;
+    font-weight: 700;
   }
   p {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 0 0 24px 0;
   }
   a {
-    color: #0060df;
+    color: #0056b3;
+    text-decoration: underline;
   }
   .ruhig {
-    color: #666666;
+    color: #777;
     font-size: 14px;
-    margin-top: 32px;
+    margin-top: 12px;
   }
   .warnung {
     background: #c0392b;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
+    font-size: 14px;
     margin-bottom: 20px;
-    font-size: 15px;
+    display: none;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -60,47 +62,50 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #a0a0a0;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-02T08:08:57Z">
+<body data-stand="2026-10-02T18:09:19Z">
+
+<div class="warnung" id="warnung"></div>
 
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 02.10.2026, 10:08 Uhr</p>
+<div class="stand">aktualisiert: 02.10.2026, 20:09 Uhr</div>
 
-<h2>Ukraine/Russland</h2>
-<p>Russland griff Kiew erneut mit jetbetriebenen Drohnen an und tötete drei Menschen, zugleich verstärken sich die Angriffe auf die ukrainische Energieversorgung. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<p class="thema">Ukraine/Russland</p>
+<p>Russische Luftangriffe trafen erneut eine wichtige Brücke in Kiew, bei einem Angriff auf Charkiw starben laut Behörden mindestens zwei Menschen. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<h2>Iran/USA</h2>
-<p>Iran bot den USA einen Sieben-Tage-Plan zur Öffnung der Straße von Hormus an, Trump wies das Angebot jedoch als unzureichend zurück. <a href="https://tagesanzeiger.ch/ticker-iran-usa-israel-libanon-nahost-news-29-872658086267" target="_blank">Quelle</a></p>
+<p class="thema">Iran/USA</p>
+<p>Die USA verlegen laut Pentagon eine dritte Flugzeugträgergruppe in den Nahen Osten, die Spannungen mit dem Iran bleiben hoch. <a href="https://www.handelsblatt.com/politik/international/iran-krieg-usa-schicken-offenbar-weiteren-flugzeugtraeger-nach-nahost/100136895.html" target="_blank">Quelle</a></p>
 
-<h2>KI</h2>
-<p>Rund 20 Tech-Konzerne wie Amazon, Google, Meta und OpenAI unterzeichneten nach einem Treffen mit Trump eine KI-Sicherheitsvereinbarung mit vierstufigem Kontrollsystem. <a href="https://www.srf.ch/news/international/usa/kuenstliche-intelligenz-tech-konzerne-unterzeichnen-ki-sicherheitsregeln" target="_blank">Quelle</a></p>
+<p class="thema">KI</p>
+<p>Rund zwanzig Tech-Konzerne wie Amazon, Google, Meta und OpenAI haben in den USA eine Erklärung für mehr KI-Sicherheit unterzeichnet. <a href="https://www.srf.ch/news/international/usa/kuenstliche-intelligenz-tech-konzerne-unterzeichnen-ki-sicherheitsregeln" target="_blank">Quelle</a></p>
 
-<h2>Apps</h2>
-<p>Seit dem 1. Oktober gelten im App Store der EU neue Bedingungen mit gestuften Provisionen, zugleich entfallen zwei bisherige Zusatzgebühren für Entwickler. <a href="https://www.apple.com/newsroom/topics/app-store/" target="_blank">Quelle</a></p>
+<p class="thema">Computer/Hardware</p>
+<p>Der KI-Boom treibt die Nachfrage nach Server-CPUs so stark, dass Intel die Fertigung von Consumer-Chips auf Xeon-Prozessoren verlagert und Engpässe drohen. <a href="https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes" target="_blank">Quelle</a></p>
 
-<h2>Weltraum</h2>
-<p>Die NASA-Mission Crew-13 startete mit vier Astronauten in einer Dragon-Kapsel zur Internationalen Raumstation, der Aufenthalt soll rund sechs Monate dauern. <a href="https://onvista.de/news/2026/10-01-vier-astronauten-zur-iss-gestartet-0-10-26559685" target="_blank">Quelle</a></p>
+<p class="thema">Wissenschaft/Forschung</p>
+<p>Ein neues KI-Modell der Uniklinik Freiburg soll die Diagnose von Blut- und Lymphdrüsenkrebs automatisieren und Ärzte deutlich entlasten. <a href="https://lifepr.de/pressemitteilung/universitaetsklinikum-freiburg/KI-Modell-soll-Blutkrebs-Diagnostik-deutlich-erleichtern/boxid/1074900" target="_blank">Quelle</a></p>
 
-<h2>Guild Wars 2</h2>
-<p>ArenaNet bereitet einen Shader-Hotfix vor, nachdem das Update vom 29. September Darstellungsfehler bei Rüstungen, Kreaturen und Effekten verursacht hat. <a href="https://en-forum.guildwars2.com/topic/177321-game-update-notes-september-29-2026/" target="_blank">Quelle</a></p>
+<p class="thema">Apple</p>
+<p>Mehrere Apple-Dienste hatten Störungen, Apple TV war laut Berichten vom 1. Oktober weiterhin betroffen, andere Ausfälle wurden inzwischen behoben. <a href="https://apfeltalk.de/magazin/news/apple-dienste-mit-stoerungen-apple-tv-weiter-betroffen-andere-ausfaelle-behoben" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apple, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, Bitcoin, Weltraum, Lorch.</p>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
-    if (ageHours > 18) {
-      var warn = document.createElement('div');
-      warn.className = 'warnung';
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warn, document.body.firstChild);
+    var now = new Date();
+    var diffHours = (now - standDate) / (1000 * 60 * 60);
+    if (diffHours > 18) {
+      var n = Math.floor(diffHours);
+      var el = document.getElementById('warnung');
+      el.textContent = 'Diese Seite ist seit ' + n + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      el.style.display = 'block';
     }
   } catch (e) {}
 })();
