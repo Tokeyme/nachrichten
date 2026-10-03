@@ -64,30 +64,30 @@
   }
 </style>
 </head>
-<body data-stand="2026-10-03T08:08:05Z">
+<body data-stand="2026-10-03T18:08:48Z">
 <div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 03.10.2026, 10:08 Uhr</div>
+<div class="stand">aktualisiert: 03.10.2026, 20:08 Uhr</div>
 
 <p class="thema">Ukraine/Russland</p>
-<p>Russische Luftangriffe trafen am 2. Oktober Kiew und Charkiw, in Charkiw wurden 36 Menschen verletzt, in Kiew zwei Bruecken gesperrt. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<p>Frankreich begann mit der Ausbildung ukrainischer Piloten auf Rafale-Kampfjets, während an der Front bei Pokrowsk und Kostjantyniwka weiterhin schwere Kämpfe tobten. <a href="https://www.ukrinform.net/rubric-ato" target="_blank">Quelle</a></p>
 
 <p class="thema">Iran/USA</p>
-<p>Die USA verlegen bis zu 10.000 weitere Soldaten und einen dritten Flugzeugtraeger in den Nahen Osten, Trump stellt eine Eskalation nach der Wahl in Aussicht. <a href="https://www.cbsnews.com/live-updates/trump-iran-war-us-midterm-elections-troops-deployment/" target="_blank">Quelle</a></p>
+<p>Donald Trump nannte Irans Sieben-Tage-Vorschlag zur Straße von Hormus inakzeptabel und stellte nach den Midterms am 3. November neue Angriffe auf den Iran in Aussicht. <a href="https://www.cbsnews.com/live-updates/iran-war-us-negotiations-strait-of-hormuz-oil/" target="_blank">Quelle</a></p>
 
 <p class="thema">AfD</p>
-<p>Ein Rechtsgutachten haelt die AfD-Wahlkampffinanzierung in Sachsen-Anhalt fuer rechtswidrig, was die dortige Landtagswahl juristisch angreifbar machen koennte. <a href="https://www.lto.de/recht/presseschau/p/presseschau-2026-10-01-afd-landtagswahl-parteispenden-hape-kerkeling-maja-t-rueckueberstellung" target="_blank">Quelle</a></p>
-
-<p class="thema">Weltraum</p>
-<p>Die SpaceX-Crew-13 dockte knapp acht Stunden nach dem Start so schnell wie nie zuvor ein US-Raumschiff an der ISS an. <a href="https://www.raumfahrer.net/nasa-mission-spacex-crew-13-startet-zur-internationalen-raumstation/" target="_blank">Quelle</a></p>
+<p>Der Rechtsausschuss des Thüringer Landtags hörte Experten zu einem möglichen AfD-Verbotsverfahren an, während rund 1000 Juristen eine entsprechende Klage fordern. <a href="https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_101381984/afd-verbot-1000-juristen-fordern-ein-verbotsverfahren.html" target="_blank">Quelle</a></p>
 
 <p class="thema">KI</p>
-<p>Microsoft hat sein Audiomodell MAI-Transcribe aktualisiert, das nun erstmals Echtzeit-Transkripte erstellt und zu den besten Modellen seiner Klasse zaehlen soll. <a href="https://drwindows.de/news/microsoft-ai-mai-transcribe-und-mai-voice-erhalten-groessere-updates" target="_blank">Quelle</a></p>
+<p>Google stellte mit Gemini 4 Argon sein erstes neues KI-Spitzenmodell seit Gemini 3 vor und tritt damit gegen GPT-6 Astra und Claude Opus 5.5 an. <a href="https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html" target="_blank">Quelle</a></p>
 
-<p class="thema">Computer/Hardware</p>
-<p>Grafikkarten- und Arbeitsspeicherpreise steigen durch die KI-Nachfrage weiter, Speicherhersteller Micron erwartet eine RAM-Verknappung bis mindestens 2028. <a href="https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes" target="_blank">Quelle</a></p>
+<p class="thema">Apps</p>
+<p>Seit dem 1. Oktober gelten in der EU neue App-Store-Regeln für Apple: Die Core Technology Fee entfällt, alternative App-Marktplätze werden leichter zugänglich. <a href="https://www.heise.de/en/news/Apple-and-EU-Commission-agree-New-App-Store-rules-from-October-1-11418571.html" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Apps, Apple, Lorch.</p>
+<p class="thema">Apple</p>
+<p>Apples erstes faltbares iPhone, das iPhone Duo, startet am 16. Oktober in die Vorbestellung, der offizielle Verkauf beginnt eine Woche später. <a href="https://9to5mac.com/2026/09/25/apple-has-big-october-coming-for-new-hardware-and-software-heres-the-lineup/" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Großes: VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Bitcoin, Lorch.</p>
 
 <script>
   (function () {
@@ -97,7 +97,7 @@
       var stunden = (Date.now() - standDate.getTime()) / 36e5;
       if (stunden > 18) {
         var el = document.getElementById('warnung');
-        el.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+        el.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
         el.style.display = 'block';
       }
     } catch (e) {}
