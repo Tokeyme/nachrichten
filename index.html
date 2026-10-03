@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -19,39 +19,36 @@
     color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 28px;
+    margin-bottom: 4px;
   }
   .stand {
-    color: #777;
+    color: #666;
     font-size: 14px;
     margin-bottom: 28px;
   }
   .thema {
     margin: 0 0 4px 0;
-    font-size: 17px;
-    font-weight: 700;
+    font-weight: bold;
   }
   p {
-    margin: 0 0 24px 0;
+    margin: 0 0 20px 0;
   }
   a {
-    color: #0056b3;
-    text-decoration: underline;
+    color: #0060df;
   }
   .ruhig {
-    color: #777;
+    color: #666;
     font-size: 14px;
     margin-top: 12px;
   }
   .warnung {
+    display: none;
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    font-size: 14px;
     margin-bottom: 20px;
-    display: none;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -62,54 +59,49 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #a0a0a0;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-02T18:09:19Z">
-
+<body data-stand="2026-10-03T08:08:05Z">
 <div class="warnung" id="warnung"></div>
-
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 02.10.2026, 20:09 Uhr</div>
+<div class="stand">aktualisiert: 03.10.2026, 10:08 Uhr</div>
 
 <p class="thema">Ukraine/Russland</p>
-<p>Russische Luftangriffe trafen erneut eine wichtige Brücke in Kiew, bei einem Angriff auf Charkiw starben laut Behörden mindestens zwei Menschen. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<p>Russische Luftangriffe trafen am 2. Oktober Kiew und Charkiw, in Charkiw wurden 36 Menschen verletzt, in Kiew zwei Bruecken gesperrt. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
 <p class="thema">Iran/USA</p>
-<p>Die USA verlegen laut Pentagon eine dritte Flugzeugträgergruppe in den Nahen Osten, die Spannungen mit dem Iran bleiben hoch. <a href="https://www.handelsblatt.com/politik/international/iran-krieg-usa-schicken-offenbar-weiteren-flugzeugtraeger-nach-nahost/100136895.html" target="_blank">Quelle</a></p>
+<p>Die USA verlegen bis zu 10.000 weitere Soldaten und einen dritten Flugzeugtraeger in den Nahen Osten, Trump stellt eine Eskalation nach der Wahl in Aussicht. <a href="https://www.cbsnews.com/live-updates/trump-iran-war-us-midterm-elections-troops-deployment/" target="_blank">Quelle</a></p>
+
+<p class="thema">AfD</p>
+<p>Ein Rechtsgutachten haelt die AfD-Wahlkampffinanzierung in Sachsen-Anhalt fuer rechtswidrig, was die dortige Landtagswahl juristisch angreifbar machen koennte. <a href="https://www.lto.de/recht/presseschau/p/presseschau-2026-10-01-afd-landtagswahl-parteispenden-hape-kerkeling-maja-t-rueckueberstellung" target="_blank">Quelle</a></p>
+
+<p class="thema">Weltraum</p>
+<p>Die SpaceX-Crew-13 dockte knapp acht Stunden nach dem Start so schnell wie nie zuvor ein US-Raumschiff an der ISS an. <a href="https://www.raumfahrer.net/nasa-mission-spacex-crew-13-startet-zur-internationalen-raumstation/" target="_blank">Quelle</a></p>
 
 <p class="thema">KI</p>
-<p>Rund zwanzig Tech-Konzerne wie Amazon, Google, Meta und OpenAI haben in den USA eine Erklärung für mehr KI-Sicherheit unterzeichnet. <a href="https://www.srf.ch/news/international/usa/kuenstliche-intelligenz-tech-konzerne-unterzeichnen-ki-sicherheitsregeln" target="_blank">Quelle</a></p>
+<p>Microsoft hat sein Audiomodell MAI-Transcribe aktualisiert, das nun erstmals Echtzeit-Transkripte erstellt und zu den besten Modellen seiner Klasse zaehlen soll. <a href="https://drwindows.de/news/microsoft-ai-mai-transcribe-und-mai-voice-erhalten-groessere-updates" target="_blank">Quelle</a></p>
 
 <p class="thema">Computer/Hardware</p>
-<p>Der KI-Boom treibt die Nachfrage nach Server-CPUs so stark, dass Intel die Fertigung von Consumer-Chips auf Xeon-Prozessoren verlagert und Engpässe drohen. <a href="https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes" target="_blank">Quelle</a></p>
+<p>Grafikkarten- und Arbeitsspeicherpreise steigen durch die KI-Nachfrage weiter, Speicherhersteller Micron erwartet eine RAM-Verknappung bis mindestens 2028. <a href="https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes" target="_blank">Quelle</a></p>
 
-<p class="thema">Wissenschaft/Forschung</p>
-<p>Ein neues KI-Modell der Uniklinik Freiburg soll die Diagnose von Blut- und Lymphdrüsenkrebs automatisieren und Ärzte deutlich entlasten. <a href="https://lifepr.de/pressemitteilung/universitaetsklinikum-freiburg/KI-Modell-soll-Blutkrebs-Diagnostik-deutlich-erleichtern/boxid/1074900" target="_blank">Quelle</a></p>
-
-<p class="thema">Apple</p>
-<p>Mehrere Apple-Dienste hatten Störungen, Apple TV war laut Berichten vom 1. Oktober weiterhin betroffen, andere Ausfälle wurden inzwischen behoben. <a href="https://apfeltalk.de/magazin/news/apple-dienste-mit-stoerungen-apple-tv-weiter-betroffen-andere-ausfaelle-behoben" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, Bitcoin, Weltraum, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Bitcoin, Apps, Apple, Lorch.</p>
 
 <script>
-(function() {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var now = new Date();
-    var diffHours = (now - standDate) / (1000 * 60 * 60);
-    if (diffHours > 18) {
-      var n = Math.floor(diffHours);
-      var el = document.getElementById('warnung');
-      el.textContent = 'Diese Seite ist seit ' + n + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      el.style.display = 'block';
-    }
-  } catch (e) {}
-})();
+  (function () {
+    try {
+      var stand = document.body.getAttribute('data-stand');
+      var standDate = new Date(stand);
+      var stunden = (Date.now() - standDate.getTime()) / 36e5;
+      if (stunden > 18) {
+        var el = document.getElementById('warnung');
+        el.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+        el.style.display = 'block';
+      }
+    } catch (e) {}
+  })();
 </script>
-
 </body>
 </html>
