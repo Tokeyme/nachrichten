@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -18,38 +18,6 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 28px;
-  }
-  .thema {
-    margin: 0 0 4px 0;
-    font-weight: bold;
-  }
-  p {
-    margin: 0 0 20px 0;
-  }
-  a {
-    color: #0060df;
-  }
-  .ruhig {
-    color: #666;
-    font-size: 14px;
-    margin-top: 12px;
-  }
-  .warnung {
-    display: none;
-    background: #c0392b;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
@@ -58,50 +26,104 @@
     a {
       color: #6aa9ff;
     }
-    .stand, .ruhig {
-      color: #a0a0a0;
+    .stand {
+      color: #999;
     }
+    .ruhig {
+      color: #999;
+      border-top-color: #333;
+    }
+  }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  .thema {
+    margin-bottom: 20px;
+  }
+  .thema h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
+  }
+  a {
+    color: #0056b3;
+  }
+  .ruhig {
+    color: #666;
+    font-size: 14px;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+  }
+  .warnung {
+    background: #c0392b;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
   }
 </style>
 </head>
-<body data-stand="2026-10-03T18:08:48Z">
-<div class="warnung" id="warnung"></div>
+<body data-stand="2026-10-04T08:08:24Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 03.10.2026, 20:08 Uhr</div>
+<p class="stand">aktualisiert: 04.10.2026, 10:08 Uhr</p>
 
-<p class="thema">Ukraine/Russland</p>
-<p>Frankreich begann mit der Ausbildung ukrainischer Piloten auf Rafale-Kampfjets, während an der Front bei Pokrowsk und Kostjantyniwka weiterhin schwere Kämpfe tobten. <a href="https://www.ukrinform.net/rubric-ato" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Russland griff erneut eine wichtige Dnipro-Brücke in Kiew an, landesweit wurden nach ukrainischen Angaben mehrere Menschen getötet und Dutzende verletzt. <a href="https://united24media.com/war-in-ukraine" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">Iran/USA</p>
-<p>Donald Trump nannte Irans Sieben-Tage-Vorschlag zur Straße von Hormus inakzeptabel und stellte nach den Midterms am 3. November neue Angriffe auf den Iran in Aussicht. <a href="https://www.cbsnews.com/live-updates/iran-war-us-negotiations-strait-of-hormuz-oil/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Iran/USA</h2>
+  <p>Die USA verlegen eine dritte Flugzeugträgergruppe und bis zu 10.000 weitere Soldaten in den Nahen Osten, Trump stellte nach den Zwischenwahlen neue Angriffe in Aussicht. <a href="https://www.cbsnews.com/live-updates/trump-iran-war-us-midterm-elections-troops-deployment/" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">AfD</p>
-<p>Der Rechtsausschuss des Thüringer Landtags hörte Experten zu einem möglichen AfD-Verbotsverfahren an, während rund 1000 Juristen eine entsprechende Klage fordern. <a href="https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_101381984/afd-verbot-1000-juristen-fordern-ein-verbotsverfahren.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>AfD</h2>
+  <p>Der Thüringer Landtag hielt eine erste Anhörung zu einem möglichen AfD-Verbotsverfahren ab, unter den geladenen Experten war der frühere Verfassungsschutz-Chef Hans-Georg Maaßen. <a href="https://www.lto.de/recht/presseschau/p/presseschau-2026-10-01-afd-landtagswahl-parteispenden-hape-kerkeling-maja-t-rueckueberstellung" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">KI</p>
-<p>Google stellte mit Gemini 4 Argon sein erstes neues KI-Spitzenmodell seit Gemini 3 vor und tritt damit gegen GPT-6 Astra und Claude Opus 5.5 an. <a href="https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>KI</h2>
+  <p>Das Weiße Haus gründete laut Wall Street Journal eine neue "Super Intelligence Force" zur Steuerung der KI-Entwicklung, den Vorsitz übernimmt Geheimdienstdirektor Jay Clayton. <a href="https://aktien.news/us-regierung-grundet-super-intelligence-force-zur-steuerung-der-ki-entwicklung" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">Apps</p>
-<p>Seit dem 1. Oktober gelten in der EU neue App-Store-Regeln für Apple: Die Core Technology Fee entfällt, alternative App-Marktplätze werden leichter zugänglich. <a href="https://www.heise.de/en/news/Apple-and-EU-Commission-agree-New-App-Store-rules-from-October-1-11418571.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Apple</h2>
+  <p>Apples neues Falt-Smartphone iPhone Duo kommt ab dem 23. Oktober in den Handel, Vorbestellungen starten am 16. Oktober mit dem neuen Betriebssystem iOS 27.1. <a href="https://9to5mac.com/2026/09/25/apple-has-big-october-coming-for-new-hardware-and-software-heres-the-lineup/" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">Apple</p>
-<p>Apples erstes faltbares iPhone, das iPhone Duo, startet am 16. Oktober in die Vorbestellung, der offizielle Verkauf beginnt eine Woche später. <a href="https://9to5mac.com/2026/09/25/apple-has-big-october-coming-for-new-hardware-and-software-heres-the-lineup/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Weltraum</h2>
+  <p>Die verspätete SpaceX-Mission Crew-13 mit Astronauten von NASA, CSA und Roskosmos startete am 1. Oktober zur Internationalen Raumstation. <a href="https://www.nasa.gov/2026-news-releases/" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Großes: VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Bitcoin, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Großes: Bitcoin-Kursschwankungen um die 85.000 Dollar, neue PC-Chips von Nvidia und Intel, Apples und Googles App-Store-Gebührenreform in der EU, Forschung zu Hörgeräten und Demenzrisiko, ein Testspielsieg des VfB Stuttgart, ein neuer Guild-Wars-2-Patch, nichts Neues aus Lorch.</p>
 
 <script>
-  (function () {
-    try {
-      var stand = document.body.getAttribute('data-stand');
-      var standDate = new Date(stand);
-      var stunden = (Date.now() - standDate.getTime()) / 36e5;
-      if (stunden > 18) {
-        var el = document.getElementById('warnung');
-        el.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-        el.style.display = 'block';
-      }
-    } catch (e) {}
-  })();
+(function() {
+  try {
+    var stand = document.body.getAttribute('data-stand');
+    var standDate = new Date(stand);
+    var hours = (Date.now() - standDate.getTime()) / 36e5;
+    if (hours > 18) {
+      var warn = document.createElement('div');
+      warn.className = 'warnung';
+      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      document.body.insertBefore(warn, document.body.firstChild);
+    }
+  } catch (e) {}
+})();
 </script>
 </body>
 </html>
