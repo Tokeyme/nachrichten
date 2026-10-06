@@ -20,90 +20,107 @@
   }
   h1 {
     margin: 0 0 4px 0;
-    font-size: 1.6em;
+    font-size: 26px;
   }
   .stand {
     color: #777777;
-    font-size: 0.85em;
-    margin: 0 0 24px 0;
+    font-size: 14px;
+    margin: 0 0 28px 0;
   }
   .thema {
-    margin: 0 0 4px 0;
-    font-weight: bold;
-  }
-  p.text {
     margin: 0 0 20px 0;
   }
+  .thema h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
+  }
   a {
-    color: #0060df;
+    color: #1a5fb4;
+    text-decoration: underline;
   }
   .ruhig {
     color: #777777;
-    font-size: 0.9em;
-    margin-top: 28px;
+    font-size: 14px;
+    margin-top: 32px;
   }
   .warnung {
-    background: #c40000;
+    display: none;
+    background: #cc0000;
     color: #ffffff;
-    font-weight: bold;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
       color: #e6e6e6;
     }
+    .stand, .ruhig {
+      color: #a0a0a0;
+    }
     a {
       color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #9a9a9a;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-06T08:07:59Z">
-
+<body data-stand="2026-10-06T18:09:53Z">
+<div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 06.10.2026, 10:07 Uhr</p>
+<p class="stand">aktualisiert: 06.10.2026, 20:09 Uhr</p>
 
-<p class="thema">Ukraine/Russland</p>
-<p class="text">Ukrainische Drohnen trafen das Moskauer Gebiet, Russland beschoss ein ukrainisches Versorgungsschiff im Schwarzen Meer, die Luftabwehr fing zuletzt 131 von 157 Drohnen ab. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Russische Angriffe auf die Region Charkiw haben binnen 24 Stunden sieben Menschen getötet und 80 verletzt, Kiew spricht von weiteren schweren Luftangriffen. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">Iran/USA</p>
-<p class="text">Iran haelt die Strasse von Hormus bis zur Erfuellung eigener Bedingungen geschlossen, waehrend die USA einen dritten Flugzeugtraeger und bis zu 10.000 weitere Soldaten in die Region verlegen. <a href="https://www.aljazeera.com/news/2026/10/4/iran-says-strait-of-hormuz-to-remain-closed-until-us-meets-conditions" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Iran/USA</h2>
+  <p>Nach neuen US-Angriffen auf Ziele an der iranischen Küste beschoss Iran laut Berichten Stellungen in Jordanien, Bahrain und Kuwait, die Lage bleibt angespannt. <a href="https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">AfD</p>
-<p class="text">Nach dem Wahlsieg der AfD in Sachsen-Anhalt mit 43,8 Prozent gab es am Tag der Deutschen Einheit bundesweit erneut Demonstrationen gegen Rechtsextremismus und die AfD. <a href="https://www.news.de/politik/860022688/anti-afd-demonstrationen-gegen-rechts-oktober-samstag-03-10-2026-demos-heute-karlsruhe-muenchen-koeln-hamburg-bremen-dresden-berlin/1/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>AfD</h2>
+  <p>Die AfD hat mit Tobias Rausch erstmals in ihrer Geschichte einen Landtagspräsidenten gestellt, gewählt im Landtag von Sachsen-Anhalt. <a href="https://zdfheute.de/politik/deutschland/sachsen-anhalt-afd-landtag-praesident-tobias-rausch-100.html" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">Wissenschaft/Forschung</p>
-<p class="text">Der Medizin-Nobelpreis 2026 geht an Peter Hegemann, Georg Nagel und Karl Deisseroth fuer die Entdeckung lichtgesteuerter Ionenkanaele (Optogenetik) und deren Einsatz in der Hirnforschung. <a href="https://www.spektrum.de/news/medizin-nobelpreis-2026-fuer-forschung-zur-optogenetik/2345552" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>VfB Stuttgart</h2>
+  <p>Der VfB Stuttgart hat den Wechsel von Dzenan Pejcinovic vom VfL Wolfsburg für rund 25 Millionen Euro abgeschlossen, der Mittelfeldspieler bestand bereits den Medizincheck. <a href="https://www.spox.com/fussball/team/vfb-stuttgart/news/3dwlvz6cl4lcavvrg0y2dycrt" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">KI</p>
-<p class="text">OpenAI stellte das Modell GPT-6.1 Sol vor, Anthropic veroeffentlichte das schnellere und guenstigere Sonnet 5.5, und OpenAI sowie Google einigten sich auf einen gemeinsamen KI-Sicherheitsstandard. <a href="https://www.microcenter.com/site/mc-news/article/this-week-in-ai-oct-2-2026.aspx" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>KI</h2>
+  <p>Das französische KI-Unternehmen Mistral hat mit Large 4 sein neues Spitzenmodell vorgestellt, das laut eigenen Angaben zu den leistungsstärksten offenen Modellen weltweit zählt. <a href="https://handelsblatt.com/technik/ki/ki-befreiungsschlag-mistral-veroeffentlicht-neues-spitzenmodell/100260044.html" target="_blank">Quelle</a></p>
+</div>
 
-<p class="thema">Apple</p>
-<p class="text">Apple bestaetigt den Verkaufsstart des iPhone Duo: Vorbestellungen sollen ab dem 16. Oktober moeglich sein, erste Geraete ab dem 23. Oktober ausgeliefert werden. <a href="https://9to5mac.com/2026/09/25/apple-has-big-october-coming-for-new-hardware-and-software-heres-the-lineup/" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Apple</h2>
+  <p>Apple plant laut Berichten neue MacBook-Pro-Modelle mit OLED-Display, die deutlich leichter ausfallen sollen; der Marktstart wird noch im Oktober oder November erwartet. <a href="https://apfelnews.de/2026/10/05/oled-macbook-pro-neue-modelle-sollen-deutlich-leichter-werden" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Guild Wars 2, Bitcoin, Computer/Hardware, Weltraum, Apps, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses: Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
 
 <script>
-(function() {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 3600000;
-    if (ageHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
-    }
-  } catch (e) {}
-})();
+  (function () {
+    try {
+      var stand = document.body.getAttribute('data-stand');
+      var standDate = new Date(stand);
+      var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+      if (ageHours > 18) {
+        var n = Math.floor(ageHours);
+        var el = document.getElementById('warnung');
+        el.textContent = 'Diese Seite ist seit ' + n + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+        el.style.display = 'block';
+      }
+    } catch (e) {}
+  })();
 </script>
-
 </body>
 </html>
