@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -18,6 +18,38 @@
     background: #ffffff;
     color: #1a1a1a;
   }
+  h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
+  }
+  .stand {
+    color: #777777;
+    font-size: 0.85em;
+    margin: 0 0 24px 0;
+  }
+  .thema {
+    margin: 0 0 4px 0;
+    font-weight: bold;
+  }
+  p.text {
+    margin: 0 0 20px 0;
+  }
+  a {
+    color: #0060df;
+  }
+  .ruhig {
+    color: #777777;
+    font-size: 0.9em;
+    margin-top: 28px;
+  }
+  .warnung {
+    background: #c40000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
@@ -26,104 +58,52 @@
     a {
       color: #6aa9ff;
     }
-    .stand {
-      color: #999;
+    .stand, .ruhig {
+      color: #9a9a9a;
     }
-    .ruhig {
-      color: #999;
-      border-top-color: #333;
-    }
-  }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #666;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema {
-    margin-bottom: 20px;
-  }
-  .thema h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 4px 0;
-  }
-  .thema p {
-    margin: 0;
-  }
-  a {
-    color: #0056b3;
-  }
-  .ruhig {
-    color: #666;
-    font-size: 14px;
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid #ddd;
-  }
-  .warnung {
-    background: #c0392b;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
   }
 </style>
 </head>
-<body data-stand="2026-10-05T18:09:12Z">
+<body data-stand="2026-10-06T08:07:59Z">
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 05.10.2026, 20:09 Uhr</p>
+<p class="stand">aktualisiert: 06.10.2026, 10:07 Uhr</p>
 
-<div class="thema">
-  <h2>Ukraine/Russland</h2>
-  <p>Laut Präsident Selenskyj bereiten die USA neue Dreiergespräche mit Russland und der Ukraine vor, um einen Weg zur Beendigung des Krieges zu finden. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">Ukraine/Russland</p>
+<p class="text">Ukrainische Drohnen trafen das Moskauer Gebiet, Russland beschoss ein ukrainisches Versorgungsschiff im Schwarzen Meer, die Luftabwehr fing zuletzt 131 von 157 Drohnen ab. <a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>Iran/USA</h2>
-  <p>Nach der Entsendung einer dritten US-Flugzeugträgergruppe droht Präsident Trump mit neuen Angriffen auf Iran nach den Zwischenwahlen, falls kein Abkommen gelingt. <a href="https://www.cbsnews.com/live-updates/iran-war-us-negotiations-strait-of-hormuz-oil/" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">Iran/USA</p>
+<p class="text">Iran haelt die Strasse von Hormus bis zur Erfuellung eigener Bedingungen geschlossen, waehrend die USA einen dritten Flugzeugtraeger und bis zu 10.000 weitere Soldaten in die Region verlegen. <a href="https://www.aljazeera.com/news/2026/10/4/iran-says-strait-of-hormuz-to-remain-closed-until-us-meets-conditions" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>AfD</h2>
-  <p>Im Thüringer Landtag fand die erste parlamentarische Anhörung zu einem möglichen AfD-Verbotsverfahren statt, bei der neun Sachverständige einschließlich Ex-Verfassungsschutzchef Maaßen geladen waren. <a href="https://www.lto.de/recht/presseschau/p/presseschau-2026-10-01-afd-landtagswahl-parteispenden-hape-kerkeling-maja-t-rueckueberstellung" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">AfD</p>
+<p class="text">Nach dem Wahlsieg der AfD in Sachsen-Anhalt mit 43,8 Prozent gab es am Tag der Deutschen Einheit bundesweit erneut Demonstrationen gegen Rechtsextremismus und die AfD. <a href="https://www.news.de/politik/860022688/anti-afd-demonstrationen-gegen-rechts-oktober-samstag-03-10-2026-demos-heute-karlsruhe-muenchen-koeln-hamburg-bremen-dresden-berlin/1/" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>VfB Stuttgart</h2>
-  <p>Der VfB Stuttgart verlor zu Hause 0:1 gegen Borussia Dortmund und rutschte mit nur drei Punkten aus vier Spielen auf Platz 15 der Bundesliga ab. <a href="https://www.sportschau.de/fussball/vereine/vfb-stuttgart,vfb-stuttgart-klub-index-sp-100.html" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">Wissenschaft/Forschung</p>
+<p class="text">Der Medizin-Nobelpreis 2026 geht an Peter Hegemann, Georg Nagel und Karl Deisseroth fuer die Entdeckung lichtgesteuerter Ionenkanaele (Optogenetik) und deren Einsatz in der Hirnforschung. <a href="https://www.spektrum.de/news/medizin-nobelpreis-2026-fuer-forschung-zur-optogenetik/2345552" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>Wissenschaft/Forschung</h2>
-  <p>Der Medizin-Nobelpreis 2026 geht an die deutschen Forscher Peter Hegemann und Georg Nagel sowie den US-Forscher Karl Deisseroth für die Entwicklung der Optogenetik. <a href="https://de.euronews.com/2026/10/05/medizin-nobelpreis-2026" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">KI</p>
+<p class="text">OpenAI stellte das Modell GPT-6.1 Sol vor, Anthropic veroeffentlichte das schnellere und guenstigere Sonnet 5.5, und OpenAI sowie Google einigten sich auf einen gemeinsamen KI-Sicherheitsstandard. <a href="https://www.microcenter.com/site/mc-news/article/this-week-in-ai-oct-2-2026.aspx" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>KI</h2>
-  <p>Nvidia erreichte im Oktober als erstes Unternehmen der Geschichte eine Börsenbewertung von mehr als 5 Billionen US-Dollar, getrieben vom anhaltenden KI-Boom. <a href="https://www.crn.de/news/2026/translated/10-hei-este-ki-news-crn" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">Apple</p>
+<p class="text">Apple bestaetigt den Verkaufsstart des iPhone Duo: Vorbestellungen sollen ab dem 16. Oktober moeglich sein, erste Geraete ab dem 23. Oktober ausgeliefert werden. <a href="https://9to5mac.com/2026/09/25/apple-has-big-october-coming-for-new-hardware-and-software-heres-the-lineup/" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Großes: Bitcoin (ETF-Vermögen über 111 Mrd. Dollar, Kurs stabil), Computer/Hardware (DeepSeek/Huawei zeigen Ascend-Tools gegen Nvidia-Abhängigkeit), Apple (Falt-Handy iPhone Duo startet im Oktober), Weltraum (SpaceX-Crew-13 zur ISS gestartet), Guild Wars 2 (Bugfix-Patch, neuer Raid-Modus ab 13. Oktober), Lorch (Breitbandausbau fast fertig, neues Pflegeheim geplant), Apps ohne wichtige Neuigkeit.</p>
+<p class="ruhig">Ruhig, nichts Grosses: VfB Stuttgart, Guild Wars 2, Bitcoin, Computer/Hardware, Weltraum, Apps, Lorch.</p>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / 36e5;
-    if (hours > 18) {
-      var warn = document.createElement('div');
-      warn.className = 'warnung';
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      document.body.insertBefore(warn, document.body.firstChild);
+    var ageHours = (Date.now() - standDate.getTime()) / 3600000;
+    if (ageHours > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
