@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
+  :root { color-scheme: light dark; }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -23,7 +21,7 @@
     font-size: 1.6em;
   }
   .stand {
-    color: #777;
+    color: #777777;
     font-size: 0.9em;
     margin-bottom: 24px;
   }
@@ -36,16 +34,17 @@
     margin: 0 0 20px 0;
   }
   a {
-    color: #0059c8;
+    color: #0060df;
+    text-decoration: underline;
   }
   .ruhig {
-    color: #777;
+    color: #777777;
     font-size: 0.9em;
-    margin-top: 32px;
+    margin-top: 28px;
   }
   .warnung {
-    background: #c40000;
-    color: #fff;
+    background: #c0392b;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -60,51 +59,42 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-07T08:10:05Z">
-
-<div id="warnung-container"></div>
-
+<body data-stand="2026-10-07T18:10:12Z">
+<div id="warnung-platz"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 07.10.2026, 10:10 Uhr</div>
+<div class="stand">aktualisiert: 07.10.2026, 20:10 Uhr</div>
 
 <p class="thema">Ukraine/Russland</p>
-<p>Laut einem ukrainischen General bereitet Russland eine neue Offensive fuer den Herbst vor, die EU wirft Moskau dabei ein Ablenkungsmanoever vor. <a href="https://www.heidelberg24.de/politik-und-wirtschaft/ukraine-news-selenskyj-warnt-vor-putins-rache-sie-suchen-nach-einem-vorwand-zr-94102540.html" target="_blank">Quelle</a></p>
+<p>Laut aktuellem Nachrichtenüberblick haben sich Donald Trump und Wolodymyr Selenskyj bereits auf 90 bis 95 Prozent eines Friedensvorschlags für die Ukraine geeinigt. <a href="https://www.news.de/politik/857207979/ukraine-krieg-news-2026-aktuell-nachrichten-im-newsticker-zu-russland-putin-donald-trump-krieg-in-der-ukraine-ukraine-krieg-aktuell/1/" target="_blank">Quelle</a></p>
 
 <p class="thema">AfD</p>
-<p>Nach den AfD-Erfolgen bei den Landtagswahlen in Sachsen-Anhalt und Mecklenburg-Vorpommern finden im Oktober in vielen deutschen St&auml;dten erneut Demonstrationen gegen Rechtsextremismus statt. <a href="https://www.news.de/politik/860022688/anti-afd-demos-gegen-rechtsextremismus-im-oktober-2026-demonstrationen-termine-aktuell-nrw-bayern-hamburg-berlin-sachsen/1/" target="_blank">Quelle</a></p>
+<p>Laut aktueller Forsa-Umfrage liegt die Union mit 26 Prozent erstmals seit längerem wieder vor der AfD, die auf 25 Prozent kommt. <a href="https://www.berliner-zeitung.de/article/aktuelle-forsa-umfrage-afd-rutscht-auf-neuen-platz-ab-union-liegt-vorne-10014405" target="_blank">Quelle</a></p>
 
-<p class="thema">Apple</p>
-<p>Apple soll im Oktober ein weiteres Event planen und dabei unter anderem ein neues iPad mini sowie ein &uuml;berarbeitetes MacBook Pro mit OLED-Display vorstellen. <a href="https://www.newsbytesapp.com/news/science/apple-s-rumored-october-event-may-bring-8-new-devices/story" target="_blank">Quelle</a></p>
+<p class="thema">Guild Wars 2</p>
+<p>Das neue Guild Wars 2-Kapitel "Visions of Eternity" startet laut Ankündigung am 28. Oktober und läutet eine neue Ära für das Spiel ein. <a href="https://roundtablecoop.com/news/guild-wars-2-visions-of-eternity-a-new-era-dawns-october-28th/" target="_blank">Quelle</a></p>
 
-<p class="thema">Weltraum</p>
-<p>Das vierte Quartal 2026 ist voller Raketenstarts, Anfang Oktober flog bereits eine SpaceX Falcon 9 vom Cape Canaveral, weitere Missionen folgen laut Startliste. <a href="https://en.wikipedia.org/wiki/List_of_spaceflight_launches_in_October%E2%80%93December_2026" target="_blank">Quelle</a></p>
-
-<p class="thema">Bitcoin</p>
-<p>Bitcoin-Spot-ETFs verzeichneten 2026 bislang Rekordzufl&uuml;sse von rund 214 Milliarden Dollar, angef&uuml;hrt von BlackRock-Fonds, trotz Prognosen f&uuml;r eine Schw&auml;chephase zum Jahresende. <a href="https://whale-alert.io/stories/9c7404baf6d7/Bitcoin-outlook-mixed-for-2026-214B-spotETF-inflows-led-by-BlackRock-contrast-with-forecasts-of-weakness-into-late-2026" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Gro&szlig;es: Iran/USA, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, K&uuml;nstliche Intelligenz, Computer/Hardware, Apps, Lorch (W&uuml;rttemberg).</p>
+<p class="ruhig">Ruhig, nichts Großes: Iran/USA, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apple, Apps, Lorch.</p>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var jetzt = new Date();
-    var stundenAlt = (jetzt - standDate) / (1000 * 60 * 60);
-    if (stundenAlt > 18) {
+    var now = new Date();
+    var diffHours = (now.getTime() - standDate.getTime()) / 36e5;
+    if (diffHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.getElementById('warnung-container').appendChild(warnung);
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      document.getElementById('warnung-platz').appendChild(warnung);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
