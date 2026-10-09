@@ -11,10 +11,10 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -22,34 +22,33 @@
     margin-bottom: 4px;
   }
   .stand {
-    color: #777777;
-    font-size: 14px;
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 24px;
+  }
+  .thema {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  p {
     margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema h2 {
-    font-size: 17px;
-    margin: 22px 0 4px 0;
-  }
-  .thema p {
-    margin: 0 0 4px 0;
+    margin-bottom: 20px;
   }
   a {
-    color: #1a56db;
-    text-decoration: underline;
+    color: #0060df;
   }
   .ruhig {
-    color: #777777;
-    font-size: 14px;
+    color: #777;
+    font-size: 0.9em;
     margin-top: 32px;
   }
   .warnung {
-    background: #c0392b;
-    color: #ffffff;
+    background: #d32f2f;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -60,43 +59,30 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-08T18:08:17Z">
+<body data-stand="2026-10-09T08:09:24Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 08.10.2026, 20:08 Uhr</p>
+<div class="stand">aktualisiert: 09.10.2026, 10:09 Uhr</div>
 
-<div class="thema">
-<h2>AfD</h2>
-<p>Nach dem Rechtsruck bei den Landtagswahlen im September sind für Oktober 2026 bundesweit zahlreiche Demonstrationen gegen die AfD angemeldet. <a href="https://www.news.de/politik/860022688/anti-afd-demos-gegen-rechtsextremismus-im-oktober-2026-demonstrationen-termine-aktuell-nrw-bayern-hamburg-berlin-sachsen/1/" target="_blank">Quelle</a></p>
-</div>
+<div class="thema">Apple</div>
+<p>Apple plant laut Medienberichten am 13. Oktober ein Event rund um das vernetzte Zuhause mit neuem Home Hub, HomePod mini und Apple TV 4K. <a href="https://www.macwelt.de/article/3246008/apple-oktober-neu.html" target="_blank">Quelle</a></p>
 
-<div class="thema">
-<h2>Weltraum</h2>
-<p>Vom 5. bis 9. Oktober findet im türkischen Antalya der Internationale Astronautische Kongress statt, die weltweit größte Raumfahrtkonferenz. <a href="https://www.martinkaessler.com/raumfahrt-2026-alle-termine-fuer-space-fans/" target="_blank">Quelle</a></p>
-</div>
-
-<div class="thema">
-<h2>VfB Stuttgart</h2>
-<p>Nach der Niederlage gegen Hoffenheim tritt der VfB Stuttgart am Samstag, 10. Oktober, beim SC Paderborn an. <a href="https://www.news.de/sport/860008901/vfb-stuttgart-gegen-borussia-dortmund-am-19-09-2026-spielplan-fuer-naechste-spiele/1/" target="_blank">Quelle</a></p>
-</div>
-
-<p class="ruhig">Ruhig, nichts Großes: Ukraine/Russland, Iran/USA, Guild Wars 2, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apple, Lorch.</p>
+<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg) - zu diesen Themen gab es in der Recherche keine verlaesslich datierten, wichtigen Meldungen der letzten Tage.</div>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var hours = (now - standDate) / 1000 / 60 / 60;
-    if (hours > 18) {
+    var ageHours = (Date.now() - standDate.getTime()) / 3600000;
+    if (ageHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
