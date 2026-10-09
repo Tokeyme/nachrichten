@@ -16,74 +16,90 @@
     font-size: 16px;
     line-height: 1.5;
     background: #ffffff;
-    color: #1a1a1a;
+    color: #111111;
   }
   h1 {
     margin-bottom: 4px;
   }
   .stand {
-    color: #777;
-    font-size: 0.9em;
-    margin-bottom: 24px;
+    color: #666666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
   .thema {
-    font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 22px;
   }
-  p {
-    margin-top: 0;
-    margin-bottom: 20px;
+  .thema h2 {
+    font-size: 17px;
+    margin: 0 0 4px 0;
+  }
+  .thema p {
+    margin: 0;
   }
   a {
-    color: #0060df;
+    color: #0b57d0;
   }
   .ruhig {
-    color: #777;
-    font-size: 0.9em;
+    color: #666666;
+    font-size: 14px;
     margin-top: 32px;
   }
-  .warnung {
-    background: #d32f2f;
-    color: #fff;
+  #warnung {
+    display: none;
+    background: #c0392b;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 15px;
   }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
       color: #e6e6e6;
     }
+    .stand, .ruhig {
+      color: #a0a0a0;
+    }
     a {
       color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-09T08:09:24Z">
+<body data-stand="2026-10-09T18:09:20Z">
+<div id="warnung"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 09.10.2026, 10:09 Uhr</div>
+<p class="stand">aktualisiert: 09.10.2026, 20:09 Uhr</p>
 
-<div class="thema">Apple</div>
-<p>Apple plant laut Medienberichten am 13. Oktober ein Event rund um das vernetzte Zuhause mit neuem Home Hub, HomePod mini und Apple TV 4K. <a href="https://www.macwelt.de/article/3246008/apple-oktober-neu.html" target="_blank">Quelle</a></p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Nach ukrainischen Angaben bereitet Russland einen weiteren grossen Luftangriff vor, Praesident Selenskyj warnt zugleich vor Munitionsmangel bei der Flugabwehr. <a href="https://www.nordkurier.de/autoren/guenther-chalupa-4694340?page=-5" target="_blank">Quelle</a></p>
+</div>
 
-<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg) - zu diesen Themen gab es in der Recherche keine verlaesslich datierten, wichtigen Meldungen der letzten Tage.</div>
+<div class="thema">
+  <h2>Apple</h2>
+  <p>Apple soll laut Berichten am 13. Oktober ein Smart-Home-Event mit neuem Home-Hub-Steuergeraet veranstalten, Ende Oktober folgt offenbar ein zweites Event mit neuen Macs. <a href="https://www.giga.de/tech/der-doppelte-apple-herbst-diese-zwei-termine-im-oktober-solltet-ihr-euch-im-kalender-markieren--01M3V4V1YD56KVSPPD082JXB3E" target="_blank">Quelle</a></p>
+</div>
+
+<div class="thema">
+  <h2>Bitcoin</h2>
+  <p>Spot-Bitcoin-ETFs verzeichneten in der Woche bis zum 25. September mit rund 2,39 Milliarden Dollar das staerkste woechentliche Zuflussvolumen des Jahres, angefuehrt von BlackRock. <a href="https://whale-alert.io/stories/9c7404baf6d7/Bitcoin-outlook-mixed-for-2026-214B-spotETF-inflows-led-by-BlackRock-contrast-with-forecasts-of-weakness-into-late-2026" target="_blank">Quelle</a></p>
+</div>
+
+<p class="ruhig">Ruhig, nichts Grosses: Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 3600000;
-    if (ageHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+    var stunden = (Date.now() - standDate.getTime()) / 36e5;
+    if (stunden > 18) {
+      var warnung = document.getElementById('warnung');
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.style.display = 'block';
     }
   } catch (e) {}
 })();
