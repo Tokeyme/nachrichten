@@ -5,95 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
+  :root { color-scheme: light dark; }
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #777;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema {
-    margin-top: 22px;
-    margin-bottom: 4px;
-    font-weight: bold;
-  }
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  a {
-    color: #1a56db;
-  }
-  .ruhig {
-    color: #777;
-    font-size: 14px;
-    margin-top: 36px;
-  }
-  .warnung {
-    background: #c0392b;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
+  h1 { margin-bottom: 4px; }
+  .stand { color: #666; font-size: 14px; margin-top: 0; margin-bottom: 24px; }
+  .thema h2 { font-size: 17px; margin: 0 0 4px 0; }
+  .thema p { margin: 0 0 20px 0; }
+  a { color: #0060df; }
+  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
+  .warnung { background: #c62828; color: #fff; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-weight: bold; }
   @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e6e6e6;
-    }
-    a {
-      color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #999;
-    }
+    body { background: #121212; color: #e6e6e6; }
+    .stand { color: #999; }
+    a { color: #6aa9ff; }
+    .ruhig { color: #999; }
   }
 </style>
 </head>
-<body data-stand="2026-10-11T18:08:22Z">
-
+<body data-stand="2026-10-12T08:09:35Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 11.10.2026, 20:08 Uhr</p>
+<p class="stand">aktualisiert: 12.10.2026, 10:09 Uhr</p>
 
-<p class="thema">Bitcoin</p>
-<p>Bitcoin startete den Oktober bei rund 84.800 Dollar (etwa 78.000 Euro), getrieben von der staerksten Woche an Bitcoin-ETF-Zufluessen im bisherigen Jahr 2026. <a href="https://247wallst.com/investing/cryptocurrency/2026/09/30/bitcoin-price-prediction-for-october-2026/" target="_blank">Quelle</a></p>
-
-<p class="thema">Apple</p>
-<p>Apple soll laut Berichten fuer die letzte Oktoberwoche eine weitere Produktankuendigung planen, zusaetzlich zu der bereits erwarteten Mac-Vorstellung im Oktober. <a href="https://www.neoteo.com/en/apple-reportedly-plans-another-product-announcement-for-late-october" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses: Fuer keines der ueblichen Themen (Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch) liess sich bei dieser Recherche eine zweifelsfrei aktuelle Meldung der letzten 2-3 Tage finden - die Suchergebnisse waren durchweg veraltet oder nicht datierbar. Naechster Durchlauf bringt wieder frische Ergebnisse.</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hoursOld = (Date.now() - standDate.getTime()) / 36e5;
-    if (hoursOld > 18) {
+    var hours = (Date.now() - standDate.getTime()) / 36e5;
+    if (hours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hoursOld) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
