@@ -19,36 +19,36 @@
     color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
     color: #777777;
-    font-size: 0.9em;
-    margin-bottom: 24px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
   h2 {
-    font-size: 1.05em;
-    margin: 22px 0 4px 0;
+    font-size: 16px;
+    margin: 20px 0 4px;
   }
   p {
-    margin: 0 0 4px 0;
+    margin: 0 0 4px;
   }
   a {
-    color: #0060df;
+    color: #1a56db;
   }
   .ruhig {
     color: #777777;
-    font-size: 0.9em;
+    font-size: 14px;
     margin-top: 28px;
   }
   .warnung {
-    background: #c0392b;
+    background: #c62828;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 18px;
-    font-size: 0.95em;
+    margin-bottom: 20px;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -64,29 +64,25 @@
   }
 </style>
 </head>
-<body data-stand="2026-10-15T08:09:04Z">
+<body data-stand="2026-10-15T18:09:09Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 15.10.2026, 10:09 Uhr</div>
+<p class="stand">aktualisiert: 15.10.2026, 20:09 Uhr</p>
 
-<h2>Ukraine/Russland</h2>
-<p>Ukraines Oberbefehlshaber Syrskyi erklärt, Russlands Vorrücken habe sich 2026 deutlich verlangsamt, mit unabhängig nicht überprüfbaren rund 32.000 russischen Verlusten pro Monat. <a href="https://www.bluewin.ch/de/news/kiew-russische-verluste-hoch-und-eroberungstempo-halbiert-li.3523750" target="_blank">Quelle</a></p>
+<h2>Apple</h2>
+<p>Apple hat laut Macwelt ein Event namens "Welcome Home" angekündigt, das sich auf neue Smart-Home-Geräte wie Hub, HomePod mini und Apple TV konzentrieren soll. <a href="https://www.macwelt.de/article/3246008/apple-oktober-neu.html" target="_blank">Quelle</a></p>
 
-<h2>AfD</h2>
-<p>Beim AfD-Bundesparteitag wurden Alice Weidel und Tino Chrupalla von rund 600 Delegierten erneut als Co-Vorsitzende bestätigt, begleitet von Protesten vor Ort. <a href="https://tvpworld.com/94178533/afd-congress-in-eastern-germany-draws-protests-amid-polling-gains" target="_blank">Quelle</a></p>
-
-<div class="ruhig">Ruhig, nichts Grosses: Iran/USA, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.</div>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var diffMs = Date.now() - standDate.getTime();
-    var diffHours = diffMs / (1000 * 60 * 60);
-    if (diffHours > 18) {
+    var hours = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
+    if (hours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
