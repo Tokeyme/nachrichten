@@ -19,36 +19,42 @@
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
+    color: #777;
+    font-size: 0.9em;
+    margin: 0 0 24px 0;
   }
-  h2 {
-    font-size: 16px;
-    margin: 20px 0 4px;
+  .thema h2 {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 20px 0 4px 0;
   }
-  p {
-    margin: 0 0 4px;
+  .thema p {
+    margin: 0 0 4px 0;
   }
-  a {
-    color: #1a56db;
+  .hinweis {
+    color: #555;
+    font-size: 0.95em;
   }
   .ruhig {
-    color: #777777;
-    font-size: 14px;
+    color: #777;
+    font-size: 0.9em;
     margin-top: 28px;
   }
+  a {
+    color: #0059c1;
+  }
   .warnung {
-    background: #c62828;
-    color: #ffffff;
+    display: none;
+    background: #c0392b;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-bottom: 16px;
+    font-size: 0.95em;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -59,31 +65,33 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
+    }
+    .hinweis {
+      color: #bbb;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-15T18:09:09Z">
+<body data-stand="2026-10-16T08:08:39Z">
+<div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 15.10.2026, 20:09 Uhr</p>
+<p class="stand">aktualisiert: 16.10.2026, 10:08 Uhr</p>
 
-<h2>Apple</h2>
-<p>Apple hat laut Macwelt ein Event namens "Welcome Home" angekündigt, das sich auf neue Smart-Home-Geräte wie Hub, HomePod mini und Apple TV konzentrieren soll. <a href="https://www.macwelt.de/article/3246008/apple-oktober-neu.html" target="_blank">Quelle</a></p>
+<p class="hinweis">Die heutige Recherche hat zu den beobachteten Themen keine verlässlich aktuellen (letzte 2-3 Tage), wichtig belegten Meldungen ergeben. Deshalb heute kein Themenblock, nur die Übersicht unten.</p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
+<p class="ruhig">Ruhig, nichts Grosses mit belastbarer aktueller Quelle gefunden zu: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
+    var hours = (Date.now() - standDate.getTime()) / 36e5;
     if (hours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+      var el = document.getElementById('warnung');
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      el.style.display = 'block';
     }
   } catch (e) {}
 })();
