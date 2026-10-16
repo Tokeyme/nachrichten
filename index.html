@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -19,42 +16,41 @@
     color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
     color: #777;
-    font-size: 0.9em;
-    margin: 0 0 24px 0;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
-  .thema h2 {
-    font-size: 1em;
-    font-weight: 700;
-    margin: 20px 0 4px 0;
+  h2 {
+    font-size: 17px;
+    margin: 22px 0 4px;
   }
-  .thema p {
-    margin: 0 0 4px 0;
+  p {
+    margin: 0 0 4px;
   }
-  .hinweis {
-    color: #555;
-    font-size: 0.95em;
+  a {
+    color: #1a5fb4;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .ruhig {
     color: #777;
-    font-size: 0.9em;
-    margin-top: 28px;
-  }
-  a {
-    color: #0059c1;
+    font-size: 14px;
+    margin-top: 32px;
   }
   .warnung {
-    display: none;
     background: #c0392b;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 16px;
-    font-size: 0.95em;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -67,34 +63,35 @@
     .stand, .ruhig {
       color: #999;
     }
-    .hinweis {
-      color: #bbb;
-    }
   }
 </style>
 </head>
-<body data-stand="2026-10-16T08:08:39Z">
+<body data-stand="2026-10-16T18:10:11Z">
+
 <div class="warnung" id="warnung"></div>
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 16.10.2026, 10:08 Uhr</p>
+<p class="stand">aktualisiert: 16.10.2026, 20:10 Uhr</p>
 
-<p class="hinweis">Die heutige Recherche hat zu den beobachteten Themen keine verlässlich aktuellen (letzte 2-3 Tage), wichtig belegten Meldungen ergeben. Deshalb heute kein Themenblock, nur die Übersicht unten.</p>
+<h2>Bitcoin</h2>
+<p>Bitcoin bewegt sich Mitte Oktober 2026 stabil zwischen rund 83.000 und 86.500 US-Dollar (etwa 76.000 bis 79.000 Euro), ohne grosse Ausschlaege. <a href="https://bgeometrics.com/reports/daily/2026-10-10.html" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses mit belastbarer aktueller Quelle gefunden zu: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Apple, Lorch.</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / 36e5;
-    if (hours > 18) {
+    var diffHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (diffHours > 18) {
       var el = document.getElementById('warnung');
-      el.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       el.style.display = 'block';
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
