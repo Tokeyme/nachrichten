@@ -16,7 +16,39 @@
     font-size: 16px;
     line-height: 1.5;
     background: #ffffff;
-    color: #1a1a1a;
+    color: #111111;
+  }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #777777;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 17px;
+    margin: 20px 0 4px;
+  }
+  p {
+    margin: 0 0 4px;
+  }
+  a {
+    color: #0060df;
+  }
+  .ruhig {
+    color: #777777;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .warnung {
+    background: #c62828;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -26,76 +58,38 @@
     a {
       color: #6aa9ff;
     }
-  }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #777;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema {
-    font-weight: bold;
-    margin-bottom: 2px;
-  }
-  .meldung {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  .ruhig {
-    color: #777;
-    font-size: 14px;
-    margin-top: 32px;
-  }
-  .warnung {
-    background: #c0392b;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
-  a {
-    color: #1a56db;
+    .stand, .ruhig {
+      color: #999999;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-10-17T18:06:00Z">
-
+<body data-stand="2026-10-18T08:06:23Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 17.10.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 18.10.2026, 10:06 Uhr</p>
 
-<div class="thema">AfD</div>
-<p class="meldung">Nach Zugewinnen der AfD bei den Landtagswahlen in Sachsen-Anhalt und Mecklenburg-Vorpommern sind fuer Oktober bundesweit Demonstrationen gegen die Partei angekuendigt. <a href="https://www.news.de/politik/860022688/anti-afd-demos-gegen-rechtsextremismus-im-oktober-2026-demonstrationen-termine-aktuell-nrw-bayern-hamburg-berlin-sachsen/1/" target="_blank">Quelle</a></p>
+<h2>KI</h2>
+<p>Forscher haben einer Übersicht aktueller KI-Meldungen zufolge eine chinesische Flotte autonomer KI-Agenten aufgespürt, während Google DeepMind selbstverbessernde KI weiterhin für weit entfernt hält. <a href="https://www.mind-verse.de/ressourcen/news/archiv/2026-10" target="_blank">Quelle</a></p>
 
-<div class="thema">Apple</div>
-<p class="meldung">Apple hielt am 13. Oktober ein Smart-Home-Event mit neuem HomePod mini und aktualisiertem Apple TV ab, weitere Mac-Vorstellungen sind fuer den 27. und 28. Oktober in Los Angeles geplant. <a href="https://www.macwelt.de/article/3258828/apple-plant-eine-zusatzliche-mac-vorstellung-ende-oktober.html" target="_blank">Quelle</a></p>
+<h2>Apple</h2>
+<p>Apple kündigte für den 13. Oktober ein Smart-Home-Event namens "Welcome Home" an, bei dem ein neuer Home Hub, ein HomePod mini und ein aktualisiertes Apple TV erwartet wurden. <a href="https://www.macwelt.de/article/3246008/apple-oktober-neu.html" target="_blank">Quelle</a></p>
 
-<div class="thema">KI</div>
-<p class="meldung">Google DeepMind erklaerte Mitte Oktober, selbstverbessernde Kuenstliche Intelligenz sei trotz schneller Fortschritte in der Branche noch lange nicht erreichbar. <a href="https://www.mind-verse.de/ressourcen/news/archiv/2026-10" target="_blank">Quelle</a></p>
-
-<div class="thema">Bitcoin</div>
-<p class="meldung">Der Bitcoin-Kurs rutschte Mitte Oktober auf rund 83.000 Dollar (etwa 76.000 Euro) ab, nachdem er Anfang des Monats noch bei rund 86.000 Dollar gelegen hatte. <a href="https://bgeometrics.com/reports/daily/2026-10-10.html" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg).</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / 3600000;
-    if (hours > 18) {
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
