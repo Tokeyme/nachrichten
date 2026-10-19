@@ -18,42 +18,6 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
-  }
-  .stand {
-    color: #777;
-    font-size: 0.9em;
-    margin-bottom: 24px;
-  }
-  .thema {
-    margin: 0 0 4px 0;
-    font-weight: bold;
-    font-size: 1.05em;
-  }
-  .meldung {
-    margin: 0 0 20px 0;
-  }
-  a {
-    color: #1a56db;
-    text-decoration: underline;
-  }
-  .ruhig {
-    color: #777;
-    font-size: 0.9em;
-    margin-top: 32px;
-    border-top: 1px solid #ddd;
-    padding-top: 16px;
-  }
-  .warnung {
-    background: #c0392b;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
@@ -62,44 +26,66 @@
     a {
       color: #6aa9ff;
     }
-    .stand, .ruhig {
+    .stand {
       color: #999;
     }
     .ruhig {
-      border-top: 1px solid #333;
+      color: #999;
     }
+  }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  .thema {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  p {
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+  .ruhig {
+    color: #666;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .warnung {
+    display: none;
+    background: #b00020;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
   }
 </style>
 </head>
-<body data-stand="2026-10-18T18:06:06Z">
-
+<body data-stand="2026-10-19T08:07:06Z">
+<div class="warnung" id="alterswarnung"></div>
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 18.10.2026, 20:06 Uhr</div>
+<p class="stand">aktualisiert: 19.10.2026, 10:07 Uhr</p>
 
-<div class="thema">KI</div>
-<p class="meldung">Google DeepMind sieht laut einem Bericht vom 14. Oktober selbstverbessernde KI trotz schneller Fortschritte bei autonomen Agenten weiterhin in weiter Ferne. <a href="https://www.mind-verse.de/ressourcen/news/archiv/2026-10" target="_blank">Quelle</a></p>
-
-<div class="thema">Apple</div>
-<p class="meldung">Apple soll laut Berichten nach einem Smart-Home-Event Mitte Oktober am 27. und 28. Oktober in Los Angeles neue Macs und ein iPad mini vorstellen. <a href="https://www.macwelt.de/article/3258828/apple-plant-eine-zusatzliche-mac-vorstellung-ende-oktober.html" target="_blank">Quelle</a></p>
-
-<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Lorch.</div>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg) - zu keinem Thema liess sich heute eine wirklich wichtige, aktuelle und verlaesslich belegte Meldung der letzten Tage finden.</p>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var diffHours = (now - standDate) / (1000 * 60 * 60);
+    var diffHours = (Date.now() - standDate.getTime()) / 36e5;
     if (diffHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+      var el = document.getElementById('alterswarnung');
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      el.style.display = 'block';
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
