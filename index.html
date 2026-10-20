@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -11,47 +11,44 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
+    color: #777;
+    font-size: 0.9em;
+    margin: 0 0 24px 0;
   }
   .thema {
-    margin-top: 20px;
-  }
-  .thema h2 {
-    font-size: 17px;
     margin: 0 0 4px 0;
+    font-weight: bold;
   }
-  .thema p {
-    margin: 0;
+  .thema + p {
+    margin: 0 0 20px 0;
   }
   a {
-    color: #0060df;
+    color: #0558c7;
   }
   .ruhig {
-    margin-top: 32px;
-    color: #666666;
-    font-size: 14px;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 24px;
   }
   .warnung {
-    background: #c0392b;
-    color: #ffffff;
+    background: #c40000;
+    color: #fff;
     padding: 10px 14px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 0.95em;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -62,20 +59,17 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-19T18:06:53Z">
-
+<body data-stand="2026-10-20T08:06:21Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 19.10.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 20.10.2026, 10:06 Uhr</p>
 
-<div class="thema">
-  <h2>KI</h2>
-  <p>Meta analysiert mit dem Projekt "Muse Wonder" Berichten zufolge fünf Millionen Patientenakten mithilfe von KI für die klinische Forschung. <a href="https://www.mind-verse.de/ressourcen/news/archiv/2026-10" target="_blank">Quelle</a></p>
-</div>
+<p class="thema">KI</p>
+<p>Google DeepMind sieht selbstverbessernde KI trotz schneller Fortschritte bei autonomen Agenten weiterhin als weit entfernt, berichten aktuelle Fachmeldungen. <a href="https://www.mind-verse.de/ressourcen/news/archiv/2026-10" target="_blank">Quelle</a></p>
 
 <p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.</p>
 
@@ -84,17 +78,15 @@
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var hoursDiff = (now - standDate) / (1000 * 60 * 60);
-    if (hoursDiff > 18) {
-      var warnDiv = document.createElement('div');
-      warnDiv.className = 'warnung';
-      warnDiv.textContent = 'Diese Seite ist seit ' + Math.floor(hoursDiff) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnDiv, document.body.firstChild);
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
+      var div = document.createElement('div');
+      div.className = 'warnung';
+      div.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(div, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
