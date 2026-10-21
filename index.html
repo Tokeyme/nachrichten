@@ -16,7 +16,7 @@
     font-size: 16px;
     line-height: 1.5;
     background: #ffffff;
-    color: #1a1a1a;
+    color: #111111;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -28,30 +28,30 @@
     }
   }
   h1 {
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .stand {
-    color: #777;
+    color: #777777;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 28px;
   }
-  .thema {
-    font-weight: bold;
-    margin-bottom: 4px;
+  .thema h2 {
+    font-size: 17px;
+    margin: 0 0 4px 0;
   }
-  article {
-    margin-bottom: 22px;
+  .thema p {
+    margin: 0 0 20px 0;
   }
   .ruhig {
-    color: #777;
+    color: #777777;
     font-size: 14px;
     margin-top: 32px;
   }
-  #warnung {
+  .warnung {
     display: none;
     background: #c0392b;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -59,15 +59,15 @@
   }
 </style>
 </head>
-<body data-stand="2026-10-20T18:06:06Z">
-<div id="warnung"></div>
+<body data-stand="2026-10-21T08:07:12Z">
+<div id="warnung" class="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 20.10.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 21.10.2026, 10:07 Uhr</p>
 
-<article>
-  <div class="thema">Apple</div>
-  <p>Berichten zufolge plant Apple fuer Ende Oktober eine zusaetzliche Vorstellung mit neuen Mac- und iPad-Modellen. <a href="https://www.macwelt.de/article/3258828/apple-plant-eine-zusatzliche-mac-vorstellung-ende-oktober.html" target="_blank">Quelle</a></p>
-</article>
+<div class="thema">
+  <h2>Apple</h2>
+  <p>Apple soll laut Berichten am 23. Oktober das iPhone Duo, das erste faltbare iPhone des Unternehmens, offiziell starten. <a href="https://www.androidheadlines.com/?p=1317239" target="_blank">Quelle</a></p>
+</div>
 
 <p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch.</p>
 
@@ -76,10 +76,12 @@
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var stunden = (Date.now() - standDate.getTime()) / 36e5;
-    if (stunden > 18) {
+    var now = new Date();
+    var hours = (now.getTime() - standDate.getTime()) / 36e5;
+    if (hours > 18) {
+      var n = Math.floor(hours);
       var warnung = document.getElementById('warnung');
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + n + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       warnung.style.display = 'block';
     }
   } catch (e) {}
