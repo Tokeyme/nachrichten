@@ -11,27 +11,18 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
-    color: #111111;
-  }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e6e6e6;
-    }
-    a {
-      color: #6aa9ff;
-    }
+    color: #1a1a1a;
   }
   h1 {
     margin-bottom: 4px;
   }
   .stand {
-    color: #777777;
+    color: #666;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 28px;
@@ -43,44 +34,59 @@
   .thema p {
     margin: 0 0 20px 0;
   }
+  a {
+    color: #0b5fff;
+  }
   .ruhig {
-    color: #777777;
+    color: #777;
     font-size: 14px;
-    margin-top: 32px;
+    margin-top: 24px;
   }
   .warnung {
-    display: none;
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
     font-size: 14px;
   }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .stand, .ruhig {
+      color: #999;
+    }
+  }
 </style>
 </head>
-<body data-stand="2026-10-21T18:06:40Z">
-<div id="warnung" class="warnung"></div>
+<body data-stand="2026-10-22T08:07:24Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 21.10.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 22.10.2026, 10:07 Uhr</p>
 
-<p class="ruhig">Ruhig, nichts Grosses mit belastbarer, aktueller Quelle gefunden: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.</p>
+<div class="thema">
+  <h2>Apple</h2>
+  <p>Apple bringt am 23. Oktober das iPhone Duo in den Handel, ein weiteres Event zu neuen Mac- und iPad-Modellen wird fuer Ende Oktober erwartet. <a href="https://androidheadlines.com/2026/10/apple-preps-two-october-product-launch-waves.html" target="_blank">Quelle</a></p>
+</div>
+
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
 
 <script>
-(function () {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var now = new Date();
-    var hours = (now.getTime() - standDate.getTime()) / 36e5;
-    if (hours > 18) {
-      var n = Math.floor(hours);
-      var warnung = document.getElementById('warnung');
-      warnung.textContent = 'Diese Seite ist seit ' + n + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      warnung.style.display = 'block';
-    }
-  } catch (e) {}
-})();
+try {
+  var stand = document.body.getAttribute('data-stand');
+  var standDate = new Date(stand);
+  var diffHours = (Date.now() - standDate.getTime()) / 36e5;
+  if (diffHours > 18) {
+    var warnung = document.createElement('div');
+    warnung.className = 'warnung';
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    document.body.insertBefore(warnung, document.body.firstChild);
+  }
+} catch (e) {}
 </script>
 </body>
 </html>
