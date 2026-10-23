@@ -11,10 +11,10 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -27,29 +27,31 @@
     margin-top: 0;
     margin-bottom: 28px;
   }
-  .thema {
-    font-weight: bold;
-    margin-bottom: 2px;
+  h2 {
+    font-size: 17px;
+    margin: 22px 0 4px;
   }
-  p.text {
-    margin-top: 2px;
-    margin-bottom: 20px;
+  p {
+    margin: 0 0 4px;
   }
   a {
-    color: #0060df;
+    color: #0060d0;
   }
   .ruhig {
-    color: #666;
+    color: #777;
     font-size: 14px;
-    margin-top: 24px;
+    margin-top: 32px;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
   }
   .warnung {
+    display: none;
     background: #c0392b;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    margin-bottom: 18px;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -59,32 +61,42 @@
     a {
       color: #6aa9ff;
     }
-    .stand, .ruhig {
+    .stand {
       color: #999;
+    }
+    .ruhig {
+      color: #999;
+      border-top: 1px solid #333;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-22T18:06:21Z">
+<body data-stand="2026-10-23T08:06:19Z">
+<div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 22.10.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 23.10.2026, 10:06 Uhr</p>
 
-<p class="ruhig">Ruhig, nichts Grosses: In dieser Runde ergab die Recherche zu keinem der ueblichen Themen (Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch) eine zuverlaessig aktuelle und ausreichend belegte Meldung der letzten Tage.</p>
+<h2>Apple</h2>
+<p>Apple plant laut Berichten eine zweite Oktober-Ankündigung: Nach dem Smart-Home-Event sollen am 27./28. Oktober neue Macs und iPads folgen. <a href="https://androidheadlines.com/2026/10/apple-preps-two-october-product-launch-waves.html" target="_blank">Quelle</a></p>
+
+<h2>Guild Wars 2</h2>
+<p>Guild Wars 2 erhält am 28. Oktober das nächste große Update der Erweiterung Visions of Eternity. <a href="https://roundtablecoop.com/news/guild-wars-2-visions-of-eternity-a-new-era-dawns-october-28th/" target="_blank">Quelle</a></p>
+
+<h2>Bitcoin</h2>
+<p>Bitcoin notiert Mitte Oktober bei rund 80.000 US-Dollar (etwa 74.000 Euro) und damit rund ein Drittel unter dem Oktober-2025-Hoch von über 126.000 Dollar. <a href="https://www.cryptotimes.io/2026/09/30/bitcoin-price-prediction-for-october-2026-40k-bottom-risk-vs-low-80k-hold/" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Lorch.</p>
 
 <script>
-(function () {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var diffHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (diffHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
-    }
-  } catch (e) {}
-})();
+try {
+  var stand = document.body.getAttribute('data-stand');
+  var alter = (Date.now() - new Date(stand).getTime()) / 36e5;
+  if (alter > 18) {
+    var el = document.getElementById('warnung');
+    el.textContent = 'Diese Seite ist seit ' + Math.floor(alter) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    el.style.display = 'block';
+  }
+} catch (e) {}
 </script>
 </body>
 </html>
