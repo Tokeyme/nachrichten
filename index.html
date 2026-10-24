@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
+  :root { color-scheme: light dark; }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -18,85 +16,72 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema {
-    margin-top: 22px;
-    margin-bottom: 4px;
-    font-weight: bold;
-    font-size: 17px;
-  }
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  a {
-    color: #0060df;
-    text-decoration: underline;
-  }
-  .ruhig {
-    margin-top: 36px;
-    color: #777777;
-    font-size: 14px;
-  }
+  h1 { margin-bottom: 4px; }
+  .stand { color: #666; font-size: 14px; margin-bottom: 24px; }
+  .thema { margin-bottom: 18px; }
+  .thema h2 { font-size: 16px; margin: 0 0 4px 0; }
+  .thema p { margin: 0; }
+  a { color: #0060df; }
+  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
   .warnung {
-    background: #c0392b;
-    color: #ffffff;
+    background: #c00020;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    font-size: 14px;
     margin-bottom: 18px;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e6e6e6;
-    }
-    a {
-      color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #999999;
-    }
+    body { background: #121212; color: #e6e6e6; }
+    .stand, .ruhig { color: #999; }
+    a { color: #6aa9ff; }
   }
 </style>
 </head>
-<body data-stand="2026-10-24T08:06:12Z">
+<body data-stand="2026-10-24T18:06:40Z">
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 24.10.2026, 10:06 Uhr</p>
+<div class="stand">aktualisiert: 24.10.2026, 20:06 Uhr</div>
 
-<div class="thema">AfD</div>
-<p>Aktuelle Umfragen sehen die AfD weiterhin als stärkste Kraft, während die Zustimmung für die Regierungsparteien laut Berichten weiter sinkt. <a href="https://www.nampa.org/text/22911539" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Apple</h2>
+<p>Apple hat am 23. Oktober sein neues iPhone Duo offiziell in den Verkauf gebracht, parallel dazu erschien iOS 27.1. (<a href="https://asomobile.net/es/blog/noticias-aso-septiembre-2026/" target="_blank">Quelle</a>)</p>
+</div>
 
-<div class="thema">Iran/USA</div>
-<p>US-Präsident Trump hat laut Berichten erklärt, vor den US-Zwischenwahlen keinen neuen Angriff auf Iran zu planen, während die Kämpfe im Jemen zunehmen. <a href="https://www.aljazeera.com/news/liveblog/2026/10/19/iran-war-live-tehran-says-netanyahu-seeks-more-war-yemen-fighting-flares" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Künstliche Intelligenz</h2>
+<p>Die Deutsche Telekom will laut einem Bericht vom 6. Oktober mit Hilfe von KI rund 2,5 Milliarden Euro einsparen. (<a href="https://blog.mean.ceo/?p=11382" target="_blank">Quelle</a>)</p>
+</div>
 
-<div class="thema">VfB Stuttgart</div>
-<p>Der VfB Stuttgart hat den VfL Wolfsburg deutlich besiegt und damit seinen Platz unter den ersten vier der Bundesliga-Tabelle gefestigt. <a href="https://www.flashscore.com/news/stuttgart/nJQmYp1BnZdPEiqF" target="_blank">Quelle</a></p>
+<div class="thema">
+<h2>Bitcoin</h2>
+<p>El Salvador hat laut Bericht 138 Millionen Dollar vom IWF erhalten, nachdem Ausnahmen fuer die staatliche Bitcoin-Politik gewaehrt wurden. (<a href="https://crypto.com/pt-br/coins-ai/bitcoin/latest-news" target="_blank">Quelle</a>)</p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Großes: Ukraine/Russland, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.</p>
+<div class="thema">
+<h2>Weltraum</h2>
+<p>Eine SpaceX-Falcon-9-Rakete brachte am 1. Oktober die NASA-Crew-13 zur Internationalen Raumstation, mit Jessica Watkins bei ihrem zweiten Dragon-Flug. (<a href="https://spaceflightnow.com/2026/10/" target="_blank">Quelle</a>)</p>
+</div>
+
+<div class="ruhig">
+Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Wissenschaft/Forschung, Computer/Hardware, Apps, Lorch.
+</div>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
+    var hours = (Date.now() - standDate.getTime()) / 36e5;
+    if (hours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
