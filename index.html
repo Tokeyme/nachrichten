@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -11,10 +11,10 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -22,36 +22,37 @@
     margin-bottom: 4px;
   }
   .stand {
-    color: #666;
+    color: #777777;
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
   .thema {
-    margin-bottom: 18px;
-  }
-  .thema h2 {
-    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 4px;
     font-weight: bold;
-    margin: 0 0 4px 0;
+    font-size: 17px;
   }
-  .thema p {
-    margin: 0;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
   a {
-    color: #0057b8;
+    color: #0060df;
+    text-decoration: underline;
   }
   .ruhig {
-    color: #666;
+    margin-top: 36px;
+    color: #777777;
     font-size: 14px;
-    margin-top: 28px;
   }
   .warnung {
     background: #c0392b;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 20px;
     font-size: 14px;
+    margin-bottom: 18px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -62,29 +63,40 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-23T18:06:00Z">
+<body data-stand="2026-10-24T08:06:12Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 23.10.2026, 20:06 Uhr</p>
+<p class="stand">aktualisiert: 24.10.2026, 10:06 Uhr</p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Zu Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple und Lorch (Wuerttemberg) fand sich bei der heutigen Recherche keine ausreichend aktuelle und verlaessliche Meldung aus den letzten Tagen.</p>
+<div class="thema">AfD</div>
+<p>Aktuelle Umfragen sehen die AfD weiterhin als stärkste Kraft, während die Zustimmung für die Regierungsparteien laut Berichten weiter sinkt. <a href="https://www.nampa.org/text/22911539" target="_blank">Quelle</a></p>
+
+<div class="thema">Iran/USA</div>
+<p>US-Präsident Trump hat laut Berichten erklärt, vor den US-Zwischenwahlen keinen neuen Angriff auf Iran zu planen, während die Kämpfe im Jemen zunehmen. <a href="https://www.aljazeera.com/news/liveblog/2026/10/19/iran-war-live-tehran-says-netanyahu-seeks-more-war-yemen-fighting-flares" target="_blank">Quelle</a></p>
+
+<div class="thema">VfB Stuttgart</div>
+<p>Der VfB Stuttgart hat den VfL Wolfsburg deutlich besiegt und damit seinen Platz unter den ersten vier der Bundesliga-Tabelle gefestigt. <a href="https://www.flashscore.com/news/stuttgart/nJQmYp1BnZdPEiqF" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Großes: Ukraine/Russland, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.</p>
 
 <script>
-try {
-  var stand = document.body.getAttribute('data-stand');
-  var standDate = new Date(stand);
-  var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-  if (ageHours > 18) {
-    var warnung = document.createElement('div');
-    warnung.className = 'warnung';
-    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(warnung, document.body.firstChild);
-  }
-} catch (e) {}
+(function () {
+  try {
+    var stand = document.body.getAttribute('data-stand');
+    var standDate = new Date(stand);
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
+    }
+  } catch (e) {}
+})();
 </script>
 </body>
 </html>
