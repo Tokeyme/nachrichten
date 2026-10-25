@@ -5,26 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    padding: 24px 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 { margin-bottom: 4px; }
-  .stand { color: #666; font-size: 14px; margin-bottom: 24px; }
-  .thema { margin-bottom: 18px; }
-  .thema h2 { font-size: 16px; margin: 0 0 4px 0; }
-  .thema p { margin: 0; }
-  a { color: #0060df; }
-  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
+  h1 {
+    margin-bottom: 2px;
+  }
+  .stand {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .thema {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  p {
+    margin-top: 2px;
+    margin-bottom: 18px;
+  }
+  a {
+    color: #0b57d0;
+  }
+  .ruhig {
+    color: #777;
+    font-size: 14px;
+    margin-top: 24px;
+  }
   .warnung {
-    background: #c00020;
+    background: #c62828;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
@@ -32,46 +51,42 @@
     font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e6e6e6; }
-    .stand, .ruhig { color: #999; }
-    a { color: #6aa9ff; }
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    .stand, .ruhig {
+      color: #9a9a9a;
+    }
+    a {
+      color: #6aa9ff;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-10-25T08:06:17Z">
-
+<body data-stand="2026-10-25T18:06:24Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 25.10.2026, 09:06 Uhr</div>
+<div class="stand">aktualisiert: 25.10.2026, 19:06 Uhr</div>
 
-<div class="thema">
-<h2>Iran/USA</h2>
-<p>Laut einem Bericht vom 19. Oktober wirft der Iran Israels Regierungschef Netanyahu vor, weiteren Krieg zu suchen, waehrend bei Huthi-Angriffen im Jemen 58 Rekruten starben. (<a href="https://www.aljazeera.com/news/liveblog/2026/10/19/iran-war-live-tehran-says-netanyahu-seeks-more-war-yemen-fighting-flares" target="_blank">Quelle</a>)</p>
-</div>
+<div class="thema">Apple</div>
+<p>Apple soll laut Medienberichten noch im Oktober ein zweites Herbst-Event abhalten, diesmal mit Fokus auf neue Mac-Modelle. <a href="https://www.gadgetreview.com/?p=417473" target="_blank">Quelle</a></p>
 
-<div class="thema">
-<h2>AfD</h2>
-<p>Am 21. Oktober fanden laut Berichten erneut bundesweite Demonstrationen gegen die AfD und Rechtsextremismus statt, nach dem Rechtsruck bei den Landtagswahlen im September. (<a href="https://www.news.de/politik/860022688/anti-afd-demonstrationen-gegen-rechts-oktober-mittwoch-21-10-2026-demos-heute/1/" target="_blank">Quelle</a>)</p>
-</div>
-
-<div class="ruhig">
-Ruhig, nichts Grosses: Ukraine/Russland, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch.
-</div>
+<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</div>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / 36e5;
-    if (hours > 18) {
+    var ageHours = (Date.now() - standDate.getTime()) / 1000 / 3600;
+    if (ageHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
