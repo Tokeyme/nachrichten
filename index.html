@@ -24,32 +24,38 @@
   }
   .stand {
     color: #777;
-    font-size: 0.85em;
-    margin: 0 0 24px 0;
+    font-size: 0.9em;
+    margin-bottom: 24px;
   }
-  h2 {
-    font-size: 1em;
+  .thema h2 {
+    font-size: 1.05em;
     margin: 20px 0 4px 0;
   }
-  p {
+  .thema p {
     margin: 0 0 4px 0;
-  }
-  a {
-    color: #0060df;
-    text-decoration: underline;
   }
   .ruhig {
     color: #777;
-    font-size: 0.85em;
+    font-size: 0.92em;
     margin-top: 28px;
+    border-top: 1px solid #ddd;
+    padding-top: 14px;
   }
-  .warnung {
+  a {
+    color: #1a5fb4;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  #veraltet-warnung {
+    display: none;
     background: #c0392b;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 18px;
-    font-size: 0.9em;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -62,33 +68,38 @@
     .stand, .ruhig {
       color: #999;
     }
+    .ruhig {
+      border-top: 1px solid #333;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-10-26T08:09:03Z">
+<body data-stand="2026-10-26T18:06:22Z">
+
+<div id="veraltet-warnung"></div>
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 26.10.2026, 09:09 Uhr</p>
+<div class="stand">aktualisiert: 26.10.2026, 19:06 Uhr</div>
 
-<h2>Apple</h2>
-<p>Apple hat am 23. Oktober das faltbare iPhone Duo in den Verkauf gebracht und plant laut Berichten fuer den 27./28. Oktober eine weitere Mac- und iPad-Vorstellung. <a href="https://www.androidheadlines.com/2026/10/apple-preps-two-october-product-launch-waves.html" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
+<div class="ruhig">
+Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg) &ndash; zu keinem Thema liess sich heute eine verlaesslich aktuelle, wichtige Meldung aus den letzten 2-3 Tagen mit belastbarer Quelle finden.
+</div>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var hours = (now - standDate) / 1000 / 60 / 60;
-    if (hours > 18) {
-      var warn = document.createElement('div');
-      warn.className = 'warnung';
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warn, document.body.firstChild);
+    var jetzt = new Date();
+    var stundenAlt = (jetzt - standDate) / (1000 * 60 * 60);
+    if (stundenAlt > 18) {
+      var warnung = document.getElementById('veraltet-warnung');
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.style.display = 'block';
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
