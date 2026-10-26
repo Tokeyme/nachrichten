@@ -11,79 +11,81 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 2px;
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
   }
   .stand {
     color: #777;
-    font-size: 14px;
-    margin-bottom: 24px;
+    font-size: 0.85em;
+    margin: 0 0 24px 0;
   }
-  .thema {
-    font-weight: bold;
-    margin-bottom: 2px;
+  h2 {
+    font-size: 1em;
+    margin: 20px 0 4px 0;
   }
   p {
-    margin-top: 2px;
-    margin-bottom: 18px;
+    margin: 0 0 4px 0;
   }
   a {
-    color: #0b57d0;
+    color: #0060df;
+    text-decoration: underline;
   }
   .ruhig {
     color: #777;
-    font-size: 14px;
-    margin-top: 24px;
+    font-size: 0.85em;
+    margin-top: 28px;
   }
   .warnung {
-    background: #c62828;
+    background: #c0392b;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 18px;
-    font-size: 14px;
+    font-size: 0.9em;
   }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
       color: #e6e6e6;
     }
-    .stand, .ruhig {
-      color: #9a9a9a;
-    }
     a {
       color: #6aa9ff;
+    }
+    .stand, .ruhig {
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-25T18:06:24Z">
+<body data-stand="2026-10-26T08:09:03Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 25.10.2026, 19:06 Uhr</div>
+<p class="stand">aktualisiert: 26.10.2026, 09:09 Uhr</p>
 
-<div class="thema">Apple</div>
-<p>Apple soll laut Medienberichten noch im Oktober ein zweites Herbst-Event abhalten, diesmal mit Fokus auf neue Mac-Modelle. <a href="https://www.gadgetreview.com/?p=417473" target="_blank">Quelle</a></p>
+<h2>Apple</h2>
+<p>Apple hat am 23. Oktober das faltbare iPhone Duo in den Verkauf gebracht und plant laut Berichten fuer den 27./28. Oktober eine weitere Mac- und iPad-Vorstellung. <a href="https://www.androidheadlines.com/2026/10/apple-preps-two-october-product-launch-waves.html" target="_blank">Quelle</a></p>
 
-<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</div>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 1000 / 3600;
-    if (ageHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+    var now = new Date();
+    var hours = (now - standDate) / 1000 / 60 / 60;
+    if (hours > 18) {
+      var warn = document.createElement('div');
+      warn.className = 'warnung';
+      warn.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warn, document.body.firstChild);
     }
   } catch (e) {}
 })();
