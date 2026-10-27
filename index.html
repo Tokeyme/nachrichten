@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
   :root {
@@ -11,90 +11,91 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
-    color: #1a1a1a;
+    color: #111111;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
-    color: #777;
-    font-size: 0.9em;
-    margin-bottom: 24px;
+    color: #777777;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  .thema {
+    margin-bottom: 22px;
   }
   .thema h2 {
-    font-size: 1.05em;
-    margin: 20px 0 4px 0;
-  }
-  .thema p {
+    font-size: 17px;
     margin: 0 0 4px 0;
   }
-  .ruhig {
-    color: #777;
-    font-size: 0.92em;
-    margin-top: 28px;
-    border-top: 1px solid #ddd;
-    padding-top: 14px;
+  .thema p {
+    margin: 0;
   }
   a {
-    color: #1a5fb4;
+    color: #0060df;
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
   }
-  #veraltet-warnung {
-    display: none;
-    background: #c0392b;
-    color: #fff;
+  .ruhig {
+    color: #777777;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .warnung {
+    background: #c62828;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 18px;
-    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
   }
   @media (prefers-color-scheme: dark) {
     body {
       background: #121212;
       color: #e6e6e6;
     }
+    .stand, .ruhig {
+      color: #aaaaaa;
+    }
     a {
       color: #6aa9ff;
-    }
-    .stand, .ruhig {
-      color: #999;
-    }
-    .ruhig {
-      border-top: 1px solid #333;
     }
   }
 </style>
 </head>
-<body data-stand="2026-10-26T18:06:22Z">
+<body data-stand="2026-10-27T18:07:19Z">
 
-<div id="veraltet-warnung"></div>
+<div class="warnung" id="warnung"></div>
 
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 26.10.2026, 19:06 Uhr</div>
+<p class="stand">aktualisiert: 27.10.2026, 19:07 Uhr</p>
 
-<div class="ruhig">
-Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg) &ndash; zu keinem Thema liess sich heute eine verlaesslich aktuelle, wichtige Meldung aus den letzten 2-3 Tagen mit belastbarer Quelle finden.
+<div class="thema">
+  <h2>Bitcoin</h2>
+  <p>Bitcoin legte nach Trumps Zusage, den Iran vor dem 3. November nicht anzugreifen, deutlich zu und lag bei rund 82.991 US-Dollar (etwa 77.000 Euro). <a href="https://cryptoticker.io/de/bitcoin-news/" target="_blank">Quelle</a></p>
 </div>
 
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Apple, Lorch.</p>
+
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var jetzt = new Date();
-    var stundenAlt = (jetzt - standDate) / (1000 * 60 * 60);
-    if (stundenAlt > 18) {
-      var warnung = document.getElementById('veraltet-warnung');
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(stundenAlt) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    var now = new Date();
+    var diffHours = (now - standDate) / (1000 * 60 * 60);
+    if (diffHours > 18) {
+      var warnung = document.getElementById('warnung');
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       warnung.style.display = 'block';
     }
   } catch (e) {}
