@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root { color-scheme: light dark; }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -16,43 +15,41 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 { margin-bottom: 4px; }
-  .stand { color: #666; font-size: 14px; margin-bottom: 24px; }
+  h1 { margin-bottom: 2px; }
+  .stand { color: #777; font-size: 14px; margin-top: 0; margin-bottom: 24px; }
   h2 { font-size: 17px; margin: 22px 0 4px; }
-  p { margin: 0 0 8px; }
+  p { margin: 0 0 4px; }
+  a { color: #1a5fb4; }
   .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
-  a { color: #0060df; }
-  .warnung { background: #c0392b; color: #fff; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-weight: bold; display: none; }
+  .warnung { background: #c00; color: #fff; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-weight: bold; }
   @media (prefers-color-scheme: dark) {
     body { background: #121212; color: #e6e6e6; }
-    .stand, .ruhig { color: #999; }
     a { color: #6aa9ff; }
+    .ruhig { color: #9a9a9a; }
+    .stand { color: #9a9a9a; }
   }
 </style>
 </head>
-<body data-stand="2026-10-28T08:07:19Z">
-<div id="warnung" class="warnung"></div>
+<body data-stand="2026-10-28T18:07:20Z">
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 28.10.2026, 09:07 Uhr</div>
+<p class="stand">aktualisiert: 28.10.2026, 19:07 Uhr</p>
 
-<h2>Apple</h2>
-<p>Apple soll laut Bloomberg-Reporter Mark Gurman am 27. und 28. Oktober in Los Angeles neue MacBook-Pro-Modelle mit OLED-Display, einen iMac mit M6-Chip und ein iPad mini vorstellen. <a href="https://www.macwelt.de/article/3258828/apple-plant-eine-zusatzliche-mac-vorstellung-ende-oktober.html" target="_blank">Quelle</a></p>
+<p>Die Recherche hat diesmal zu keinem der beobachteten Themen eine verlässlich datierte, wirklich wichtige Meldung der letzten 2-3 Tage mit brauchbarer Quelle ergeben - die Suchergebnisse waren überwiegend veraltet, ohne Datum oder aus unseriösen Seiten. Im Zweifel wurde daher nichts gemeldet.</p>
 
-<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</div>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</p>
 
 <script>
-(function() {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
-      var el = document.getElementById('warnung');
-      el.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      el.style.display = 'block';
-    }
-  } catch (e) {}
-})();
+try {
+  var stand = document.body.getAttribute('data-stand');
+  var alterMs = Date.now() - new Date(stand).getTime();
+  var stunden = alterMs / 1000 / 60 / 60;
+  if (stunden > 18) {
+    var zeile = document.createElement('div');
+    zeile.className = 'warnung';
+    zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    document.body.insertBefore(zeile, document.body.firstChild);
+  }
+} catch (e) {}
 </script>
 </body>
 </html>
