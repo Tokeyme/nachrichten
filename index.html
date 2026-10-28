@@ -1,106 +1,58 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
+  :root { color-scheme: light dark; }
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
-    color: #111111;
+    color: #1a1a1a;
   }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema {
-    margin-bottom: 22px;
-  }
-  .thema h2 {
-    font-size: 17px;
-    margin: 0 0 4px 0;
-  }
-  .thema p {
-    margin: 0;
-  }
-  a {
-    color: #0060df;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .ruhig {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 32px;
-  }
-  .warnung {
-    background: #c62828;
-    color: #ffffff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    display: none;
-  }
+  h1 { margin-bottom: 4px; }
+  .stand { color: #666; font-size: 14px; margin-bottom: 24px; }
+  h2 { font-size: 17px; margin: 22px 0 4px; }
+  p { margin: 0 0 8px; }
+  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
+  a { color: #0060df; }
+  .warnung { background: #c0392b; color: #fff; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-weight: bold; display: none; }
   @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e6e6e6;
-    }
-    .stand, .ruhig {
-      color: #aaaaaa;
-    }
-    a {
-      color: #6aa9ff;
-    }
+    body { background: #121212; color: #e6e6e6; }
+    .stand, .ruhig { color: #999; }
+    a { color: #6aa9ff; }
   }
 </style>
 </head>
-<body data-stand="2026-10-27T18:07:19Z">
-
-<div class="warnung" id="warnung"></div>
-
+<body data-stand="2026-10-28T08:07:19Z">
+<div id="warnung" class="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 27.10.2026, 19:07 Uhr</p>
+<div class="stand">aktualisiert: 28.10.2026, 09:07 Uhr</div>
 
-<div class="thema">
-  <h2>Bitcoin</h2>
-  <p>Bitcoin legte nach Trumps Zusage, den Iran vor dem 3. November nicht anzugreifen, deutlich zu und lag bei rund 82.991 US-Dollar (etwa 77.000 Euro). <a href="https://cryptoticker.io/de/bitcoin-news/" target="_blank">Quelle</a></p>
-</div>
+<h2>Apple</h2>
+<p>Apple soll laut Bloomberg-Reporter Mark Gurman am 27. und 28. Oktober in Los Angeles neue MacBook-Pro-Modelle mit OLED-Display, einen iMac mit M6-Chip und ein iPad mini vorstellen. <a href="https://www.macwelt.de/article/3258828/apple-plant-eine-zusatzliche-mac-vorstellung-ende-oktober.html" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Apple, Lorch.</p>
+<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Wuerttemberg).</div>
 
 <script>
 (function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var now = new Date();
-    var diffHours = (now - standDate) / (1000 * 60 * 60);
-    if (diffHours > 18) {
-      var warnung = document.getElementById('warnung');
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      warnung.style.display = 'block';
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
+      var el = document.getElementById('warnung');
+      el.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      el.style.display = 'block';
     }
   } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
