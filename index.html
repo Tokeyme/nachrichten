@@ -5,49 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 { margin-bottom: 2px; }
-  .stand { color: #777; font-size: 14px; margin-top: 0; margin-bottom: 24px; }
-  h2 { font-size: 17px; margin: 22px 0 4px; }
-  p { margin: 0 0 4px; }
-  a { color: #1a5fb4; }
-  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
-  .warnung { background: #c00; color: #fff; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-weight: bold; }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  .thema {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #0060df;
+  }
+  .ruhig {
+    color: #777;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .warnung {
+    background: #c0392b;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: none;
+  }
   @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e6e6e6; }
-    a { color: #6aa9ff; }
-    .ruhig { color: #9a9a9a; }
-    .stand { color: #9a9a9a; }
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+    .stand, .ruhig {
+      color: #999;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-10-28T18:07:20Z">
+<body data-stand="2026-10-29T08:06:20Z">
+<div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 28.10.2026, 19:07 Uhr</p>
+<p class="stand">aktualisiert: 29.10.2026, 09:06 Uhr</p>
 
-<p>Die Recherche hat diesmal zu keinem der beobachteten Themen eine verlässlich datierte, wirklich wichtige Meldung der letzten 2-3 Tage mit brauchbarer Quelle ergeben - die Suchergebnisse waren überwiegend veraltet, ohne Datum oder aus unseriösen Seiten. Im Zweifel wurde daher nichts gemeldet.</p>
+<div class="thema">Bitcoin</div>
+<p>Bitcoin fiel am 27. Oktober kurzzeitig unter 81.000 Dollar (rund 75.000 Euro), begleitet von Long-Liquidationen von ueber 600 Millionen Dollar binnen kurzer Zeit. <a href="https://cryptoticker.io/nl/crypto-nieuws/archiv/2026/10/" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</p>
+<div class="thema">Apple</div>
+<p>Apple soll laut Berichten von Mark Gurman am 27. und 28. Oktober in Los Angeles neue Macs und ein iPad mini mit OLED-Display vorstellen. <a href="https://www.macwelt.de/article/3258828/apple-plant-eine-zusatzliche-mac-vorstellung-ende-oktober.html" target="_blank">Quelle</a></p>
+
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Lorch (Wuerttemberg).</p>
 
 <script>
 try {
   var stand = document.body.getAttribute('data-stand');
-  var alterMs = Date.now() - new Date(stand).getTime();
-  var stunden = alterMs / 1000 / 60 / 60;
-  if (stunden > 18) {
-    var zeile = document.createElement('div');
-    zeile.className = 'warnung';
-    zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(zeile, document.body.firstChild);
+  var standDate = new Date(stand);
+  var diffHours = (Date.now() - standDate.getTime()) / 36e5;
+  if (diffHours > 18) {
+    var el = document.getElementById('warnung');
+    el.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    el.style.display = 'block';
   }
 } catch (e) {}
 </script>
