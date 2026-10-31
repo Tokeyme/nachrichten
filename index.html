@@ -5,16 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -25,32 +22,30 @@
     color: #777;
     font-size: 14px;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
-  .thema {
-    font-weight: bold;
-    margin-bottom: 4px;
+  h2 {
+    font-size: 16px;
+    margin: 20px 0 4px;
   }
   p {
-    margin-top: 4px;
-    margin-bottom: 20px;
+    margin: 0 0 16px;
   }
   a {
-    color: #0060df;
+    color: #1a56db;
   }
   .ruhig {
     color: #777;
     font-size: 14px;
-    margin-top: 24px;
+    margin-top: 28px;
   }
   .warnung {
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
     font-size: 14px;
-    display: none;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -66,29 +61,26 @@
   }
 </style>
 </head>
-<body data-stand="2026-10-30T18:05:43Z">
-<div class="warnung" id="warnung"></div>
+<body data-stand="2026-10-31T08:05:33Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 30.10.2026, 19:05 Uhr</p>
+<p class="stand">aktualisiert: 31.10.2026, 09:05 Uhr</p>
 
-<p>Keine der recherchierten Meldungen zu den beobachteten Themen war in den letzten 2-3 Tagen eindeutig datiert und zugleich wichtig genug fuer eine Aufnahme. Die Suche lieferte ueberwiegend aeltere oder undatierte Ergebnisse.</p>
+<h2>Guild Wars 2</h2>
+<p>Das neue Erweiterungskapitel "Visions of Eternity" ist seit dem 28. Oktober verfügbar und startet laut Entwickler ArenaNet eine neue, mehrteilige Story-Ära. <a href="https://www.guildwars2.com/news/guild-wars-2-visions-of-eternity-launches-today" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg)</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg) &ndash; keine belastbaren, aktuellen Meldungen der letzten Tage gefunden.</p>
 
 <script>
-(function() {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var jetzt = new Date();
-    var stunden = (jetzt - standDate) / 1000 / 60 / 60;
-    if (stunden > 18) {
-      var el = document.getElementById('warnung');
-      el.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      el.style.display = 'block';
-    }
-  } catch (e) {}
-})();
+try {
+  var stand = new Date(document.body.getAttribute('data-stand'));
+  var alterStunden = (Date.now() - stand.getTime()) / 36e5;
+  if (alterStunden > 18) {
+    var warnung = document.createElement('div');
+    warnung.className = 'warnung';
+    warnung.textContent = 'Diese Seite ist seit ' + Math.floor(alterStunden) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
+    document.body.insertBefore(warnung, document.body.firstChild);
+  }
+} catch (e) {}
 </script>
 </body>
 </html>
