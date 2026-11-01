@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
+  :root { color-scheme: light dark; }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -18,92 +16,47 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #777777;
-    font-size: 0.9em;
-    margin-top: 0;
-    margin-bottom: 28px;
-  }
-  .thema {
-    margin-bottom: 20px;
-  }
-  .thema h2 {
-    font-size: 1.05em;
-    font-weight: bold;
-    margin: 0 0 4px 0;
-  }
-  .thema p {
-    margin: 0;
-  }
-  a {
-    color: #0a5fd0;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .ruhig {
-    color: #777777;
-    font-size: 0.9em;
-    margin-top: 32px;
-  }
+  h1 { margin-bottom: 4px; }
+  .stand { color: #666; font-size: 14px; margin-top: 0; margin-bottom: 28px; }
+  h2 { font-size: 16px; margin: 20px 0 4px; }
+  p { margin: 0 0 4px; }
+  a { color: #0060df; }
+  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
+  .hinweis { color: #777; font-size: 14px; margin-top: 20px; }
   .warnung {
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e6e6e6;
-    }
-    .stand, .ruhig {
-      color: #a0a0a0;
-    }
-    a {
-      color: #6aa9ff;
-    }
+    body { background: #121212; color: #e6e6e6; }
+    a { color: #6aa9ff; }
+    .stand, .ruhig, .hinweis { color: #999; }
   }
 </style>
 </head>
-<body data-stand="2026-10-31T18:06:25Z">
+<body data-stand="2026-11-01T08:05:33Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 31.10.2026, 19:06 Uhr</p>
+<p class="stand">aktualisiert: 01.11.2026, 09:05 Uhr</p>
 
-<div class="thema">
-  <h2>Guild Wars 2</h2>
-  <p>ArenaNet hat laut offizieller Ankündigung ein neues Kapitel der laufenden Erweiterung "Visions of Eternity" veröffentlicht, mit frischen Inhalten für Spieler. <a href="https://www.guildwars2.com/news/guild-wars-2-visions-of-eternity-launches-today" target="_blank">Quelle</a></p>
-</div>
+<p class="hinweis">Diese Runde lieferte keine verlässlich aktuellen, mit echten Quellen belegbaren Meldungen zu den beobachteten Themen - die Suche brachte ueberwiegend veraltete oder undatierte Treffer. Es wurde daher nichts veroeffentlicht, um nichts zu erfinden.</p>
 
-<div class="thema">
-  <h2>Computer / Hardware</h2>
-  <p>Nvidia-Chef Jensen Huang hat auf der GTC-Konferenz einen neuen Chip angekündigt, der laut seinen eigenen Worten "die Welt überraschen" solle. <a href="https://www.pcgameshardware.de/GTC-Event-257049/News/2026-Nvidia-Jensen-Huang-Chip-Ankuendigung-Ueberraschung-1509718/" target="_blank">Quelle</a></p>
-</div>
-
-<div class="thema">
-  <h2>Apple</h2>
-  <p>Apple soll laut Medienberichten am 28. Oktober in Los Angeles eine zweite Herbst-Veranstaltung abgehalten haben, mit neuen Macs und einem iPad mini mit OLED-Display. <a href="https://androidheadlines.com/2026/10/apple-preps-two-october-product-launch-waves.html" target="_blank">Quelle</a></p>
-</div>
-
-<p class="ruhig">Ruhig, nichts Großes: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Apps, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg)</p>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
+    var hours = (Date.now() - standDate.getTime()) / 36e5;
+    if (hours > 18) {
+      var div = document.createElement('div');
+      div.className = 'warnung';
+      div.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(div, document.body.firstChild);
     }
   } catch (e) {}
 })();
