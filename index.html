@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -16,47 +18,60 @@
     background: #ffffff;
     color: #1a1a1a;
   }
-  h1 { margin-bottom: 4px; }
-  .stand { color: #666; font-size: 14px; margin-top: 0; margin-bottom: 28px; }
-  h2 { font-size: 16px; margin: 20px 0 4px; }
-  p { margin: 0 0 4px; }
-  a { color: #0060df; }
-  .ruhig { color: #777; font-size: 14px; margin-top: 28px; }
-  .hinweis { color: #777; font-size: 14px; margin-top: 20px; }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #121212;
+      color: #e6e6e6;
+    }
+    a {
+      color: #6aa9ff;
+    }
+  }
+  h1 {
+    margin-bottom: 4px;
+  }
+  .stand {
+    color: #777;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  .thema {
+    margin: 0 0 4px 0;
+    font-weight: bold;
+  }
+  .ruhig {
+    color: #777;
+    font-size: 14px;
+    margin-top: 28px;
+  }
   .warnung {
     background: #c0392b;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
     font-size: 14px;
   }
-  @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e6e6e6; }
-    a { color: #6aa9ff; }
-    .stand, .ruhig, .hinweis { color: #999; }
-  }
 </style>
 </head>
-<body data-stand="2026-11-01T08:05:33Z">
+<body data-stand="2026-11-01T18:05:43Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 01.11.2026, 09:05 Uhr</p>
+<p class="stand">aktualisiert: 01.11.2026, 19:05 Uhr</p>
 
-<p class="hinweis">Diese Runde lieferte keine verlässlich aktuellen, mit echten Quellen belegbaren Meldungen zu den beobachteten Themen - die Suche brachte ueberwiegend veraltete oder undatierte Treffer. Es wurde daher nichts veroeffentlicht, um nichts zu erfinden.</p>
-
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg)</p>
+<p class="ruhig">Ruhig, nichts Grosses: Diese Recherche hat zu keinem der ueblichen Themen (Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch) eine echte, in den letzten 2-3 Tagen datierte Meldung gefunden. Die naechste Ausgabe wird es erneut versuchen.</p>
 
 <script>
 (function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / 36e5;
-    if (hours > 18) {
-      var div = document.createElement('div');
-      div.className = 'warnung';
-      div.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(div, document.body.firstChild);
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
