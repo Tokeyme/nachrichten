@@ -11,10 +11,10 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -31,22 +31,24 @@
     margin: 0 0 4px 0;
     font-weight: bold;
   }
-  .thema + p {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  .ruhig {
-    color: #777;
-    font-size: 0.92em;
-    margin-top: 28px;
+  p.text {
+    margin: 0 0 20px 0;
   }
   a {
     color: #0060df;
+    text-decoration: none;
+  }
+  a:hover {
     text-decoration: underline;
   }
+  .ruhig {
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 28px;
+  }
   .warnung {
-    background: #c0392b;
-    color: #fff;
+    background: #c62828;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -66,27 +68,28 @@
   }
 </style>
 </head>
-<body data-stand="2026-11-02T08:18:12Z">
+<body data-stand="2026-11-02T18:16:07Z">
 
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 02.11.2026, 09:18 Uhr</div>
+<div class="stand">aktualisiert: 02.11.2026, 19:16 Uhr</div>
 
-<p class="ruhig">Keine bestätigten, aktuell datierten wichtigen Meldungen der letzten 2–3 Tage gefunden (Recherche lieferte überwiegend veraltete oder undatierte Treffer). Ruhig, nichts Grosses in dieser Runde zu: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</p>
+<div class="thema">Wissenschaft/Forschung</div>
+<p class="text">Vom 6. bis 9. November findet in Berlin der Falling Walls Science Summit statt, bei dem am Abschlusstag die Science Breakthroughs of the Year 2026 verkündet werden. <a href="https://berlinscienceweek.com/programme/falling-walls-science-summit-day-4-celebrating-science-breakthroughs-year" target="_blank">Quelle</a></p>
+
+<div class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</div>
 
 <script>
-(function() {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine läuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
-    }
-  } catch (e) {}
-})();
+try {
+  var stand = document.body.getAttribute('data-stand');
+  var standDate = new Date(stand);
+  var stunden = (Date.now() - standDate.getTime()) / 3600000;
+  if (stunden > 18) {
+    var zeile = document.createElement('div');
+    zeile.className = 'warnung';
+    zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+    document.body.insertBefore(zeile, document.body.firstChild);
+  }
+} catch (e) {}
 </script>
 
 </body>
