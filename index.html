@@ -11,10 +11,10 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -23,31 +23,27 @@
     font-size: 1.6em;
   }
   .stand {
-    color: #777;
+    color: #777777;
     font-size: 0.9em;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
   }
   .thema {
     margin: 0 0 4px 0;
     font-weight: bold;
   }
-  p.text {
+  .thema-text {
     margin: 0 0 20px 0;
   }
   a {
-    color: #0060df;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
+    color: #1a5fb4;
   }
   .ruhig {
-    color: #777;
+    color: #777777;
     font-size: 0.9em;
-    margin-top: 28px;
+    margin-top: 24px;
   }
   .warnung {
-    background: #c62828;
+    background: #c0392b;
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 6px;
@@ -63,33 +59,35 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999;
+      color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-11-03T18:06:10Z">
+<body data-stand="2026-11-04T08:06:25Z">
 
 <h1>Nachrichten</h1>
-<div class="stand">aktualisiert: 03.11.2026, 19:06 Uhr</div>
+<p class="stand">aktualisiert: 04.11.2026, 09:06 Uhr</p>
 
-<div class="thema">Bitcoin</div>
-<p class="text">Analysten sehen Bitcoin laut Cointelegraph auf dem Weg zum schwaechsten November seit sieben Jahren, nachdem der Kurs im bisherigen Monatsverlauf deutlich nachgegeben hat. <a href="https://cointelegraph.com/news/bitcoin-likely-on-track-worst-november-in-7-years-analysts" target="_blank">Quelle</a></p>
+<p class="thema">Apple</p>
+<p class="thema-text">Apple legte am 2. November die Quartalszahlen fürs vierte Fiskalquartal 2026 vor, den ersten Bericht unter dem neuen CEO John Ternus und CFO Kevan Parekh. <a href="https://www.apfelpatient.de/news/apple-q4-2026-quartalszahlen-termin-2-november" target="_blank">Quelle</a></p>
 
-<div class="ruhig">Ruhig, nichts Grosses mit verlaesslicher aktueller Quelle gefunden zu: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Apple, Lorch (Württemberg).</div>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg) - zu diesen Themen fanden sich heute keine verlässlich aktuellen und wirklich wichtigen Meldungen der letzten Tage.</p>
 
 <script>
-try {
-  var stand = document.body.getAttribute('data-stand');
-  var standDate = new Date(stand);
-  var stunden = (Date.now() - standDate.getTime()) / 3600000;
-  if (stunden > 18) {
-    var zeile = document.createElement('div');
-    zeile.className = 'warnung';
-    zeile.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-    document.body.insertBefore(zeile, document.body.firstChild);
-  }
-} catch (e) {}
+(function () {
+  try {
+    var stand = document.body.getAttribute('data-stand');
+    var standDate = new Date(stand);
+    var diffHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (diffHours > 18) {
+      var warn = document.createElement('div');
+      warn.className = 'warnung';
+      warn.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warn, document.body.firstChild);
+    }
+  } catch (e) {}
+})();
 </script>
 
 </body>
