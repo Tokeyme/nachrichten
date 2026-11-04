@@ -11,40 +11,42 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
-    color: #777777;
-    font-size: 0.9em;
-    margin: 0 0 24px 0;
+    color: #777;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
   .thema {
-    margin: 0 0 4px 0;
+    margin-top: 22px;
+    margin-bottom: 4px;
     font-weight: bold;
   }
-  .thema-text {
-    margin: 0 0 20px 0;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
   a {
-    color: #1a5fb4;
+    color: #0060df;
   }
   .ruhig {
-    color: #777777;
-    font-size: 0.9em;
-    margin-top: 24px;
+    margin-top: 32px;
+    color: #777;
+    font-size: 14px;
   }
   .warnung {
     background: #c0392b;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -59,20 +61,20 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-11-04T08:06:25Z">
+<body data-stand="2026-11-04T18:05:54Z">
 
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 04.11.2026, 09:06 Uhr</p>
+<p class="stand">aktualisiert: 04.11.2026, 19:05 Uhr</p>
 
-<p class="thema">Apple</p>
-<p class="thema-text">Apple legte am 2. November die Quartalszahlen fürs vierte Fiskalquartal 2026 vor, den ersten Bericht unter dem neuen CEO John Ternus und CFO Kevan Parekh. <a href="https://www.apfelpatient.de/news/apple-q4-2026-quartalszahlen-termin-2-november" target="_blank">Quelle</a></p>
+<p class="thema">Bitcoin</p>
+<p>Bitcoin steuert laut Marktbeobachtern auf den schwächsten November seit sieben Jahren zu und ist zuletzt unter 80.000 US-Dollar (rund 74.000 Euro) gefallen. <a href="https://cointelegraph.com/news/bitcoin-likely-on-track-worst-november-in-7-years-analysts" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Lorch (Württemberg) - zu diesen Themen fanden sich heute keine verlässlich aktuellen und wirklich wichtigen Meldungen der letzten Tage.</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apps, Apple, Lorch.</p>
 
 <script>
 (function () {
@@ -81,10 +83,10 @@
     var standDate = new Date(stand);
     var diffHours = (Date.now() - standDate.getTime()) / 36e5;
     if (diffHours > 18) {
-      var warn = document.createElement('div');
-      warn.className = 'warnung';
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warn, document.body.firstChild);
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(diffHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
