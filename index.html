@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachrichten</title>
 <style>
-  :root {
-    color-scheme: light dark;
-  }
   body {
     max-width: 680px;
     margin: 0 auto;
@@ -19,37 +16,37 @@
     color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
-    color: #666;
-    font-size: 0.9em;
-    margin: 0 0 24px 0;
+    color: #777;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
-  .thema {
-    margin: 0 0 4px 0;
-    font-weight: bold;
+  .thema h2 {
+    font-size: 17px;
+    margin-bottom: 4px;
   }
-  p {
-    margin: 0 0 20px 0;
+  .thema p {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   .ruhig {
     color: #777;
-    font-size: 0.92em;
+    font-size: 14px;
     margin-top: 28px;
   }
   a {
-    color: #0060c0;
+    color: #0060df;
   }
-  #alterswarnung {
-    display: none;
-    background: #c0392b;
+  .warnung {
+    background: #c40000;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
     margin-bottom: 20px;
-    font-size: 0.95em;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -60,34 +57,29 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #9a9a9a;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-11-08T08:05:59Z">
-<div id="alterswarnung"></div>
+<body data-stand="2026-11-08T18:05:54Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 08.11.2026, 09:05 Uhr</p>
+<p class="stand">aktualisiert: 08.11.2026, 19:05 Uhr</p>
 
-<p class="thema">Wissenschaft/Forschung</p>
-<p>Der Falling-Walls-Wissenschaftsgipfel in Berlin kuert am 9. November die Forschungsdurchbrueche des Jahres 2026, Finalisten sind unter anderem ein Retina-Implantat und KI-gestuetzte Phagenforschung. <a href="https://falling-walls.com/" target="_blank">Quelle</a></p>
-
-<p class="thema">Bitcoin</p>
-<p>Nach einem schwachen Oktober sehen Analysten Bitcoin auf Kurs fuer den schwaechsten November seit sieben Jahren. <a href="https://cointelegraph.com/news/bitcoin-likely-on-track-worst-november-in-7-years-analysts" target="_blank">Quelle</a></p>
-
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, KI, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg) - zu keinem dieser Themen liess sich heute eine verlaesslich datierte, wirklich wichtige Meldung der letzten 2-3 Tage mit echter Quelle bestaetigen.</p>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
-      var warn = document.getElementById('alterswarnung');
-      warn.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      warn.style.display = 'block';
+    var now = new Date();
+    var hours = (now - standDate) / (1000 * 60 * 60);
+    if (hours > 18) {
+      var warnung = document.createElement('div');
+      warnung.className = 'warnung';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
