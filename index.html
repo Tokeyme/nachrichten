@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nachrichten</title>
 <style>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
@@ -24,24 +27,32 @@
     margin-top: 0;
     margin-bottom: 28px;
   }
+  .thema {
+    margin-bottom: 22px;
+  }
   .thema h2 {
-    font-size: 17px;
-    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
   }
   .thema p {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 0;
+  }
+  a {
+    color: #0060df;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .ruhig {
     color: #777;
     font-size: 14px;
-    margin-top: 28px;
-  }
-  a {
-    color: #0060df;
+    margin-top: 32px;
   }
   .warnung {
-    background: #c40000;
+    display: none;
+    background: #c0392b;
     color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
@@ -62,27 +73,42 @@
   }
 </style>
 </head>
-<body data-stand="2026-11-09T08:07:26Z">
+<body data-stand="2026-11-09T18:07:01Z">
+<div class="warnung" id="warnung"></div>
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 09.11.2026, 09:07 Uhr</p>
+<p class="stand">aktualisiert: 09.11.2026, 19:07 Uhr</p>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg) - zu keinem dieser Themen liess sich heute eine verlaesslich datierte, wirklich wichtige Meldung der letzten 2-3 Tage mit echter Quelle bestaetigen.</p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Russland griff nach einem Telefonat zwischen Trump und Putin erneut Ziele in der Südukraine an, laut Berichten mit einem Rekordangriff von 145 Drohnen in einer Nacht. <a href="https://www.berliner-zeitung.de/article/2270815" target="_blank">Quelle</a></p>
+</div>
+
+<div class="thema">
+  <h2>Computer/Hardware</h2>
+  <p>AMD und Intel legen für kommende Server-Chips neue CPU-Sockel fest: AMD setzt bei Venice auf SP7, Intel bei Diamond Rapids auf LGA 9324. <a href="https://t.me/s/ComputerBase/23293" target="_blank">Quelle</a></p>
+</div>
+
+<div class="thema">
+  <h2>Wissenschaft/Forschung</h2>
+  <p>Das experimentelle Krebsmedikament Daraxonrasib von Revolution Medicines verdoppelt laut ersten Berichten die Überlebenszeit von Patienten mit fortgeschrittenem Bauchspeicheldrüsenkrebs. <a href="https://theweek.com/health-and-science/1019386/recent-scientific-breakthroughs" target="_blank">Quelle</a></p>
+</div>
+
+<p class="ruhig">Ruhig, nichts Grosses: Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, KI, Bitcoin, Apps, Apple, Lorch.</p>
 
 <script>
-(function() {
-  try {
-    var stand = document.body.getAttribute('data-stand');
-    var standDate = new Date(stand);
-    var now = new Date();
-    var hours = (now - standDate) / (1000 * 60 * 60);
-    if (hours > 18) {
-      var warnung = document.createElement('div');
-      warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
-      document.body.insertBefore(warnung, document.body.firstChild);
-    }
-  } catch (e) {}
-})();
+  (function () {
+    try {
+      var stand = document.body.getAttribute('data-stand');
+      var standDate = new Date(stand);
+      var jetzt = new Date();
+      var stunden = (jetzt - standDate) / (1000 * 60 * 60);
+      if (stunden > 18) {
+        var el = document.getElementById('warnung');
+        el.textContent = 'Diese Seite ist seit ' + Math.floor(stunden) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+        el.style.display = 'block';
+      }
+    } catch (e) {}
+  })();
 </script>
 </body>
 </html>
