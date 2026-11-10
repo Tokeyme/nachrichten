@@ -11,12 +11,50 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
+  }
+  h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
+  }
+  .stand {
+    color: #777777;
+    font-size: 0.9em;
+    margin: 0 0 24px 0;
+  }
+  .thema {
+    font-weight: bold;
+    margin: 20px 0 4px 0;
+  }
+  p {
+    margin: 0 0 4px 0;
+  }
+  a {
+    color: #0060df;
+    text-decoration: underline;
+  }
+  .ruhig {
+    color: #777777;
+    font-size: 0.9em;
+    margin-top: 28px;
+  }
+  .hinweis {
+    color: #777777;
+    font-size: 0.9em;
+    margin: 20px 0;
+  }
+  .warnung {
+    background: #c0392b;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -26,44 +64,17 @@
     a {
       color: #6aa9ff;
     }
-  }
-  h1 {
-    margin-bottom: 4px;
-  }
-  .stand {
-    color: #767676;
-    font-size: 0.9em;
-    margin-top: 0;
-    margin-bottom: 24px;
-  }
-  .thema {
-    margin-top: 20px;
-    margin-bottom: 4px;
-    font-weight: bold;
-  }
-  p {
-    margin-top: 0;
-  }
-  .ruhig {
-    color: #767676;
-    font-size: 0.9em;
-    margin-top: 32px;
-  }
-  .warnung {
-    background: #c0392b;
-    color: #ffffff;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    .stand, .ruhig, .hinweis {
+      color: #999999;
+    }
   }
 </style>
 </head>
-<body data-stand="2026-11-10T08:06:22Z">
+<body data-stand="2026-11-10T18:06:44Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 10.11.2026, 09:06 Uhr</p>
+<p class="stand">aktualisiert: 10.11.2026, 19:06 Uhr</p>
 
-<p>Heute keine Themen, die die Schwelle fuer den Digest sicher erreichen - die Recherche lieferte zu den gewuenschten Themen ueberwiegend veraltete oder undatierte Treffer ohne verlaesslichen Bezug zu den letzten Tagen. Um nichts zu erfinden, wird diese Ausgabe ohne Meldungen veroeffentlicht.</p>
+<p class="hinweis">In dieser Runde lieferte die Recherche zu keinem der beobachteten Themen eine verlaesslich datierte, eigenstaendig belegte Meldung aus den letzten 2-3 Tagen. Daher gibt es diesmal keine Einzelthemen.</p>
 
 <p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg).</p>
 
@@ -72,11 +83,11 @@
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hours = (Date.now() - standDate.getTime()) / 1000 / 60 / 60;
-    if (hours > 18) {
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
