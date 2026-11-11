@@ -11,50 +11,48 @@
   body {
     max-width: 680px;
     margin: 0 auto;
+    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
   h1 {
-    margin: 0 0 4px 0;
-    font-size: 1.6em;
+    margin-bottom: 4px;
   }
   .stand {
     color: #777777;
-    font-size: 0.9em;
-    margin: 0 0 24px 0;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 28px;
   }
   .thema {
-    font-weight: bold;
-    margin: 20px 0 4px 0;
+    margin-bottom: 20px;
   }
-  p {
+  .thema h2 {
+    font-size: 16px;
+    font-weight: bold;
     margin: 0 0 4px 0;
   }
+  .thema p {
+    margin: 0;
+  }
   a {
-    color: #0060df;
-    text-decoration: underline;
+    color: #0057d9;
   }
   .ruhig {
     color: #777777;
-    font-size: 0.9em;
-    margin-top: 28px;
-  }
-  .hinweis {
-    color: #777777;
-    font-size: 0.9em;
-    margin: 20px 0;
+    font-size: 14px;
+    margin-top: 32px;
   }
   .warnung {
-    background: #c0392b;
+    background: #c62828;
     color: #ffffff;
     padding: 10px 14px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -64,30 +62,43 @@
     a {
       color: #6aa9ff;
     }
-    .stand, .ruhig, .hinweis {
+    .stand, .ruhig {
       color: #999999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-11-10T18:06:44Z">
+<body data-stand="2026-11-11T08:06:30Z">
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 10.11.2026, 19:06 Uhr</p>
+<p class="stand">aktualisiert: 11.11.2026, 09:06 Uhr</p>
 
-<p class="hinweis">In dieser Runde lieferte die Recherche zu keinem der beobachteten Themen eine verlaesslich datierte, eigenstaendig belegte Meldung aus den letzten 2-3 Tagen. Daher gibt es diesmal keine Einzelthemen.</p>
+<div class="thema">
+  <h2>Ukraine/Russland</h2>
+  <p>Russland und die Ukraine treffen sich am 10. und 11. November in Abu Dhabi zu von den USA vermittelten Dreiergesprächen, der Kreml hat dies bestätigt. <a href="https://en.ilsole24ore.com/art/ukraine-war-latest-news-witkoff-us-mediators-abu-dhabi-talks-AJyZMl2B" target="_blank">Quelle</a></p>
+</div>
 
-<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Bitcoin, Computer/Hardware, Apps, Apple, Lorch (Wuerttemberg).</p>
+<div class="thema">
+  <h2>Iran/USA</h2>
+  <p>Die USA griffen laut Berichten erneut Ziele im Südiran an, Präsident Trump spricht von Fortschritten in den von Katar vermittelten Verhandlungen. <a href="https://de.euronews.com/2026/11/07/usa-greifen-sudiran-erneut-an-trump-meldet-fortschritte-in-verhandlungen" target="_blank">Quelle</a></p>
+</div>
+
+<div class="thema">
+  <h2>Bitcoin</h2>
+  <p>Der Zahlungsdienst Square ermöglicht seit dem 10. November allen Händlern Bitcoin-Zahlungen anzunehmen, inklusive automatischer Umrechnung und integrierter Wallet im Dashboard. <a href="https://bitcoinnews.com/p/square-just-killed-the-myth-that-bitcoin-isn-t-for-buying-coffee" target="_blank">Quelle</a></p>
+</div>
+
+<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apple, Apps, Lorch (Württemberg).</p>
 
 <script>
-(function () {
+(function() {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
-    if (ageHours > 18) {
+    var hoursDiff = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
+    if (hoursDiff > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hoursDiff) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
