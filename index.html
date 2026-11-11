@@ -11,48 +11,45 @@
   body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 24px 18px;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 24px 18px;
     background: #ffffff;
     color: #1a1a1a;
   }
   h1 {
-    margin-bottom: 4px;
+    margin-bottom: 0.2em;
   }
   .stand {
-    color: #777777;
-    font-size: 14px;
+    color: #777;
+    font-size: 0.9em;
     margin-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 1.5em;
   }
-  .thema {
-    margin-bottom: 20px;
-  }
-  .thema h2 {
-    font-size: 16px;
+  h2 {
+    font-size: 1.05em;
     font-weight: bold;
-    margin: 0 0 4px 0;
+    margin: 1.2em 0 0.2em;
   }
-  .thema p {
-    margin: 0;
+  p {
+    margin: 0.2em 0 1em;
   }
   a {
-    color: #0057d9;
+    color: #0060df;
   }
   .ruhig {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 32px;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 2em;
   }
   .warnung {
-    background: #c62828;
-    color: #ffffff;
+    background: #c0392b;
+    color: #fff;
     padding: 10px 14px;
     border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-bottom: 1.2em;
+    font-weight: bold;
   }
   @media (prefers-color-scheme: dark) {
     body {
@@ -63,46 +60,42 @@
       color: #6aa9ff;
     }
     .stand, .ruhig {
-      color: #999999;
+      color: #999;
     }
   }
 </style>
 </head>
-<body data-stand="2026-11-11T08:06:30Z">
+<body data-stand="2026-11-11T18:06:14Z">
+
 <h1>Nachrichten</h1>
-<p class="stand">aktualisiert: 11.11.2026, 09:06 Uhr</p>
+<p class="stand">aktualisiert: 11.11.2026, 19:06 Uhr</p>
 
-<div class="thema">
-  <h2>Ukraine/Russland</h2>
-  <p>Russland und die Ukraine treffen sich am 10. und 11. November in Abu Dhabi zu von den USA vermittelten Dreiergesprächen, der Kreml hat dies bestätigt. <a href="https://en.ilsole24ore.com/art/ukraine-war-latest-news-witkoff-us-mediators-abu-dhabi-talks-AJyZMl2B" target="_blank">Quelle</a></p>
-</div>
+<h2>KI</h2>
+<p>Qualcomm treibt laut Branchenbericht nach sinkenden Smartphone-Verkäufen verstärkt den Einstieg in KI-Rechenzentren voran, Databricks startet zudem ein Förderprogramm für KI-Startups. <a href="https://aitoolly.com/de/ai-news/2026-11-05" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>Iran/USA</h2>
-  <p>Die USA griffen laut Berichten erneut Ziele im Südiran an, Präsident Trump spricht von Fortschritten in den von Katar vermittelten Verhandlungen. <a href="https://de.euronews.com/2026/11/07/usa-greifen-sudiran-erneut-an-trump-meldet-fortschritte-in-verhandlungen" target="_blank">Quelle</a></p>
-</div>
+<h2>Computer/Hardware</h2>
+<p>AMD plant laut Branchenbericht für November weitere Preiserhöhungen bei Radeon-Grafikkarten, da die Preise für GDDR6-Speicher weiter steigen. <a href="https://hwbusters.com/?hwb_reviews=48" target="_blank">Quelle</a></p>
 
-<div class="thema">
-  <h2>Bitcoin</h2>
-  <p>Der Zahlungsdienst Square ermöglicht seit dem 10. November allen Händlern Bitcoin-Zahlungen anzunehmen, inklusive automatischer Umrechnung und integrierter Wallet im Dashboard. <a href="https://bitcoinnews.com/p/square-just-killed-the-myth-that-bitcoin-isn-t-for-buying-coffee" target="_blank">Quelle</a></p>
-</div>
+<h2>Apps</h2>
+<p>Google hat laut Branchenseite AppsOps bestätigt, dass die ab November geltende Mindestvorgabe für die Android-API-Stufe 36 auch bestehende App-Updates betrifft, nicht nur neue Einreichungen. <a href="https://appsops.store/news/week-in-app-store-ops-october-25-2026" target="_blank">Quelle</a></p>
 
-<p class="ruhig">Ruhig, nichts Grosses: AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, KI, Computer/Hardware, Apple, Apps, Lorch (Württemberg).</p>
+<p class="ruhig">Ruhig, nichts Grosses: Ukraine/Russland, Iran/USA, AfD, VfB Stuttgart, Guild Wars 2, Weltraum, Wissenschaft/Forschung, Bitcoin, Apple, Lorch.</p>
 
 <script>
-(function() {
+(function () {
   try {
     var stand = document.body.getAttribute('data-stand');
     var standDate = new Date(stand);
-    var hoursDiff = (Date.now() - standDate.getTime()) / (1000 * 60 * 60);
-    if (hoursDiff > 18) {
+    var ageHours = (Date.now() - standDate.getTime()) / 36e5;
+    if (ageHours > 18) {
       var warnung = document.createElement('div');
       warnung.className = 'warnung';
-      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(hoursDiff) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
+      warnung.textContent = 'Diese Seite ist seit ' + Math.floor(ageHours) + ' Stunden nicht aktualisiert worden - die Routine laeuft nicht.';
       document.body.insertBefore(warnung, document.body.firstChild);
     }
   } catch (e) {}
 })();
 </script>
+
 </body>
 </html>
